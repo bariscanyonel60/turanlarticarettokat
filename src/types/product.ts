@@ -29,6 +29,11 @@ export type ProductImage =
     }
   | ProductPhoto;
 
+export type ProductFaq = {
+  question: string;
+  answer: string;
+};
+
 export type Product = {
   slug: string;
   name: string;
@@ -38,8 +43,15 @@ export type Product = {
   seoDescription: string;
   /** Kuruş cinsinden satış fiyatı. Boşsa sitede rakam gösterilmez. */
   priceKurus: number | null;
+  /** Fiyatın yanındaki kısa not. Boşsa gösterilmez. */
+  priceNote?: string | null;
+  /** YYYY-AA-GG. Boşsa tarih satırı gösterilmez. */
+  priceUpdatedAt?: string | null;
   /** Yalnızca doğrulanmış dolum bilgisi. */
   capacity: string | null;
+  longDescription?: string | null;
+  features?: string[];
+  faq?: ProductFaq[];
   image: ProductImage;
   /** Ana görsele ek ürün fotoğrafları. */
   gallery?: ProductPhoto[];

@@ -49,7 +49,7 @@ export const products: Product[] = [
     summary: "Mutfak ve günlük kullanım için 2 kg ev tipi tüp.",
     usage: "Ev ve mutfak",
     seoDescription:
-      "Tokat Tüp. Tokat Merkez'de 2 kg Hürgaz ev tipi tüp. Mutfak kullanımı için Turanlar Ticaret'e WhatsApp'tan yazın; servis talebi telefonla alınır.",
+      "Tokat Merkez'de 2 kg Hürgaz ev tipi tüp. Mutfak kullanımı için Turanlar Ticaret'e WhatsApp'tan yazın; servis talebi telefonla alınır.",
     priceKurus: null,
     capacity: "2 kg",
     image: {
@@ -67,7 +67,7 @@ export const products: Product[] = [
     summary: "Mutfak ve günlük kullanım için 12 kg ev tüpü.",
     usage: "Ev ve mutfak",
     seoDescription:
-      "Tokat Tüp. Tokat Merkez'de 12 kg Hürgaz ev tüpü. 2 kg tüpten ayrı bir üründür. Stok ve sipariş için Turanlar Ticaret WhatsApp hattına yazın.",
+      "Tokat Merkez'de 12 kg Ev Tüpü, Turanlar Ticaret vitrininde. Mutfak ve günlük kullanım için 12 kg ev tüpü. Güncel fiyatı WhatsApp veya telefondan sorun.",
     priceKurus: null,
     capacity: "12 kg",
     image: {
@@ -94,7 +94,7 @@ export const products: Product[] = [
     summary: "Kamp, piknik ve taşınabilir kullanım için tercih edilen tüpler.",
     usage: "Kamp ve piknik",
     seoDescription:
-      "Tokat Tüp. Tokat piknik tüpü için Turanlar Ticaret. Tokat Merkez'de taşınabilir tüp siparişini WhatsApp üzerinden iletebilirsiniz.",
+      "Tokat piknik tüpü için Turanlar Ticaret. Tokat Merkez'de taşınabilir tüp siparişini WhatsApp üzerinden iletebilirsiniz.",
     priceKurus: null,
     capacity: null,
     image: {
@@ -112,7 +112,7 @@ export const products: Product[] = [
     summary: "İşletmeler ve uygun endüstriyel kullanım için 24 kg sanayi tüpü.",
     usage: "İş yeri ve sanayi",
     seoDescription:
-      "Tokat Tüp. Tokat Merkez'de 24 kg sanayi tüpü. Turanlar Ticaret, işletmeler için Hürgaz sanayi tüplerinde WhatsApp siparişi ve telefonla servis talebi alır.",
+      "Tokat Merkez'de 24 kg sanayi tüpü. Turanlar Ticaret, işletmeler için Hürgaz sanayi tüplerinde WhatsApp siparişi ve telefonla servis talebi alır.",
     priceKurus: null,
     capacity: "24 kg",
     image: {
@@ -130,7 +130,7 @@ export const products: Product[] = [
     summary: "Gönen kahverengi emaye soba.",
     usage: "Isınma",
     seoDescription:
-      "Tokat Tüp. Tokat Merkez'de Gönen emaye soba. Turanlar Ticaret fiyatı WhatsApp veya telefonla söyler.",
+      "Tokat Merkez'de Gönen emaye soba. Turanlar Ticaret fiyatı WhatsApp veya telefonla söyler.",
     priceKurus: null,
     capacity: null,
     image: {
@@ -148,7 +148,7 @@ export const products: Product[] = [
     summary: "Özenler krom semaver.",
     usage: "Çay",
     seoDescription:
-      "Tokat Tüp. Tokat Merkez'de Özenler semaver. Turanlar Ticaret fiyatı WhatsApp veya telefonla söyler.",
+      "Tokat Merkez'de Özenler semaver. Turanlar Ticaret fiyatı WhatsApp veya telefonla söyler.",
     priceKurus: null,
     capacity: null,
     image: {
@@ -166,7 +166,7 @@ export const products: Product[] = [
     summary: "Kouns emaye kuzine.",
     usage: "Pişirme",
     seoDescription:
-      "Tokat Tüp. Tokat Merkez'de Kouns emaye kuzine. Turanlar Ticaret fiyatı WhatsApp veya telefonla söyler.",
+      "Tokat Merkez'de Kouns emaye kuzine. Turanlar Ticaret fiyatı WhatsApp veya telefonla söyler.",
     priceKurus: null,
     capacity: null,
     image: {
@@ -184,7 +184,7 @@ export const products: Product[] = [
     summary: "Aorcamp PR-50 taşınabilir kamp ocağı.",
     usage: "Kamp",
     seoDescription:
-      "Tokat Tüp. Tokat Merkez'de Aorcamp PR-50 kamp ocağı. Turanlar Ticaret fiyatı WhatsApp veya telefonla söyler.",
+      "Tokat Merkez'de Aorcamp PR-50 kamp ocağı. Turanlar Ticaret fiyatı WhatsApp veya telefonla söyler.",
     priceKurus: null,
     capacity: null,
     image: {
@@ -202,7 +202,7 @@ export const products: Product[] = [
     summary: "Hortum, regülatör ve şalomeden oluşan set.",
     usage: "Şalome",
     seoDescription:
-      "Tokat Tüp. Tokat Merkez'de gaz şalomesi seti. Turanlar Ticaret fiyatı WhatsApp veya telefonla söyler.",
+      "Tokat Merkez'de gaz şalomesi seti. Turanlar Ticaret fiyatı WhatsApp veya telefonla söyler.",
     priceKurus: null,
     capacity: null,
     image: {
@@ -220,7 +220,7 @@ export const products: Product[] = [
     summary: "MUPA tek gözlü elektrikli ocak.",
     usage: "Pişirme",
     seoDescription:
-      "Tokat Tüp. Tokat Merkez'de MUPA tekli elektrikli ocak. Turanlar Ticaret fiyatı WhatsApp veya telefonla söyler.",
+      "Tokat Merkez'de MUPA tekli elektrikli ocak. Turanlar Ticaret fiyatı WhatsApp veya telefonla söyler.",
     priceKurus: null,
     capacity: null,
     image: {
@@ -238,7 +238,7 @@ export const products: Product[] = [
     summary: "FEMAS dört gözlü beyaz ocak.",
     usage: "Pişirme",
     seoDescription:
-      "Tokat Tüp. Tokat Merkez'de FEMAS dörtlü ocak. Turanlar Ticaret fiyatı WhatsApp veya telefonla söyler.",
+      "Tokat Merkez'de FEMAS dörtlü ocak. Turanlar Ticaret fiyatı WhatsApp veya telefonla söyler.",
     priceKurus: null,
     capacity: null,
     image: {
@@ -256,7 +256,7 @@ export const products: Product[] = [
     summary: "FEMAS iki gözlü beyaz ocak.",
     usage: "Pişirme",
     seoDescription:
-      "Tokat Tüp. Tokat Merkez'de FEMAS ikili ocak. Turanlar Ticaret fiyatı WhatsApp veya telefonla söyler.",
+      "Tokat Merkez'de FEMAS ikili ocak. Turanlar Ticaret fiyatı WhatsApp veya telefonla söyler.",
     priceKurus: null,
     capacity: null,
     image: {
@@ -274,7 +274,7 @@ export const products: Product[] = [
     summary: "Orgaz kamp ocağı.",
     usage: "Kamp",
     seoDescription:
-      "Tokat Tüp. Tokat Merkez'de Orgaz kamp ocağı. Turanlar Ticaret fiyatı WhatsApp veya telefonla söyler.",
+      "Tokat Merkez'de Orgaz kamp ocağı. Turanlar Ticaret fiyatı WhatsApp veya telefonla söyler.",
     priceKurus: null,
     capacity: null,
     image: {
@@ -292,7 +292,7 @@ export const products: Product[] = [
     summary: "Orgaz 300-11 LPG regülatör.",
     usage: "Regülatör",
     seoDescription:
-      "Tokat Tüp. Tokat Merkez'de Orgaz 300-11 LPG regülatör. Turanlar Ticaret fiyatı WhatsApp veya telefonla söyler.",
+      "Tokat Merkez'de Orgaz 300-11 LPG regülatör. Turanlar Ticaret fiyatı WhatsApp veya telefonla söyler.",
     priceKurus: null,
     capacity: null,
     image: {
@@ -310,7 +310,7 @@ export const products: Product[] = [
     summary: "Orgaz MT-300-20 kırmızı LPG dedantör.",
     usage: "Dedantör",
     seoDescription:
-      "Tokat Tüp. Tokat Merkez'de Orgaz MT-300-20 LPG dedantör. Turanlar Ticaret fiyatı WhatsApp veya telefonla söyler.",
+      "Tokat Merkez'de Orgaz MT-300-20 LPG dedantör. Turanlar Ticaret fiyatı WhatsApp veya telefonla söyler.",
     priceKurus: null,
     capacity: null,
     image: {
@@ -328,7 +328,7 @@ export const products: Product[] = [
     summary: "Orgaz YB-150 yüksek basınç LPG dedantör.",
     usage: "Dedantör",
     seoDescription:
-      "Tokat Tüp. Tokat Merkez'de Orgaz YB-150 yüksek basınç LPG dedantör. Turanlar Ticaret fiyatı WhatsApp veya telefonla söyler.",
+      "Tokat Merkez'de Orgaz YB-150 yüksek basınç LPG dedantör. Turanlar Ticaret fiyatı WhatsApp veya telefonla söyler.",
     priceKurus: null,
     capacity: null,
     image: {
@@ -346,7 +346,7 @@ export const products: Product[] = [
     summary: "45 cm portatif tüplü saç tava. Kavurma, gözleme ve katmer için.",
     usage: "Pişirme",
     seoDescription:
-      "Tokat Tüp. Tokat Merkez'de Tüplü Saç Tava 45 cm Portatif Kavurma Gözleme Katmer Sacı. 45 cm portatif tüplü saç tava. Kavurma, gözleme ve katmer için. Turanlar Ticaret fiyatı WhatsApp veya telefonla söyler.",
+      "Tokat Merkez'de Tüplü Saç Tava 45 cm Portatif Kavurma Gözleme Katmer Sacı. 45 cm portatif tüplü saç tava. Kavurma, gözleme ve katmer için. Turanlar Ticaret fiyatı WhatsApp veya telefonla söyler.",
     priceKurus: null,
     capacity: null,
     image: {
@@ -380,7 +380,7 @@ export const products: Product[] = [
     summary: "Şamdan 1003 kırmızı döner yuvarlak fırın.",
     usage: "Fırın",
     seoDescription:
-      "Tokat Tüp. Tokat Merkez'de Şamdan 1003 Döner Yuvarlak Fırın. Şamdan 1003 kırmızı döner yuvarlak fırın. Turanlar Ticaret fiyatı WhatsApp veya telefonla söyler.",
+      "Tokat Merkez'de Şamdan 1003 Döner Yuvarlak Fırın. Şamdan 1003 kırmızı döner yuvarlak fırın. Turanlar Ticaret fiyatı WhatsApp veya telefonla söyler.",
     priceKurus: null,
     capacity: null,
     image: {
@@ -407,7 +407,7 @@ export const products: Product[] = [
     summary: "Gurme Mk101 elektrikli katmer sacı. Termostatı ayarlanabilir.",
     usage: "Pişirme",
     seoDescription:
-      "Tokat Tüp. Tokat Merkez'de Gurme Mk101 Elektrikli Ayarlanabilir Termostatlı Katmer Sacı. Gurme Mk101 elektrikli katmer sacı. Termostatı ayarlanabilir. Turanlar Ticaret fiyatı WhatsApp veya telefonla söyler.",
+      "Tokat Merkez'de Gurme Mk101 Elektrikli Ayarlanabilir Termostatlı Katmer Sacı. Gurme Mk101 elektrikli katmer sacı. Termostatı ayarlanabilir. Turanlar Ticaret fiyatı WhatsApp veya telefonla söyler.",
     priceKurus: null,
     capacity: null,
     image: {
@@ -425,7 +425,7 @@ export const products: Product[] = [
     summary: "Büyük boy lav taşlı tüplü mangal. Ölçüsü 32x54x22 cm.",
     usage: "Mangal",
     seoDescription:
-      "Tokat Tüp. Tokat Merkez'de Büyük Boy Lav Taşlı Tüplü Mangal 32x54x22 cm. Büyük boy lav taşlı tüplü mangal. Ölçüsü 32x54x22 cm. Turanlar Ticaret fiyatı WhatsApp veya telefonla söyler.",
+      "Tokat Merkez'de Büyük Boy Lav Taşlı Tüplü Mangal 32x54x22 cm. Büyük boy lav taşlı tüplü mangal. Ölçüsü 32x54x22 cm. Turanlar Ticaret fiyatı WhatsApp veya telefonla söyler.",
     priceKurus: null,
     capacity: null,
     image: {
@@ -453,7 +453,7 @@ export const products: Product[] = [
       "Beyaz sürgülü aspiratör. Genişlik 600 mm. Baca çıkış çapı 120 mm. Motor gücü 2×95 W. Halojen lamba aydınlatma. Switch kontrol. Hava debisi 450 m³/h. 2 alüminyum filtre. Ses seviyesi 48 dBA.",
     usage: "Aspiratör",
     seoDescription:
-      "Tokat Tüp. Tokat Merkez'de Beyaz Sürgülü Aspiratör. Genişlik 600 mm, baca çıkışı 120 mm, hava debisi 450 m³/h. Turanlar Ticaret fiyatı WhatsApp veya telefonla söyler.",
+      "Tokat Merkez'de Beyaz Sürgülü Aspiratör. Genişlik 600 mm, baca çıkışı 120 mm, hava debisi 450 m³/h. Turanlar Ticaret fiyatı WhatsApp veya telefonla söyler.",
     priceKurus: null,
     capacity: null,
     image: {
@@ -471,7 +471,7 @@ export const products: Product[] = [
     summary: "Demaver çelik çay makinesi. 2 lt, 1800 W.",
     usage: "Çay",
     seoDescription:
-      "Tokat Tüp. Tokat Merkez'de Demaver Çelik Çay Makinesi 2 Lt 1800 W. Demaver çelik çay makinesi. 2 lt, 1800 W. Turanlar Ticaret fiyatı WhatsApp veya telefonla söyler.",
+      "Tokat Merkez'de Demaver Çelik Çay Makinesi 2 Lt 1800 W. Demaver çelik çay makinesi. 2 lt, 1800 W. Turanlar Ticaret fiyatı WhatsApp veya telefonla söyler.",
     priceKurus: null,
     capacity: "2 lt",
     image: {
@@ -498,7 +498,7 @@ export const products: Product[] = [
     summary: "Orgaz L-627 büyük kamp lambası. Tüp üzeri, Aygaz dar musluk, 500 W.",
     usage: "Lamba",
     seoDescription:
-      "Tokat Tüp. Tokat Merkez'de Orgaz Lantern L-627 ( Büyük ) Kamp Lamba ( Löküs ) Tüp Üzeri ( Aygaz Dar Musluk ) 500w. Orgaz L-627 büyük kamp lambası. Tüp üzeri, Aygaz dar musluk, 500 W. Turanlar Ticaret fiyatı WhatsApp veya telefonla söyler.",
+      "Tokat Merkez'de Orgaz Lantern L-627 ( Büyük ) Kamp Lamba ( Löküs ) Tüp Üzeri ( Aygaz Dar Musluk ) 500w. Orgaz L-627 büyük kamp lambası. Tüp üzeri, Aygaz dar musluk, 500 W. Turanlar Ticaret fiyatı WhatsApp veya telefonla söyler.",
     priceKurus: null,
     capacity: null,
     image: {
@@ -525,7 +525,7 @@ export const products: Product[] = [
     summary: "Orgaz dedantörlü kamp sobası.",
     usage: "Kamp",
     seoDescription:
-      "Tokat Tüp. Tokat Merkez'de Orgaz Dedantörlü Kamp Sobası. Orgaz dedantörlü kamp sobası. Turanlar Ticaret fiyatı WhatsApp veya telefonla söyler.",
+      "Tokat Merkez'de Orgaz Dedantörlü Kamp Sobası. Orgaz dedantörlü kamp sobası. Turanlar Ticaret fiyatı WhatsApp veya telefonla söyler.",
     priceKurus: null,
     capacity: null,
     image: {
@@ -544,7 +544,7 @@ export const products: Product[] = [
       "Aorcamp çakmaklı kartuş pürmüz set. Stok kodu CX-500 + KTS-227. KTS-227 gaz kartuşu ile uyumlu.",
     usage: "Pürmüz",
     seoDescription:
-      "Tokat Tüp. Tokat Merkez'de Aorcamp Çakmaklı Kartuş Pürmüz Set. Aorcamp çakmaklı kartuş pürmüz set. Stok kodu CX-500 + KTS-227. KTS-227 gaz kartuşu ile uyumlu. Turanlar Ticaret fiyatı WhatsApp veya telefonla söyler.",
+      "Tokat Merkez'de Aorcamp Çakmaklı Kartuş Pürmüz Set. Aorcamp çakmaklı kartuş pürmüz set. Stok kodu CX-500 + KTS-227. KTS-227 gaz kartuşu ile uyumlu. Turanlar Ticaret fiyatı WhatsApp veya telefonla söyler.",
     priceKurus: null,
     capacity: null,
     image: {
@@ -579,7 +579,7 @@ export const products: Product[] = [
       "LT-44 tost makinesi. 2000 W, 220-240 V, 50-60 Hz. Pişirme alanı 23,5x33 cm. Izgaralar çıkartılabilir ve kolay temizlenir. Teflon ve granit kaplamalı yanmaz, yapışmaz ızgara seçeneği. Sıcaklık ayarlanabilir. Dikey saklanır.",
     usage: "Tost",
     seoDescription:
-      "Tokat Tüp. Tokat Merkez'de LT-44 Tost Makinesi. 2000 W, pişirme alanı 23,5x33 cm. Turanlar Ticaret fiyatı WhatsApp veya telefonla söyler.",
+      "Tokat Merkez'de LT-44 Tost Makinesi. 2000 W, pişirme alanı 23,5x33 cm. Turanlar Ticaret fiyatı WhatsApp veya telefonla söyler.",
     priceKurus: null,
     capacity: null,
     image: {
@@ -613,7 +613,7 @@ export const products: Product[] = [
     summary: "Nazar jel reşo yakıtı. 1 litre.",
     usage: "Yakıt",
     seoDescription:
-      "Tokat Tüp. Tokat Merkez'de Nazar Reşo Yakıtı (Jel) 1 Litre. Nazar jel reşo yakıtı. 1 litre. Turanlar Ticaret fiyatı WhatsApp veya telefonla söyler.",
+      "Tokat Merkez'de Nazar Reşo Yakıtı (Jel) 1 Litre. Nazar jel reşo yakıtı. 1 litre. Turanlar Ticaret fiyatı WhatsApp veya telefonla söyler.",
     priceKurus: null,
     capacity: "1 litre",
     image: {
@@ -631,7 +631,7 @@ export const products: Product[] = [
     summary: "60 cm tüplü ekmek ve katmer sacı. Hortum ve vana seti ile.",
     usage: "Pişirme",
     seoDescription:
-      "Tokat Tüp. Tokat Merkez'de Tüplü Sac Ekmek Sacı Katmer Sacı 60 Cm Hortum Vana Setli. 60 cm tüplü ekmek ve katmer sacı. Hortum ve vana seti ile. Turanlar Ticaret fiyatı WhatsApp veya telefonla söyler.",
+      "Tokat Merkez'de Tüplü Sac Ekmek Sacı Katmer Sacı 60 Cm Hortum Vana Setli. 60 cm tüplü ekmek ve katmer sacı. Hortum ve vana seti ile. Turanlar Ticaret fiyatı WhatsApp veya telefonla söyler.",
     priceKurus: null,
     capacity: "60 cm",
     image: {
@@ -649,7 +649,7 @@ export const products: Product[] = [
     summary: "Aorcamp gaz kartuşu. 227 gram.",
     usage: "Kartuş",
     seoDescription:
-      "Tokat Tüp. Tokat Merkez'de Aorcamp 227 Gram Gaz Kartuşu. Aorcamp gaz kartuşu. 227 gram. Turanlar Ticaret fiyatı WhatsApp veya telefonla söyler.",
+      "Tokat Merkez'de Aorcamp 227 Gram Gaz Kartuşu. Aorcamp gaz kartuşu. 227 gram. Turanlar Ticaret fiyatı WhatsApp veya telefonla söyler.",
     priceKurus: null,
     capacity: "227 gram",
     image: {

@@ -1,8 +1,15 @@
 import type { Metadata } from "next";
-import { business } from "@/data/business";
+import { business, businessHours } from "@/data/business";
 import type { Product } from "@/types/product";
 import { mapsSearchUrl } from "@/lib/maps";
 import { getSiteUrl } from "@/lib/site";
+
+type OgImage = {
+  url: string;
+  width?: number;
+  height?: number;
+  alt: string;
+};
 
 type PageMetaInput = {
   title: string;
@@ -10,6 +17,8 @@ type PageMetaInput = {
   path: string;
   absoluteTitle?: boolean;
   noIndex?: boolean;
+  openGraphType?: "website" | "product";
+  image?: OgImage;
 };
 
 export function buildMetadata({
@@ -18,13 +27,15 @@ export function buildMetadata({
   path,
   absoluteTitle = false,
   noIndex = false,
+  openGraphType = "website",
+  image,
 }: PageMetaInput): Metadata {
   const url = new URL(path, getSiteUrl()).toString();
-  const image = {
+  const sharedImage = image ?? {
     url: new URL("/opengraph-image", getSiteUrl()).toString(),
     width: 1200,
     height: 630,
-    alt: "Tokat Tüp | Turanlar Ticaret, Tokat Merkez'de Hürgaz tüp hizmeti",
+    alt: "Turanlar Ticaret, Tokat Merkez'de Hürgaz tüp hizmeti",
   };
 
   return {
@@ -33,19 +44,26 @@ export function buildMetadata({
     alternates: noIndex ? undefined : { canonical: url },
     robots: noIndex ? { index: false, follow: true } : { index: true, follow: true },
     openGraph: {
-      type: "website",
+      ...(openGraphType === "website" ? { type: "website" as const } : {}),
       locale: "tr_TR",
       url,
       siteName: business.name,
       title,
       description,
-      images: [image],
+      images: [sharedImage],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: [{ url: image.url, alt: image.alt, width: image.width, height: image.height }],
+      images: [
+        {
+          url: sharedImage.url,
+          alt: sharedImage.alt,
+          width: sharedImage.width,
+          height: sharedImage.height,
+        },
+      ],
     },
   };
 }
@@ -63,16 +81,29 @@ export function websiteJsonLd() {
 }
 
 export function localBusinessJsonLd() {
+  // TODO: koordinatlar doğrulanınca geo ekle.
+  // TODO: açılış saati ve çalışma günleri dolunca openingHoursSpecification ekle.
+  const hours =
+    businessHours.openingTime && businessHours.workingDays
+      ? {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: businessHours.workingDays,
+          opens: businessHours.openingTime,
+          closes: businessHours.closingTime,
+        }
+      : null;
+
   return {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": "Store",
     name: business.name,
     alternateName: "Tokat Tüp",
     description: business.shortDescription,
     foundingDate: String(business.foundedYear),
     url: getSiteUrl(),
     sameAs: [business.instagramUrl, business.googleProfileUrl, mapsSearchUrl()],
-    telephone: business.phoneTel,
+    telephone: "+90-356-228-52-54",
+    ...(hours ? { openingHoursSpecification: hours } : {}),
     image: new URL("/opengraph-image", getSiteUrl()).toString(),
     address: {
       "@type": "PostalAddress",

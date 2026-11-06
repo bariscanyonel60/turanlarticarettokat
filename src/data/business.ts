@@ -26,6 +26,7 @@ export const business = {
 } as const;
 
 /**
+ * TODO: tam çalışma saatleri.
  * Açılış saati ve çalışma günleri doğrulanmadan doldurulmamalıdır.
  * Kapanış saati işletme tarafından 22:00 olarak paylaşılmıştır.
  */
@@ -38,6 +39,23 @@ export const businessHours: {
   openingTime: null,
   workingDays: null,
 };
+
+/**
+ * TODO: gerçek dükkân fotoğrafı ekle.
+ * Boşken sayfa, dükkân varmış gibi bir fotoğraf üretmez.
+ */
+export const shopPhoto: {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+} | null = null;
+
+/**
+ * TODO: mahalle listesi doğrulanınca hizmet bölgesine ekle.
+ * Şu an yalnızca Tokat Merkez biliniyor.
+ */
+export const serviceNeighborhoods: string[] = [];
 
 /**
  * Gerçek servis aracı fotoğrafı eklendiğinde doldurun.

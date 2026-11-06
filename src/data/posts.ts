@@ -69,3 +69,35 @@ export const posts: readonly Post[] = [
 export function getPost(slug: string) {
   return posts.find((post) => post.slug === slug);
 }
+
+/** Yayınlanmayan taslaklar. Blog listesine ve site haritasına eklenmez. */
+export const draftPosts: readonly Post[] = [
+  {
+    slug: "12-kg-tup-ne-kadar-gider",
+    title: "12 kg tüp ne kadar gider",
+    description: "Taslak. Tüketim süresi eve göre değişir; bu yazı henüz yayınlanmadı.",
+    date: "2026-11-06",
+    dateLabel: "Taslak",
+  },
+  {
+    slug: "tup-degisiminde-guvenlik-kontrolu",
+    title: "Tüp değişiminde güvenlik kontrolü",
+    description: "Taslak. Hortum, regülatör ve bağlantı kontrolü henüz yayınlanmadı.",
+    date: "2026-11-06",
+    dateLabel: "Taslak",
+  },
+  {
+    slug: "tup-kacagi-nasil-anlasilir",
+    title: "Tüp kaçağı nasıl anlaşılır",
+    description: "Taslak. Kaçak belirtileri henüz yayınlanmadı.",
+    date: "2026-11-06",
+    dateLabel: "Taslak",
+  },
+  {
+    slug: "kis-oncesi-soba-ve-tup-hazirligi",
+    title: "Kış öncesi soba ve tüp hazırlığı",
+    description: "Taslak. Kış hazırlığı notları henüz yayınlanmadı.",
+    date: "2026-11-06",
+    dateLabel: "Taslak",
+  },
+];
