@@ -34,7 +34,7 @@ export const posts: readonly Post[] = [
     dateLabel: "5 Kasım 2026",
     paragraphs: [
       "Turanlar Ticaret, 1977'den bugüne Tokat Merkez'de hizmet verir. Yıllar içinde değişen tek şey tüp ihtiyacının kendisi olmadı; alışverişin güvenli, samimi ve dürüst kalması da aynı çizgide tutuldu.",
-      "İşletme, Hürgaz tüp çeşitlerinin satışını Tokat Merkez ile sınırlı bir alanda yapar. Ev tipi, piknik, sanayi ve ticari kullanım tüplerinin yanında stoktaki diğer seçenekler için de yazılabilir.",
+      "İşletme, Hürgaz ev tipi, piknik tipi ve sanayi tipi tüplerin satışını Tokat Merkez ile sınırlı bir alanda yapar. Soba, kuzine, semaver, ocak ve bağlantı parçaları da vitrindedir. Vitrinde olmayan bir parça WhatsApp'tan sorulur.",
       "Sitede sepet ve online ödeme yoktur. Sipariş WhatsApp üzerinden, servis talebi sabit telefon üzerinden alınır. Fiyat, stok ve servis uygunluğu her talepte ayrıca konuşulur.",
     ],
   },

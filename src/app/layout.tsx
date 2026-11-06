@@ -2,10 +2,11 @@ import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { MobileOrderBar } from "@/components/layout/MobileOrderBar";
 import { Providers } from "@/components/layout/Providers";
+import { SiteShell } from "@/components/layout/SiteShell";
 import { WhatsAppFloat } from "@/components/layout/WhatsAppFloat";
 import { JsonLd } from "@/components/shared/JsonLd";
 import { business } from "@/data/business";
-import { localBusinessJsonLd } from "@/lib/seo";
+import { localBusinessJsonLd, websiteJsonLd } from "@/lib/seo";
 import { getSiteUrl } from "@/lib/site";
 import type { Metadata, Viewport } from "next";
 import { Manrope, Plus_Jakarta_Sans } from "next/font/google";
@@ -45,6 +46,9 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  verification: {
+    google: "0KjKlJxfcXll4Mtoke7PRzX_uzPuzyXY3qjttgefing",
+  },
   formatDetection: {
     telephone: false,
     email: false,
@@ -63,9 +67,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="tr"
+      data-scroll-behavior="smooth"
       className={`${manrope.variable} ${jakarta.variable} h-full scroll-smooth`}
     >
-      <body className="min-h-full overflow-x-clip bg-paper pb-[calc(5.25rem+env(safe-area-inset-bottom))] text-ink antialiased md:pb-0">
+      <body className="min-h-full overflow-x-clip bg-paper text-ink antialiased">
+        <JsonLd data={websiteJsonLd()} />
         <JsonLd data={localBusinessJsonLd()} />
         <a
           href="#icerik"
@@ -74,11 +80,14 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           İçeriğe geç
         </a>
         <Providers>
-          <Header />
-          <main id="icerik">{children}</main>
-          <Footer />
-          <MobileOrderBar />
-          <WhatsAppFloat />
+          <SiteShell
+            header={<Header />}
+            footer={<Footer />}
+            mobile={<MobileOrderBar />}
+            whatsapp={<WhatsAppFloat />}
+          >
+            {children}
+          </SiteShell>
         </Providers>
       </body>
     </html>

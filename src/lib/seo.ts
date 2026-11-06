@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { business } from "@/data/business";
-import { products } from "@/data/products";
+import type { Product } from "@/types/product";
 import { mapsSearchUrl } from "@/lib/maps";
 import { getSiteUrl } from "@/lib/site";
 
@@ -24,7 +24,7 @@ export function buildMetadata({
     url: new URL("/opengraph-image", getSiteUrl()).toString(),
     width: 1200,
     height: 630,
-    alt: "Turanlar Ticaret, Tokat Merkez'de Hürgaz tüp hizmeti",
+    alt: "Tokat Tüp | Turanlar Ticaret, Tokat Merkez'de Hürgaz tüp hizmeti",
   };
 
   return {
@@ -45,8 +45,20 @@ export function buildMetadata({
       card: "summary_large_image",
       title,
       description,
-      images: [image.url],
+      images: [{ url: image.url, alt: image.alt, width: image.width, height: image.height }],
     },
+  };
+}
+
+export function websiteJsonLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Tokat Tüp",
+    alternateName: business.name,
+    url: getSiteUrl(),
+    description: business.shortDescription,
+    inLanguage: "tr-TR",
   };
 }
 
@@ -55,6 +67,7 @@ export function localBusinessJsonLd() {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: business.name,
+    alternateName: "Tokat Tüp",
     description: business.shortDescription,
     foundingDate: String(business.foundedYear),
     url: getSiteUrl(),
@@ -110,12 +123,7 @@ export function breadcrumbJsonLd(items: Array<{ name: string; path: string }>) {
   };
 }
 
-export function productJsonLd(slug: string) {
-  const product = products.find((item) => item.slug === slug);
-  if (!product) {
-    return null;
-  }
-
+export function productJsonLd(product: Product) {
   const data: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "Product",
@@ -124,6 +132,15 @@ export function productJsonLd(slug: string) {
     category: product.usage,
     url: new URL(`/urunler/${product.slug}`, getSiteUrl()).toString(),
   };
+
+  if (product.priceKurus != null) {
+    data.offers = {
+      "@type": "Offer",
+      priceCurrency: "TRY",
+      price: (product.priceKurus / 100).toFixed(2),
+      url: data.url,
+    };
+  }
 
   switch (product.categoryId) {
     case "ev-tipi":
@@ -167,11 +184,11 @@ export function faqJsonLd(items: ReadonlyArray<{ question: string; answer: strin
   };
 }
 
-export function productListJsonLd() {
+export function productListJsonLd(products: Product[]) {
   return {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: "Turanlar Ticaret ürünleri",
+    name: "Tokat Tüp ürünleri",
     itemListElement: products.map((product, index) => ({
       "@type": "ListItem",
       position: index + 1,

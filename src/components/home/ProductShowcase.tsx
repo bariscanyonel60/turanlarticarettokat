@@ -1,39 +1,34 @@
 import { ProductGrid } from "@/components/products/ProductGrid";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
-import { products } from "@/data/products";
+import type { Product } from "@/types/product";
 
-export function ProductShowcase() {
+const HOME_PRODUCT_LIMIT = 12;
+
+export function ProductShowcase({ products }: { products: Product[] }) {
+  const preview = products.slice(0, HOME_PRODUCT_LIMIT);
+  const hasMore = products.length > preview.length;
+
   return (
-    <section id="urunler" className="bg-white py-16 sm:py-24">
+    <section id="urunler" className="bg-paper pt-6 pb-16 sm:pt-8 sm:pb-20">
       <Container>
-        <div className="grid gap-6 lg:grid-cols-12 lg:items-end">
-          <div className="lg:col-span-7">
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-navy">
-              Ürünlerimiz
-            </p>
-            <h2 className="mt-3 font-display text-3xl tracking-[-0.04em] text-navy sm:text-5xl">
-              Tüp, mangal ve kamp ürünleri
-            </h2>
+        <div className="mb-5 flex flex-col gap-2 sm:mb-6 sm:flex-row sm:items-end sm:justify-between">
+          <h1 className="font-display text-3xl tracking-[-0.05em] text-navy sm:text-5xl">
+            Tokat Tüp
+          </h1>
+          <p className="max-w-xl text-sm leading-6 text-ink-soft">
+            Tokat Tüp siparişi Turanlar Ticaret&apos;ten. 1977&apos;den beri Tokat Merkez&apos;de
+            Hürgaz tüp. {products.length} ürün. Fiyat kartta yazar, sipariş WhatsApp ile verilir.
+          </p>
+        </div>
+        <ProductGrid products={preview} />
+        {hasMore ? (
+          <div className="mt-8 flex justify-center">
+            <Button href="/urunler" variant="line">
+              Tüm ürünleri gör
+            </Button>
           </div>
-          <p className="text-base leading-7 text-ink-soft lg:col-span-5">
-            Tüp çeşitlerinin yanında tüp ekipmanı, mangal, soba, ısıtıcı, kamp
-            ürünü ve barbekü aksesuarı da bulunur.
-          </p>
-        </div>
-        <div className="mt-10">
-          <ProductGrid products={products} />
-        </div>
-        <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-          <p className="max-w-3xl text-sm leading-6 text-ink-soft">
-            2 kg ve 12 kg ev tüpleri, piknik tüpü ve 24 kg sanayi tüpü fotoğrafları
-            ürüne aittir. Mangal, soba, ısıtıcı, kamp ve ekipman görselleri ürün
-            grubunu tanıtır; stoktaki model WhatsApp'ta sorulur. Fiyat sitede yazılmaz.
-          </p>
-          <Button href="/urunler" variant="line" className="shrink-0">
-            Ürün sayfası
-          </Button>
-        </div>
+        ) : null}
       </Container>
     </section>
   );

@@ -206,7 +206,7 @@ export const guidePosts: readonly Post[] = [
       "Tokat sanayi tipi tüp: Turanlar Ticaret Tokat Merkez'de 24 kg Hürgaz sanayi tüpü satar. İş yeri servisi telefon veya WhatsApp ile konuşulur, fiyat sitede yazılmaz.",
     links: [
       { href: "/urunler/sanayi-tipi-tup", label: "24 kg sanayi tüpü" },
-      { href: "/urunler/ticari-kullanim-tupu", label: "Ticari kullanım tüpü" },
+      { href: "/urunler/sanayi-tipi-tup", label: "24 kg Sanayi Tüpü" },
       { href: "/hizmetlerimiz", label: "İşletmelere tedarik" },
       { href: "/sss", label: "Sanayi tüpü sorusu" },
     ],

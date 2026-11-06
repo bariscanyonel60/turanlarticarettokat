@@ -29,7 +29,7 @@ export function Services() {
             Hizmetlerimiz
           </p>
           <h2 className="mt-3 font-display text-3xl tracking-[-0.04em] text-navy sm:text-5xl">
-            İhtiyacınız Olduğunda Yanınızdayız
+            Tokat Tüp Hizmetleri
           </h2>
           <p className="mt-4 text-base leading-7 text-ink-soft">
             Satış ve servis yalnızca Tokat Merkez için planlanır.

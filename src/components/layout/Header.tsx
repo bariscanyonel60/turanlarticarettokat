@@ -94,7 +94,7 @@ export function Header() {
       >
         <Container className="flex h-full items-center gap-3">
           <Link href="/" aria-label="Turanlar Ticaret ana sayfa" className="shrink-0">
-            <Logo priority className="lg:h-10 lg:max-w-[9.5rem]" />
+            <Logo priority />
           </Link>
           <nav className="ml-auto hidden shrink-0 items-center gap-2 lg:flex xl:gap-3" aria-label="Ana menü">
             {navItems.map((item) => (

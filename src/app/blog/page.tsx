@@ -16,10 +16,10 @@ export default function BlogPage() {
     <>
       <PageHeader
         eyebrow="Blog"
-        title="Tokat tüp yazıları"
+        title="Tokat Tüp yazıları"
         lede="Tokat Merkez'de tüp, tüp ekipmanı, mangal, soba, ısıtıcı ve kamp ürünü. Güvenlik notları genel bilgidir; model ve fiyat WhatsApp'ta netleşir."
         crumbs={[
-          { name: "Ana Sayfa", path: "/" },
+          { name: "Tokat Tüp", path: "/" },
           { name: "Kurumsal", path: "/kurumsal" },
           { name: "Blog", path: "/blog" },
         ]}

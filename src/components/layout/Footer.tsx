@@ -4,13 +4,14 @@ import { MediaCredit } from "@/components/shared/MediaCredit";
 import { Container } from "@/components/ui/Container";
 import { business, businessHours, fullAddress } from "@/data/business";
 import { corporateLinks, legalLinks, navItems } from "@/data/navigation";
-import { products } from "@/data/products";
+import { getProducts } from "@/lib/catalog";
 import { mapsSearchUrl } from "@/lib/maps";
 import { generalWhatsappUrl } from "@/lib/whatsapp";
 import { cacheLife } from "next/cache";
 import Link from "next/link";
 
-export function Footer() {
+export async function Footer() {
+  const products = await getProducts();
   return (
     <footer className="bg-navy text-cream">
       <Container className="flex flex-col gap-5 border-b border-white/10 py-8 sm:flex-row sm:items-center sm:justify-between">
@@ -43,7 +44,7 @@ export function Footer() {
       <Container className="grid gap-12 py-16 sm:grid-cols-2 lg:grid-cols-12 lg:py-20">
         <div className="lg:col-span-3">
           <Link href="/" aria-label="Turanlar Ticaret ana sayfa" className="inline-flex rounded-2xl bg-cream px-4 py-3">
-            <Logo className="h-12 max-w-[15rem] sm:h-14" />
+            <Logo />
           </Link>
           <p className="mt-5 max-w-sm text-base leading-7 text-mist">
             {business.foundedYear}&apos;den bugüne {business.shortDescription}

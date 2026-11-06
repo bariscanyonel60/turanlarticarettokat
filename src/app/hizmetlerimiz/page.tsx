@@ -8,9 +8,9 @@ import { Factory, House, MapPinned, MessageCircle } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
 export const metadata = buildMetadata({
-  title: "Tokat Merkez Tüp Servisi",
+  title: "Tokat Tüp Hizmetleri",
   description:
-    "Turanlar Ticaret, Tokat Merkez'de ev tipi tüp satışı, işletmelere tüp tedariki ve WhatsApp ile sipariş hizmeti sunar.",
+    "Tokat Tüp hizmeti Turanlar Ticaret'te. Tokat Merkez'de ev tipi tüp satışı, işletmelere tüp tedariki ve WhatsApp ile sipariş.",
   path: "/hizmetlerimiz",
 });
 
@@ -38,17 +38,17 @@ export default function ServicesPage() {
         <Container className="py-12 sm:py-16">
           <Breadcrumbs
             items={[
-              { name: "Ana Sayfa", path: "/" },
+              { name: "Tokat Tüp", path: "/" },
               { name: "Hizmetlerimiz", path: "/hizmetlerimiz" },
             ]}
           />
           <h1 className="mt-6 max-w-3xl font-display text-4xl tracking-[-0.045em] text-navy sm:text-6xl">
-            İhtiyacınız Olduğunda Yanınızdayız
+            Tokat Tüp Hizmetleri
           </h1>
           <p className="mt-5 max-w-2xl text-base leading-7 text-ink-soft sm:text-lg">
-            Turanlar Ticaret, tüp satışı ve servis taleplerini yalnızca Tokat Merkez
-            için karşılar. Teslimat süresi veya kesintisiz hizmet gibi doğrulanmamış
-            vaatler paylaşılmaz.
+            Turanlar Ticaret, Tokat Tüp satışını ve servis taleplerini yalnızca Tokat
+            Merkez için karşılar. Teslimat süresi veya kesintisiz hizmet gibi
+            doğrulanmamış vaatler paylaşılmaz.
           </p>
         </Container>
       </section>

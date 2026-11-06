@@ -23,7 +23,7 @@ export default function FaqPage() {
       <JsonLd data={faqJsonLd(faqs)} />
       <PageHeader
         crumbs={[
-          { name: "Ana Sayfa", path: "/" },
+          { name: "Tokat Tüp", path: "/" },
           { name: "Sıkça Sorulan Sorular", path: "/sss" },
         ]}
         eyebrow="Tokat Tüp"

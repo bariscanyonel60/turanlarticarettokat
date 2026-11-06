@@ -41,7 +41,7 @@ export default function CookiePage() {
         title="Çerez politikası"
         lede="Site, gezinmenizi izleyen bir çerez kullanmaz. Harita yalnızca iletişim sayfasında üçüncü taraf içeriği olarak durur."
         crumbs={[
-          { name: "Ana Sayfa", path: "/" },
+          { name: "Tokat Tüp", path: "/" },
           { name: "Kurumsal", path: "/kurumsal" },
           { name: "Çerez Politikası", path: "/cerez-politikasi" },
         ]}

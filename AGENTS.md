@@ -22,6 +22,10 @@ npm run build
 
 Üretim adresi için `NEXT_PUBLIC_SITE_URL` tanımlayın (ör. `https://ornek-alanadi.com`). Tanımlı değilse Vercel üretim hostu, o da yoksa `http://localhost:3000` kullanılır. Canonical, Open Graph ve sitemap bu adresten üretilir.
 
+Cloudinary anahtarları yalnızca `.env.local` içindedir: `CLOUDINARY_CLOUD_NAME`, `CLOUDINARY_API_KEY`, `CLOUDINARY_API_SECRET`. Güzel Hosting MySQL bilgileri de yalnızca bu dosyadadır: `MYSQL_HOST`, `MYSQL_PORT`, `MYSQL_DATABASE`, `MYSQL_USER`, `MYSQL_PASSWORD`. Yönetim girişi `ADMIN_USERNAME`, `ADMIN_PASSWORD` ve `ADMIN_SESSION_SECRET` ile açılır. Bu dosya git’e girmez. Değerleri koda veya sohbete yazmayın.
+
+Ürün yönetimi `/admin` adresindedir. Kayıtlar MySQL'dedir, yüklenen görseller Cloudinary'ye gider. Veritabanı boşken paneldeki aktarma düğmesi sitedeki mevcut kataloğu yazar. Bağlantı kurulamazsa ziyaretçi sayfaları `src/data/products.ts` kataloğunu göstermeye devam eder. Logo, banner ve ürün fotoğrafları yalnızca `https://res.cloudinary.com/ddm7ouuwk/...` adreslerinden okunur. `public/images/` altında kopya tutulmaz. Sekme simgesi `src/app/icon.png` ve `src/app/favicon.ico` dosyalarındadır.
+
 ## Dokunma / uydurma
 
 - Fiyat, puan, yorum, müşteri sayısı ve "yetkili bayi" iddiası ekleme. Hizmete başlama yılı işletmenin bildirdiği 1977'dir; başka yıl yazma.
@@ -30,7 +34,7 @@ npm run build
 - Hizmet bölgesi yalnızca Tokat Merkez.
 - Sosyal medya bağlantısı doğrulanmadan eklenmez.
 - `servicePhoto` boşken sahte servis aracı görseli kullanılmaz. Gerçek fotoğraf `{ src, alt, width, height }` olarak eklenir.
-- Ürün fotoğrafı için `image` alanını `{ kind: "photo", src, alt, width, height }` yapın. Dosyalar `public/images/products/` altına konur. Kamp ve ekipman kartlarındaki görseller lisanslı örneklerdir; stoktaki modelin fotoğrafı değildir. `credit` alanı kaynakla birlikte durur.
+- Ürün fotoğrafı için `image` alanını `{ kind: "photo", src, alt, width, height }` yapın. `src` Cloudinary adresidir. Kamp ve ekipman kartlarındaki örnek görseller lisanslıdır; stoktaki modelin fotoğrafı değildir. `credit` alanı kaynakla birlikte durur.
 
 ## İletişim kaynağı
 

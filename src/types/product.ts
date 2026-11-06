@@ -19,6 +19,7 @@ export type ProductPhoto = {
   height: number;
   /** Lisanslı örnek görselin kısa kaynağı. */
   credit?: string;
+  id?: number;
 };
 
 export type ProductImage =
@@ -35,6 +36,8 @@ export type Product = {
   summary: string;
   usage: string;
   seoDescription: string;
+  /** Kuruş cinsinden satış fiyatı. Boşsa sitede rakam gösterilmez. */
+  priceKurus: number | null;
   /** Yalnızca doğrulanmış dolum bilgisi. */
   capacity: string | null;
   image: ProductImage;

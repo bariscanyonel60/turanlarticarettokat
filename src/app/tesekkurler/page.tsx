@@ -20,7 +20,7 @@ export default function ThanksPage() {
     <>
       <PageHeader
         crumbs={[
-          { name: "Ana Sayfa", path: "/" },
+          { name: "Tokat Tüp", path: "/" },
           { name: "Teşekkürler", path: "/tesekkurler" },
         ]}
         eyebrow="Tokat Merkez"

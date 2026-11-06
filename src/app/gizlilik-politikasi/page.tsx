@@ -19,7 +19,7 @@ export default function PrivacyPage() {
       title: "Sitenin kapsamı",
       paragraphs: [
         `${business.name} sitesi, ${business.area} için tüp çeşitlerini tanıtır. Sepet, üyelik, online ödeme ve yorum sistemi yoktur.`,
-        "Fiyat sitede yazılmaz. Sipariş WhatsApp ile, servis talebi sabit telefonla alınır.",
+        "Fiyat ürün kartında yazar. Sepet yoktur. Sipariş WhatsApp ile, servis talebi sabit telefonla alınır.",
       ],
     },
     {
@@ -54,7 +54,7 @@ export default function PrivacyPage() {
         title="Gizlilik politikası"
         lede="Site bir vitrindir. Kişisel veri, sipariş veya servis için bize ulaştığınızda oluşur."
         crumbs={[
-          { name: "Ana Sayfa", path: "/" },
+          { name: "Tokat Tüp", path: "/" },
           { name: "Kurumsal", path: "/kurumsal" },
           { name: "Gizlilik Politikası", path: "/gizlilik-politikasi" },
         ]}

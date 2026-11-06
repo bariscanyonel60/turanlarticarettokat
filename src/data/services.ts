@@ -23,7 +23,7 @@ export const services = [
   {
     id: "whatsapp",
     title: "WhatsApp ile Kolay Sipariş",
-    summary: "Ürün adı hazır mesaja yazılır, fiyat WhatsApp'ta konuşulur.",
+    summary: "Ürün adı hazır mesaja yazılır, fiyat kartta yazar.",
     detail:
       "Sitede sepet ve online ödeme yoktur. Bir tüp çeşidini seçtiğinizde WhatsApp, ürün adını içeren bir mesajla açılır. Fiyat, stok ve Tokat Merkez servis durumu bu yazışmada netleşir.",
   },
@@ -35,7 +35,7 @@ export const orderSteps = [
   {
     number: "01",
     title: "Tüp Çeşidini Seç",
-    text: "Ev, piknik, sanayi, ticari veya diğer tüp çeşitleri arasından ihtiyacınıza uygun olanı belirleyin.",
+    text: "Ev, piknik ve sanayi tüpleri ile vitrindeki soba, ocak ve bağlantı parçaları arasından ihtiyacınıza uygun olanı belirleyin.",
   },
   {
     number: "02",
@@ -51,9 +51,9 @@ export const orderSteps = [
 
 export const aboutCopy = {
   title: "1977'den bugüne Tokat Merkez",
-  lead: "Turanlar Ticaret, 1977'den bugüne Tokat Merkez'de hizmet verir. Yıllar boyu güvenli, samimi ve dürüst bir alışveriş gerçekleştirir.",
+  lead: "Tokat Tüp için Turanlar Ticaret, 1977'den bugüne Tokat Merkez'de hizmet verir. Yıllar boyu güvenli, samimi ve dürüst bir alışveriş gerçekleştirir.",
   paragraphs: [
-    "Hürgaz tüp çeşitlerinin satışını Tokat Merkez'de yaparız. Ev tipi, piknik tipi, sanayi tipi ve ticari kullanıma yönelik tüplerin yanında stoktaki diğer seçenekler için de yazabilirsiniz.",
+    "Hürgaz ev tipi, piknik tipi ve sanayi tipi tüplerin satışını Tokat Merkez'de yaparız. Soba, kuzine, semaver, ocak ve bağlantı parçaları da vitrindedir.",
     "Sipariş WhatsApp hattından, servis talebi sabit telefondan alınır. Sitede fiyat, sepet veya online ödeme yer almaz. Stok, fiyat ve servis uygunluğu her siparişte ayrıca konuşulur.",
     "Hizmet bölgesi Tokat Merkez'dir. Müşteri sayısı veya yetkili bayi unvanı gibi paylaşılmamış bilgiler bu sitede kullanılmaz.",
   ],

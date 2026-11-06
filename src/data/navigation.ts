@@ -57,6 +57,7 @@ export const navItems = [
     children: corporateLinks,
   },
   { href: "/urunler", label: "Ürünlerimiz" },
+  { href: "/galeri", label: "Galeri" },
   { href: "/hizmetlerimiz", label: "Hizmetlerimiz" },
   { href: "/iletisim", label: "İletişim" },
 ] as const satisfies readonly NavItem[];

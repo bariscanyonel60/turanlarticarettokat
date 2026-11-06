@@ -64,7 +64,7 @@ export default function KvkkPage() {
         title="Kişisel verilerin korunması"
         lede="Bu metin, Turanlar Ticaret sitesinin ve sipariş hatlarının bugünkü işleyişini anlatır."
         crumbs={[
-          { name: "Ana Sayfa", path: "/" },
+          { name: "Tokat Tüp", path: "/" },
           { name: "Kurumsal", path: "/kurumsal" },
           { name: "KVKK", path: "/kvkk" },
         ]}

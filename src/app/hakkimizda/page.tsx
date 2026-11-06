@@ -7,9 +7,9 @@ import { buildMetadata } from "@/lib/seo";
 import { generalWhatsappUrl } from "@/lib/whatsapp";
 
 export const metadata = buildMetadata({
-  title: "Hakkımızda",
+  title: "Tokat Tüp Hakkımızda",
   description:
-    "Turanlar Ticaret, 1977'den bugüne Tokat Merkez'de güvenli, samimi ve dürüst bir alışverişle Hürgaz tüp hizmeti verir.",
+    "Tokat Tüp için Turanlar Ticaret. 1977'den bugüne Tokat Merkez'de güvenli, samimi ve dürüst bir alışverişle Hürgaz tüp hizmeti.",
   path: "/hakkimizda",
 });
 
@@ -33,7 +33,7 @@ export default function AboutPage() {
         <div className="lg:col-span-7">
           <Breadcrumbs
             items={[
-              { name: "Ana Sayfa", path: "/" },
+              { name: "Tokat Tüp", path: "/" },
               { name: "Kurumsal", path: "/kurumsal" },
               { name: "Hakkımızda", path: "/hakkimizda" },
             ]}

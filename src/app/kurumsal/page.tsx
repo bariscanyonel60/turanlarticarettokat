@@ -9,7 +9,7 @@ import Link from "next/link";
 export const metadata = buildMetadata({
   title: "Kurumsal",
   description:
-    "Turanlar Ticaret kurumsal sayfaları: hakkımızda, blog, sıkça sorulan sorular, KVKK, gizlilik ve çerez politikası. Hizmet Tokat Merkez'dedir.",
+    "Tokat Tüp için Turanlar Ticaret kurumsal sayfaları: hakkımızda, blog, sıkça sorulan sorular, KVKK, gizlilik ve çerez politikası. Hizmet Tokat Merkez'dedir.",
   path: "/kurumsal",
 });
 
@@ -36,7 +36,7 @@ export default function CorporatePage() {
         title="1977'den bugüne Tokat Merkez"
         lede="Turanlar Ticaret, 1977'den bugüne Tokat Merkez'de hizmet verir. Yıllar boyu güvenli, samimi ve dürüst bir alışveriş gerçekleştirir."
         crumbs={[
-          { name: "Ana Sayfa", path: "/" },
+          { name: "Tokat Tüp", path: "/" },
           { name: "Kurumsal", path: "/kurumsal" },
         ]}
       />
@@ -46,9 +46,9 @@ export default function CorporatePage() {
             {business.foundedYear}
           </p>
           <p className="mt-4 max-w-2xl text-base leading-7 text-ink-soft">
-            {business.name}, {business.area} sınırında {business.brandSold} tüp
-            çeşitlerinin satışını yapar. Sipariş WhatsApp, servis talebi sabit
-            telefon üzerinden alınır.
+            Tokat Tüp araması {business.name} içindir. {business.area} sınırında{" "}
+            {business.brandSold} tüp çeşitlerinin satışını yapar. Sipariş WhatsApp,
+            servis talebi sabit telefon üzerinden alınır.
           </p>
           <ul className="mt-12 grid gap-4 md:grid-cols-3">
             {principles.map((item) => (

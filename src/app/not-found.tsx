@@ -26,7 +26,7 @@ export default function NotFound() {
         <ol className="flex flex-wrap items-center gap-2 text-sm text-ink-soft">
           <li>
             <Link href="/" className="hover:text-navy">
-              Ana Sayfa
+              Tokat Tüp
             </Link>
           </li>
           <li aria-hidden>/</li>

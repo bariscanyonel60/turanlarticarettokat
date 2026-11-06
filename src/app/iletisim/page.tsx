@@ -12,7 +12,7 @@ import { MapPin, MessageCircle, Phone } from "lucide-react";
 export const metadata = buildMetadata({
   title: "Tokat Tüp Siparişi İletişim",
   description:
-    "Turanlar Ticaret iletişim: Bahçelievler, Yazıcıoğlu Caddesi, Tokat Merkez. Telefon 0356 228 52 54, WhatsApp ile tüp siparişi.",
+    "Tokat Tüp siparişi için Turanlar Ticaret. Bahçelievler, Yazıcıoğlu Caddesi, Tokat Merkez. Telefon 0356 228 52 54, WhatsApp ile tüp siparişi.",
   path: "/iletisim",
 });
 
@@ -23,16 +23,17 @@ export default function ContactPage() {
         <Container className="py-12 sm:py-16">
           <Breadcrumbs
             items={[
-              { name: "Ana Sayfa", path: "/" },
+              { name: "Tokat Tüp", path: "/" },
               { name: "İletişim", path: "/iletisim" },
             ]}
           />
           <h1 className="mt-6 font-display text-4xl tracking-[-0.045em] text-navy sm:text-6xl">
-            Tokat Merkez&apos;de bize ulaşın
+            Tokat Tüp için bize ulaşın
           </h1>
           <p className="mt-5 max-w-2xl text-base leading-7 text-ink-soft sm:text-lg">
-            Tüp siparişi için WhatsApp hattını, servis talebi için sabit telefonu
-            kullanın. Harita, Google&apos;daki işletme kaydını gösterir.
+            Tokat Tüp siparişi için WhatsApp hattını, servis talebi için sabit telefonu
+            kullanın. Adres Tokat Merkez&apos;dedir. Harita, Google&apos;daki işletme
+            kaydını gösterir.
           </p>
         </Container>
       </section>

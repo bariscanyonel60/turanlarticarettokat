@@ -1,5 +1,4 @@
 import { AboutPreview } from "@/components/home/AboutPreview";
-import { Hero } from "@/components/home/Hero";
 import { HomeContact } from "@/components/home/HomeContact";
 import { HomeFaq } from "@/components/home/HomeFaq";
 import { OrderSteps } from "@/components/home/OrderSteps";
@@ -8,6 +7,7 @@ import { ServiceBanner } from "@/components/home/ServiceBanner";
 import { Services } from "@/components/home/Services";
 import { JsonLd } from "@/components/shared/JsonLd";
 import { faqs } from "@/data/faqs";
+import { getProducts } from "@/lib/catalog";
 import { faqJsonLd, productListJsonLd, buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
@@ -18,13 +18,13 @@ export const metadata = buildMetadata({
   absoluteTitle: true,
 });
 
-export default function HomePage() {
+export default async function HomePage() {
+  const products = await getProducts();
   return (
     <>
-      <JsonLd data={productListJsonLd()} />
+      <JsonLd data={productListJsonLd(products)} />
       <JsonLd data={faqJsonLd(faqs)} />
-      <Hero />
-      <ProductShowcase />
+      <ProductShowcase products={products} />
       <Services />
       <ServiceBanner />
       <AboutPreview />

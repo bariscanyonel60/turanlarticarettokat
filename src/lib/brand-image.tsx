@@ -4,7 +4,7 @@ import { ImageResponse } from "next/og";
 
 export const imageSize = { width: 1200, height: 630 };
 export const imageContentType = "image/png";
-export const imageAlt = "Turanlar Ticaret — Tokat Merkez tüp hizmeti";
+export const imageAlt = "Tokat Tüp | Turanlar Ticaret, Tokat Merkez tüp hizmeti";
 
 const jakartaBold = readFileSync(
   join(process.cwd(), "src/assets/fonts/PlusJakartaSans-Bold.ttf"),

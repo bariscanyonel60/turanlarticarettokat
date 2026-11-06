@@ -9,6 +9,7 @@ import { getSiteUrl } from "@/lib/site";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Suspense } from "react";
 
 type PostPageProps = {
   params: Promise<{ slug: string }>;
@@ -32,7 +33,23 @@ export async function generateMetadata({ params }: PostPageProps): Promise<Metad
   });
 }
 
-export default async function BlogPostPage({ params }: PostPageProps) {
+export default function BlogPostPage({ params }: PostPageProps) {
+  return (
+    <Suspense
+      fallback={
+        <section className="bg-paper">
+          <Container className="py-16">
+            <p className="text-sm text-ink-soft">Yazı yükleniyor.</p>
+          </Container>
+        </section>
+      }
+    >
+      <BlogPostContent params={params} />
+    </Suspense>
+  );
+}
+
+async function BlogPostContent({ params }: PostPageProps) {
   const { slug } = await params;
   const post = getPost(slug);
   if (!post) {
@@ -61,7 +78,7 @@ export default async function BlogPostPage({ params }: PostPageProps) {
         title={post.title}
         lede={post.description}
         crumbs={[
-          { name: "Ana Sayfa", path: "/" },
+          { name: "Tokat Tüp", path: "/" },
           { name: "Blog", path: "/blog" },
           { name: post.title, path: `/blog/${post.slug}` },
         ]}

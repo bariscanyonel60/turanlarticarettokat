@@ -10,7 +10,7 @@ export const outdoorPosts: readonly Post[] = [
     description:
       "Tokat Merkez'de tüp güvenliği: tüp dik durur, hortum ve regülatör ayrı sorulur. Turanlar Ticaret montaj adımı yayınlamaz. Kapanış 22:00.",
     links: [
-      { href: "/urunler/tup-ekipmanlari", label: "Tüp ekipmanları" },
+      { href: "/urunler", label: "Ürün vitrini" },
       { href: "/urunler/ev-tipi-tup", label: "2 kg ev tipi tüp" },
       { href: "/urunler/12kg-ev-tupu", label: "12 kg ev tüpü" },
       { href: "/iletisim", label: "Telefon" },
@@ -61,7 +61,7 @@ export const outdoorPosts: readonly Post[] = [
     description:
       "Tokat Merkez'de tüp ekipmanı: regülatör, hortum ve bağlantı. Turanlar Ticaret model ve fiyatı WhatsApp'ta söyler. Montaj adımı yayınlamaz.",
     links: [
-      { href: "/urunler/tup-ekipmanlari", label: "Tüp ekipmanları" },
+      { href: "/urunler", label: "Ürün vitrini" },
       { href: "/blog/tokat-tup-guvenligi", label: "Tüp güvenliği" },
       { href: "/urunler/piknik-tupu", label: "Piknik tüpü" },
       { href: "/iletisim", label: "İletişim" },
@@ -78,21 +78,21 @@ export const outdoorPosts: readonly Post[] = [
         heading: "Ne zaman parça değişir",
         paragraphs: [
           "Hortumun dışındaki çatlak, şişme ve sertleşme değişim konuşmasının gerekçesidir. Regülatörün zor dönmesi veya bağlantıdaki gevşeklik de aynı kapıya çıkar. Bu belirtiler bir arıza teşhisi değildir. Kişi parçayı anlatır, işletme stoktaki karşılığını söyler. Sökme ve takma adımları bu yazıda yoktur. Cihazın kitapçığı ve işi bilen kişi o işi yapar.",
-          "Görsel, hortum ve regülatörlü bir bağlantı örneğidir. Kaynak görselin altındadır. Tokat Merkez'deki parçanın rengi, markası ve ölçüsü fotoğraftan okunmaz. Örnek, grubu tanıtır.",
+          "Vitrindeki bağlantı parçaları, dükkândaki ürünün fotoğrafıdır. Ölçü ve uyum fotoğraftan tahmin edilmez, WhatsApp'ta sorulur.",
         ],
       },
       {
         heading: "Siparişin sınırı",
         paragraphs: [
           "Hizmet bölgesi Tokat Merkez'dir. İlçe ve il dışı için düzenli ekipman servisi yazılmaz. Satış noktası Bahçelievler Mahallesi, Yazıcıoğlu Caddesi, 3. Geçit No: 47/C adresindedir. Parçayı kendisi almak ile adrese bırakmak ayrı konuşulur. Teslimat süresi için dakika yoktur. Kapanış 22:00'dır. Açılış telefonda öğrenilir.",
-          "Ekipman siparişi tüp siparişiyle aynı hatta gider. WhatsApp +90 555 860 63 69 numarasıdır. Hazır mesaj, ürün sayfasından açılırsa tüp ekipmanı adını taşır. Başka bir markanın kampanya metni veya deniz tipi marin tesisat bu sayfaya eklenmez. Turanlar Ticaret'in yazdığı sınır ev, iş yeri, mangal, soba, ısıtıcı ve kamp ürünüdür.",
+          "Ekipman siparişi tüp siparişiyle aynı hatta gider. WhatsApp +90 555 860 63 69 numarasıdır. Hazır mesaj, ürün sayfasından açılırsa ürün adını taşır. Başka bir markanın kampanya metni veya deniz tipi marin tesisat bu sayfaya eklenmez. Vitrinde tüp, soba, semaver, kuzine, ocak ve bağlantı parçaları vardır. Vitrinde olmayan bir parça ayrıca sorulur.",
         ],
       },
       {
         heading: "Mesajda yazılması gerekenler",
         paragraphs: [
-          "Kısa ve net bir mesaj parçayı hızlandırır. İlk satırda tüpün adı olur: 2 kg ev tipi, 12 kg ev tüpü, piknik, 24 kg sanayi veya ticari. İkinci satırda parça adı olur: hortum, regülatör veya bağlantı. Üçüncü satırda yer olur: ev, iş yeri, mangal, soba, ısıtıcı ya da kamp ocağı. Adres Tokat Merkez içindeyse mahalle de yazılır. Bu dört bilgi fiyatın ve stokun konuşulması için yeterlidir.",
-          "Fotoğraftaki bağlantı bir örnektir. Kaynak, ürün kartının altında durur. Dükkândaki parçanın markası, rengi ve boyu o kareden okunmaz. Kişi elindeki eski parçanın boyunu biliyorsa mesaja ekler. Bilmiyorsa bilmiyorum demek yanlış parça göndermekten iyidir. Turanlar Ticaret uyumu tahminle ilan etmez.",
+          "Kısa ve net bir mesaj parçayı hızlandırır. İlk satırda tüpün adı olur: 2 kg ev tipi, 12 kg ev tüpü, piknik veya 24 kg sanayi. İkinci satırda parça adı olur: hortum, regülatör veya bağlantı. Üçüncü satırda yer olur: ev, iş yeri, soba ya da kamp ocağı. Adres Tokat Merkez içindeyse mahalle de yazılır. Bu dört bilgi fiyatın ve stokun konuşulması için yeterlidir.",
+          "Vitrindeki fotoğraf, satılan parçanın kendi görselidir. Kişi elindeki eski parçanın boyunu biliyorsa mesaja ekler. Bilmiyorsa bilmiyorum demek yanlış parça göndermekten iyidir. Turanlar Ticaret uyumu tahminle ilan etmez.",
           "Montaj yine yazılmaz. Parça satışı, parçanın evde takılacağı anlamına gelmez. Cihazın kitapçığı ve işi bilen kişi takma işini görür. Gaz kokusu varsa parça siparişi beklenmez. Vana kapatılır, pencere açılır, alev yakılmaz ve itfaiye ile gaz dağıtım hattı aranır. Bu cümle acil servis sözü değildir. İşletmenin kapanışı 22:00'dır. Açılış saati ve günler 0356 228 52 54 hattından öğrenilir.",
         ],
       },
@@ -105,9 +105,10 @@ export const outdoorPosts: readonly Post[] = [
     description:
       "Tokat Merkez'de ısıtıcı ve soba. Gazlı model stokta sorulur. Turanlar Ticaret elektrikli ısıtıcı kataloğu yayınlamaz. Fiyat WhatsApp'tadır.",
     links: [
-      { href: "/urunler/isitici", label: "Isıtıcı" },
-      { href: "/urunler/soba", label: "Soba" },
-      { href: "/urunler/tup-ekipmanlari", label: "Tüp ekipmanı" },
+      { href: "/urunler/soba", label: "Gönen Soba" },
+      { href: "/urunler/soba", label: "Gönen Soba" },
+      { href: "/urunler/semaver", label: "Özenler Semaver" },
+      { href: "/urunler", label: "Ürün vitrini" },
       { href: "/sss", label: "Sıkça sorulan sorular" },
     ],
     sections: [
@@ -121,7 +122,7 @@ export const outdoorPosts: readonly Post[] = [
       {
         heading: "Soba ayrı başlıktır",
         paragraphs: [
-          "Soba, dış mekân ısıtıcısının kısa adı değildir. Turanlar Ticaret sobayı ayrı ürün olarak tutar. Yakıt tipi ve model stokta belli olur. Örnek görsel bir sobayı tanıtır; dükkândaki sobanın birebir fotoğrafı diye sunulmaz. Isıtıcı görseli de gazlı bir dış mekân örneğidir. İki sayfa karıştırılırsa WhatsApp yanlış ürün adı taşır.",
+          "Soba, dış mekân ısıtıcısının kısa adı değildir. Turanlar Ticaret sobayı ayrı ürün olarak tutar. Soba sayfasındaki görsel, işletmenin paylaştığı Gönen emaye sobadır. Semaver de ayrı bir üründür. Isıtıcı görseli gazlı bir dış mekân örneğidir. İki sayfa karıştırılırsa WhatsApp yanlış ürün adı taşır.",
           "İkisi için de fiyat yazılmaz. Güncel bedel, model belli olduktan sonra WhatsApp veya telefonda konuşulur. Başka markanın ürün incelemesi, puanı ve seri adı bu yazıya taşınmaz.",
         ],
       },
@@ -136,7 +137,7 @@ export const outdoorPosts: readonly Post[] = [
         heading: "Gazlı ısıtıcıda tüp ayrı sorulur",
         paragraphs: [
           "Gazlı bir ısıtıcı düşünülüyorsa tüp ikinci bir üründür. 2 kg ev tipi tüp, 12 kg ev tüpü ve piknik tüpü birbirinin yerine yazılmaz. Hangi gövdenin o ısıtıcıya uyduğu sitede tahmin edilmez. Mesajda ısıtıcı ve tüp ayrı adlarla durur. Hortum ve regülatör de gerekiyorsa tüp ekipmanı üçüncü satır olur. Hürgaz adı tüp kartlarına aittir. Isıtıcı kartına Hürgaz etiketi konmaz.",
-          "Örnek görsel gece çekilmiş bir dış mekân ısıtıcısıdır. Kaynak kartın altındadır. Tokat'taki stok modelinin boyu, rengi ve markası o kareden okunmaz. Soba görseli de örnektir ve ısıtıcı görselinin yerine geçmez. İki ürün aynı rafta durabilir. Sipariş yine ayrı adlarla verilir.",
+          "Isıtıcı görseli bir dış mekân örneğidir. Kaynak kartın altındadır. Soba görseli ise Gönen emaye sobadır ve ısıtıcının yerine geçmez. Semaver de ayrı karttadır. Sipariş ayrı adlarla verilir.",
           "Balkon ve bahçe için genel hatırlatma şudur: cihaz devrilmeyecek bir zeminde, kendi açıklığına göre ve havalanan bir yerde durur. Kapalı odaya dış mekân tipi sıkıştırılmaz. Bu cümle montaj kılavuzu değildir. Dairenin ve cihazın kendi kuralı geçerlidir. Turanlar Ticaret kaçak kontrolü veya kurulum ekibi ilan etmez. Satış ve soru Tokat Merkez ile sınırlıdır. Kapanış 22:00'dır. Fiyat model netleşince WhatsApp +90 555 860 63 69 veya 0356 228 52 54 hattında konuşulur.",
         ],
       },
@@ -149,9 +150,9 @@ export const outdoorPosts: readonly Post[] = [
     description:
       "Tokat Merkez'de kamp ocağı ve kamp ürünü. Piknik tüpünden ayrıdır. Turanlar Ticaret model karşılaştırması ve fiyat listesi yayınlamaz.",
     links: [
-      { href: "/urunler/kamp-urunleri", label: "Kamp ürünleri" },
+      { href: "/urunler/orgaz-kamp-ocagi", label: "Orgaz Kamp Ocağı" },
       { href: "/urunler/piknik-tupu", label: "Piknik tüpü" },
-      { href: "/urunler/tup-ekipmanlari", label: "Tüp ekipmanı" },
+      { href: "/urunler", label: "Ürün vitrini" },
       { href: "/iletisim", label: "İletişim" },
     ],
     sections: [
@@ -193,23 +194,23 @@ export const outdoorPosts: readonly Post[] = [
     description:
       "Tokat Merkez'de mangal. Kömürlü ve gazlı ayrımı stokta sorulur. Turanlar Ticaret belirli bir barbekü serisi incelemesi yayınlamaz. Fiyat WhatsApp'tadır.",
     links: [
-      { href: "/urunler/mangal", label: "Mangal" },
-      { href: "/urunler/barbeku-aksesuarlari", label: "Barbekü aksesuarları" },
-      { href: "/urunler/tup-ekipmanlari", label: "Tüp ekipmanı" },
+      { href: "/urunler", label: "Ürün vitrini" },
+      { href: "/urunler", label: "Ürün vitrini" },
+      { href: "/urunler", label: "Ürün vitrini" },
       { href: "/iletisim", label: "İletişim" },
     ],
     sections: [
       {
         heading: "Kömürlü ile gazlı aynı kart değildir",
         paragraphs: [
-          "Mangal arayan kişi kömürlü ile gazlı arasında kalır. Kömürlü mangal köz ve dumanla pişirir. Gazlı barbekü, tüple çalışan ve ısısı daha çabuk ayarlanan bir düzendir. Turanlar Ticaret mangal satar. Rafta o gün kömürlü mü gazlı mı olduğu sitede ilan edilmez. İkisi de varsa ikisi de WhatsApp'ta söylenir. Belirli bir seri adı, otomatik ateşleme iddiası veya dumansız vaat bu sayfada yoktur.",
-          "Örnek görsel kapaklı küçük bir mangalı ve ızgara telini gösterir. Bu, satılan her mangalın ölçüsü değildir. Bahçe, balkon veya geniş teras ayrımı mesajda yazılır. Apartman kuralı ve komşu mesafesi kişinin kendi sorumluluğundadır. Site, her balkonda mangal yakılır demez.",
+          "Mangal arayan kişi kömürlü ile gazlı arasında kalır. Kömürlü mangal köz ve dumanla pişirir. Gazlı barbekü, tüple çalışan ve ısısı daha çabuk ayarlanan bir düzendir. Vitrindeki kart büyük boy lav taşlı tüplü mangaldır. Başka bir mangal sorulacaksa WhatsApp'tan yazılır. Belirli bir seri adı, otomatik ateşleme iddiası veya dumansız vaat bu sayfada yoktur.",
+          "Bahçe, balkon veya geniş teras ayrımı mesajda yazılır. Apartman kuralı ve komşu mesafesi kişinin kendi sorumluluğundadır. Site, her balkonda mangal yakılır demez.",
         ],
       },
       {
         heading: "Aksesuar mangalın kendisi değildir",
         paragraphs: [
-          "Maşa, tel, şiş ve kömür gereci barbekü aksesuarı kartındadır. Mangal gövdesi ayrıdır. İkisi birden isteniyorsa iki ad yazılır. Aksesuar görseli de örnektir. Setin içinde kaç parça olduğu stokta netleşir. Başka markanın on parçalık aksesuar listesi buraya taşınmaz.",
+          "Maşa, tel, şiş ve kömür gereci vitrinde ayrı kart değildir. İstenirse WhatsApp mesajına yazılır. Setin içinde kaç parça olduğu stokta netleşir. Başka markanın on parçalık aksesuar listesi buraya taşınmaz.",
           "Gazlı bir mangal düşünülüyorsa tüp ve ekipman üçüncü bir satır olur. Ev tüpü ile mangal tüpü karıştırılmaz. Hangi tüpün uyduğu tahmin edilmez, sorulur. Piknik tüpü her mangala uyar diye bir cümle yazılmaz.",
         ],
       },
@@ -224,8 +225,8 @@ export const outdoorPosts: readonly Post[] = [
         heading: "Bahçe, balkon ve iş yeri",
         paragraphs: [
           "Mangalın duracağı yer siparişin parçasıdır. Bahçe ile dar balkon aynı gövdeyi istemeyebilir. Kişi yerin kabaca ölçüsünü yazarsa işletme stoktaki modele bakabilir. Ölçü uydurulmaz. Apartman yönetimi ve komşu mesafesi bu sitenin kararı değildir. Turanlar Ticaret her balkonda mangal yakılır demez.",
-          "Gazlı bir düzen düşünülüyorsa tüp üçüncü bir üründür. 2 kg, 12 kg, piknik ve 24 kg sanayi aynı cümlede eritilmez. Hangi tüpün o mangala uyduğu sorulur. Kömürlü mangalda tüp satırı boş kalabilir. İki düzen aynı gün stokta olmayabilir. Olmayan model varmış gibi yazılmaz. Örnek fotoğraf kapaklı küçük bir mangalı ve ızgara telini gösterir. Kaynak kartın altındadır.",
-          "Aksesuar ayrıca istenir. Maşa, tel, şiş ve kömür gereci barbekü aksesuarı kartındadır. Mangal gövdesinin fiyatı aksesuarın fiyatı değildir. İkisi de sitede rakam olarak durmaz. WhatsApp +90 555 860 63 69 hattı ve 0356 228 52 54 telefonu siparişi açar. Hazır mesaj siparişi bitirmez. Adres Bahçelievler Mahallesi, Yazıcıoğlu Caddesi, 3. Geçit No: 47/C'dir. İlçe ve il dışı için düzenli mangal servisi yoktur. Kapanış 22:00'dır.",
+          "Gazlı bir düzen düşünülüyorsa tüp üçüncü bir üründür. 2 kg, 12 kg, piknik ve 24 kg sanayi aynı cümlede eritilmez. Hangi tüpün o mangala uyduğu sorulur. Kömürlü mangalda tüp satırı boş kalabilir. İki düzen aynı gün stokta olmayabilir. Olmayan model varmış gibi yazılmaz.",
+          "Aksesuar ayrıca istenir. Maşa, tel, şiş ve kömür gereci vitrinde ayrı kart değildir. Mangal gövdesinin fiyatı aksesuarın fiyatı değildir. WhatsApp +90 555 860 63 69 hattı ve 0356 228 52 54 telefonu siparişi açar. Hazır mesaj siparişi bitirmez. Adres Bahçelievler Mahallesi, Yazıcıoğlu Caddesi, 3. Geçit No: 47/C'dir. İlçe ve il dışı için düzenli mangal servisi yoktur. Kapanış 22:00'dır.",
         ],
       },
     ],
@@ -237,8 +238,8 @@ export const outdoorPosts: readonly Post[] = [
     description:
       "Tokat Merkez'de barbekü aksesuarı. Şiş, ızgara ve kömür gerecinin içeriği stokta sorulur. Turanlar Ticaret fiyatı WhatsApp'ta söyler.",
     links: [
-      { href: "/urunler/barbeku-aksesuarlari", label: "Barbekü aksesuarları" },
-      { href: "/urunler/mangal", label: "Mangal" },
+      { href: "/urunler", label: "Ürün vitrini" },
+      { href: "/urunler", label: "Ürün vitrini" },
       { href: "/blog/tokat-mangal-secimi", label: "Mangal seçimi" },
       { href: "/iletisim", label: "İletişim" },
     ],

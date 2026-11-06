@@ -5,7 +5,7 @@ export const business = {
   /** İşletmenin bildirdiği hizmete başlama yılı. */
   foundedYear: 1977,
   shortDescription:
-    "Tokat Merkez'de Hürgaz tüp çeşitlerinin satışını yapan yerel işletme. Sipariş WhatsApp üzerinden, servis talebi telefonla alınır.",
+    "Tokat Merkez'de Tokat Tüp hizmeti veren yerel işletme. Hürgaz tüp çeşitlerinin satışını yapar. Sipariş WhatsApp üzerinden, servis talebi telefonla alınır.",
   address: {
     street: "Bahçelievler Mahallesi, Yazıcıoğlu Caddesi",
     line: "3. Geçit No: 47/C",
