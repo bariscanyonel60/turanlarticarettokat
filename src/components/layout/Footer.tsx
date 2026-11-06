@@ -4,6 +4,7 @@ import { MediaCredit } from "@/components/shared/MediaCredit";
 import { Container } from "@/components/ui/Container";
 import { business, businessHours, fullAddress } from "@/data/business";
 import { corporateLinks, legalLinks, navItems } from "@/data/navigation";
+import { showcaseGroupId, showcaseGroups } from "@/data/showcase";
 import { getProducts } from "@/lib/catalog";
 import { mapsSearchUrl } from "@/lib/maps";
 import { generalWhatsappUrl } from "@/lib/whatsapp";
@@ -79,17 +80,30 @@ export async function Footer() {
         </div>
         <div className="lg:col-span-3">
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-mist">
-            Tüp çeşitleri
+            Ürünler
           </p>
-          <ul className="mt-4 space-y-3 text-base font-medium">
-            {products.map((product) => (
-              <li key={product.slug}>
-                <Link href={`/urunler/${product.slug}`} className="hover:text-white">
-                  {product.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
+          <div className="mt-4 space-y-5">
+            {showcaseGroups.map((group) => {
+              const items = products.filter((product) => showcaseGroupId(product) === group.id);
+              if (items.length === 0) {
+                return null;
+              }
+              return (
+                <div key={group.id}>
+                  <p className="text-sm font-semibold text-white">{group.name}</p>
+                  <ul className="mt-2 space-y-2 text-sm font-medium">
+                    {items.map((product) => (
+                      <li key={product.slug}>
+                        <Link href={`/urunler/${product.slug}`} className="hover:text-white">
+                          {product.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              );
+            })}
+          </div>
         </div>
         <div className="lg:col-span-3">
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-mist">

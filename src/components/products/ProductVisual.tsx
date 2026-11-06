@@ -1,4 +1,5 @@
 import { CylinderArt } from "@/components/brand/CylinderArt";
+import { cloudinaryDeliveryUrl } from "@/lib/cloudinary";
 import type { ProductImage } from "@/types/product";
 import Image from "next/image";
 
@@ -6,10 +7,12 @@ export function ProductVisual({
   image,
   className,
   priority = false,
+  sizes = "(max-width: 1023px) 50vw, 280px",
 }: {
   image: ProductImage;
   className?: string;
   priority?: boolean;
+  sizes?: string;
 }) {
   switch (image.kind) {
     case "illustration":
@@ -17,13 +20,13 @@ export function ProductVisual({
     case "photo":
       return (
         <Image
-          src={image.src}
+          src={cloudinaryDeliveryUrl(image.src)}
           alt={image.alt}
           width={image.width}
           height={image.height}
           priority={priority}
           className={className}
-          sizes="(min-width: 1280px) 30vw, (min-width: 640px) 45vw, 100vw"
+          sizes={sizes}
         />
       );
     default: {

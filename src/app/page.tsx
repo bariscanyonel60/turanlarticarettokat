@@ -1,4 +1,5 @@
 import { AboutPreview } from "@/components/home/AboutPreview";
+import { Reviews } from "@/components/home/Reviews";
 import { HomeContact } from "@/components/home/HomeContact";
 import { HomeFaq } from "@/components/home/HomeFaq";
 import { OrderSteps } from "@/components/home/OrderSteps";
@@ -30,6 +31,7 @@ export default async function HomePage() {
       <AboutPreview />
       <OrderSteps />
       <HomeFaq />
+      <Reviews />
       <HomeContact />
     </>
   );

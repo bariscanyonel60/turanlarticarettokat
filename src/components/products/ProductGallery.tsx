@@ -1,5 +1,6 @@
 "use client";
 
+import { cloudinaryDeliveryUrl } from "@/lib/cloudinary";
 import type { ProductPhoto } from "@/types/product";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
@@ -46,11 +47,11 @@ export function ProductGallery({ photos }: { photos: ProductPhoto[] }) {
             >
               <div className="absolute inset-4 sm:inset-8">
                 <Image
-                  src={photo.src}
+                  src={cloudinaryDeliveryUrl(photo.src)}
                   alt={photo.alt}
                   fill
                   priority={photoIndex === 0}
-                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  sizes="(min-width: 1024px) 55vw, 100vw"
                   className="object-contain"
                 />
               </div>
@@ -99,7 +100,7 @@ export function ProductGallery({ photos }: { photos: ProductPhoto[] }) {
                 }
               >
                 <Image
-                  src={photo.src}
+                  src={cloudinaryDeliveryUrl(photo.src)}
                   alt=""
                   fill
                   sizes="64px"

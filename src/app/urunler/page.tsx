@@ -8,7 +8,7 @@ import { buildMetadata, productListJsonLd } from "@/lib/seo";
 export const metadata = buildMetadata({
   title: "Tokat Tüp ve Kamp Ürünleri",
   description:
-    "Tokat Tüp ve kamp ürünleri. Tokat Merkez'de Hürgaz tüp, Gönen soba, Kouns kuzine, Özenler semaver, FEMAS ocak, Orgaz kamp ocağı, regülatör ve dedantör. Fiyat ürün kartında, sipariş WhatsApp ile.",
+    "Tokat Merkez'de Hürgaz tüp, soba, ocak ve kamp ürünleri. Fiyat kartta yazar, sipariş WhatsApp ile verilir.",
   path: "/urunler",
 });
 

@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
-import { business, servicePhoto } from "@/data/business";
+import { business, fullAddress, serviceNeighborhoods, servicePhoto } from "@/data/business";
+import { mapsDirectionsUrl, mapsSearchUrl } from "@/lib/maps";
 import { generalWhatsappUrl } from "@/lib/whatsapp";
 import { MessageCircle, Phone } from "lucide-react";
 import Image from "next/image";
@@ -49,14 +50,27 @@ export function ServiceBanner() {
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-mist">
                 Hizmet bölgesi
               </p>
-              <p className="font-display text-5xl leading-[0.95] tracking-[-0.05em] sm:text-6xl">
-                Tokat
-                <br />
-                Merkez
-              </p>
-              <p className="max-w-xs text-sm leading-6 text-mist">
-                Servis bölgemiz Tokat Merkez&apos;dir.
-              </p>
+              <div>
+                <p className="font-display text-5xl leading-[0.95] tracking-[-0.05em] sm:text-6xl">
+                  Tokat
+                  <br />
+                  Merkez
+                </p>
+                <p className="mt-4 max-w-xs text-base leading-7 text-mist">{fullAddress()}</p>
+                {serviceNeighborhoods.length > 0 ? (
+                  <p className="mt-3 text-sm leading-6 text-mist">
+                    {serviceNeighborhoods.join(", ")}
+                  </p>
+                ) : null}
+              </div>
+              <div className="flex flex-col gap-2 text-sm font-semibold">
+                <a href={mapsSearchUrl()} className="underline" target="_blank" rel="noopener noreferrer">
+                  Haritada aç
+                </a>
+                <a href={mapsDirectionsUrl()} className="underline" target="_blank" rel="noopener noreferrer">
+                  Yol tarifi
+                </a>
+              </div>
             </div>
           )}
         </div>
