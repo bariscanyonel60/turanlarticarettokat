@@ -6,7 +6,7 @@ import { slugify } from "@/lib/slug";
 import type { Product, ProductCategory } from "@/types/product";
 import { ImagePlus } from "lucide-react";
 import Image from "next/image";
-import { useActionState, useEffect, useState } from "react";
+import { useActionState, useState } from "react";
 
 type EditableProduct = Product & { id: number; sortOrder: number };
 
@@ -32,10 +32,8 @@ export function ProductForm({
   const [slugTouched, setSlugTouched] = useState(Boolean(product));
   const [slug, setSlug] = useState(product?.slug ?? "");
   const [imageKind, setImageKind] = useState(product?.image.kind ?? "photo");
-  const [mainFile, setMainFile] = useState<File | null>(null);
-  const [galleryFiles, setGalleryFiles] = useState<File[]>([]);
-  const mainPreview = useObjectUrl(mainFile);
-  const galleryPreviews = useObjectUrls(galleryFiles);
+  const [mainPreview, setMainPreview] = useState<string | null>(null);
+  const [galleryPreviews, setGalleryPreviews] = useState<string[]>([]);
   const photo = product?.image.kind === "photo" ? product.image : null;
   const gallery = product?.gallery ?? [];
 
@@ -169,7 +167,13 @@ export function ProductForm({
               preview={mainPreview ?? photo?.src}
               previewAlt={photo?.alt ?? "Seçilen ürün görseli"}
               label={photo ? "Görseli değiştir" : "Görsel seçin"}
-              onFiles={(files) => setMainFile(files[0] ?? null)}
+              onFiles={(files) => {
+                const file = files[0] ?? null;
+                setMainPreview((current) => {
+                  if (current) URL.revokeObjectURL(current);
+                  return file ? URL.createObjectURL(file) : null;
+                });
+              }}
             />
             {gallery.length > 0 ? (
               <ul className="grid grid-cols-3 gap-2">
@@ -197,7 +201,12 @@ export function ProductForm({
               name="gallery"
               multiple
               label="Galeriye görsel ekle"
-              onFiles={setGalleryFiles}
+              onFiles={(files) => {
+                setGalleryPreviews((current) => {
+                  for (const url of current) URL.revokeObjectURL(url);
+                  return files.map((file) => URL.createObjectURL(file));
+                });
+              }}
             />
             {galleryPreviews.length > 0 ? (
               <ul className="grid grid-cols-3 gap-2">
@@ -302,30 +311,4 @@ function DropZone({
       />
     </label>
   );
-}
-
-function useObjectUrl(file: File | null) {
-  const [url, setUrl] = useState<string | null>(null);
-  useEffect(() => {
-    if (!file) {
-      setUrl(null);
-      return;
-    }
-    const next = URL.createObjectURL(file);
-    setUrl(next);
-    return () => URL.revokeObjectURL(next);
-  }, [file]);
-  return url;
-}
-
-function useObjectUrls(files: File[]) {
-  const [urls, setUrls] = useState<string[]>([]);
-  useEffect(() => {
-    const next = files.map((file) => URL.createObjectURL(file));
-    setUrls(next);
-    return () => {
-      for (const url of next) URL.revokeObjectURL(url);
-    };
-  }, [files]);
-  return urls;
 }

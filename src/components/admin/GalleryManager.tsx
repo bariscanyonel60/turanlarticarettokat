@@ -4,14 +4,20 @@ import { deleteGalleryAction, saveGalleryAction, type AdminFormState } from "@/a
 import type { GalleryImage } from "@/lib/gallery";
 import { ImagePlus } from "lucide-react";
 import Image from "next/image";
-import { useActionState, useEffect, useState } from "react";
+import { useActionState, useState } from "react";
 
 const initialState: AdminFormState = { error: "" };
 
 export function GalleryManager({ images }: { images: GalleryImage[] }) {
   const [state, action, pending] = useActionState(saveGalleryAction, initialState);
-  const [files, setFiles] = useState<File[]>([]);
-  const previews = usePreviewUrls(files);
+  const [previews, setPreviews] = useState<string[]>([]);
+
+  function replaceFiles(next: File[]) {
+    setPreviews((current) => {
+      for (const url of current) URL.revokeObjectURL(url);
+      return next.map((file) => URL.createObjectURL(file));
+    });
+  }
 
   return (
     <div className="grid gap-6">
@@ -33,7 +39,7 @@ export function GalleryManager({ images }: { images: GalleryImage[] }) {
               for (const file of dropped) data.items.add(file);
               input.files = data.files;
             }
-            setFiles(dropped);
+            replaceFiles(dropped);
           }}
         >
           <span className="mx-auto grid size-12 place-items-center rounded-full bg-white text-navy">
@@ -47,7 +53,7 @@ export function GalleryManager({ images }: { images: GalleryImage[] }) {
             accept="image/jpeg,image/png,image/webp"
             multiple
             className="sr-only"
-            onChange={(event) => setFiles([...(event.target.files ?? [])])}
+            onChange={(event) => replaceFiles([...(event.target.files ?? [])])}
           />
         </label>
         {previews.length > 0 ? (
@@ -101,16 +107,4 @@ export function GalleryManager({ images }: { images: GalleryImage[] }) {
       )}
     </div>
   );
-}
-
-function usePreviewUrls(files: File[]) {
-  const [urls, setUrls] = useState<string[]>([]);
-  useEffect(() => {
-    const next = files.map((file) => URL.createObjectURL(file));
-    setUrls(next);
-    return () => {
-      for (const url of next) URL.revokeObjectURL(url);
-    };
-  }, [files]);
-  return urls;
 }

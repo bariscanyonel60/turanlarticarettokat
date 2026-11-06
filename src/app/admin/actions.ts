@@ -84,6 +84,7 @@ export async function logoutAction() {
 }
 
 export async function setupCatalogAction(_previous: AdminFormState): Promise<AdminFormState> {
+  void _previous;
   await requireAdminAction();
   try {
     await seedCatalogFromSite();
