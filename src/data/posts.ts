@@ -29,39 +29,39 @@ export const posts: readonly Post[] = [
     slug: "1977den-bugune-tokat-merkez",
     title: "1977'den bugüne Tokat Merkez",
     description:
-      "Turanlar Ticaret, 1977'den bu yana Tokat Merkez'de güvenli, samimi ve dürüst bir alışverişle tüp hizmeti verir.",
+      "Turanlar Ticaret 1977'den beri Tokat Merkez'de. Tokat tüp için Hürgaz ev, piknik ve sanayi tüpü satıyoruz.",
     date: "2026-11-05",
     dateLabel: "5 Kasım 2026",
     paragraphs: [
-      "Turanlar Ticaret, 1977'den bugüne Tokat Merkez'de hizmet verir. Yıllar içinde değişen tek şey tüp ihtiyacının kendisi olmadı; alışverişin güvenli, samimi ve dürüst kalması da aynı çizgide tutuldu.",
-      "İşletme, Hürgaz ev tipi, piknik tipi ve sanayi tipi tüplerin satışını Tokat Merkez ile sınırlı bir alanda yapar. Soba, kuzine, semaver, ocak ve bağlantı parçaları da vitrindedir. Vitrinde olmayan bir parça WhatsApp'tan sorulur.",
-      "Sitede sepet ve online ödeme yoktur. Sipariş WhatsApp üzerinden, servis talebi sabit telefon üzerinden alınır. Fiyat, stok ve servis uygunluğu her talepte ayrıca konuşulur.",
+      "1977'den beri Tokat Merkez'deyiz. Dükkân Bahçelievler'de. Tokat tüp deyince kastettiğimiz yer burası.",
+      "Hürgaz ev tipi, piknik tipi ve sanayi tipi tüp satıyoruz. Soba, kuzine, semaver, ocak ve bağlantı parçaları da vitrinde. Vitrinde olmayan bir parçayı WhatsApp'tan sorun.",
+      "Siteden kartla ödeme yok. Siparişi WhatsApp'tan bırakın, servis için arayın. Fiyat ve stok o gün neyse onu söyleriz.",
     ],
   },
   {
     slug: "whatsapp-ile-tup-siparisi",
     title: "WhatsApp ile tüp siparişi nasıl verilir?",
     description:
-      "Turanlar Ticaret'te tüp seçilir, WhatsApp hazır mesajla açılır; fiyat ve servis Tokat Merkez için yazışmada netleşir.",
+      "Tüpü seçin, WhatsApp açılsın. Tokat tüp fiyatı ve Tokat Merkez'e bırakma işi yazışmada netleşir.",
     date: "2026-11-05",
     dateLabel: "5 Kasım 2026",
     paragraphs: [
-      "Sipariş üç adımdan oluşur. Önce tüp çeşidi seçilir. Sonra ürün sayfasındaki bağlantı, ürün adını içeren bir mesajla WhatsApp'ı açar. Ardından stok, fiyat ve Tokat Merkez servis durumu birlikte netleştirilir.",
-      "Hazır mesaj bir sipariş fişi değildir. Online tahsilat yapılmaz. Uygunluk, yazışmada veya 0356 228 52 54 hattından konuşularak belli olur.",
-      "Sabit telefon servis talebi içindir. WhatsApp hattı sipariş ve ürün bilgisi içindir. İki kanal da yalnızca Turanlar Ticaret'e ulaşır; sitede üyelik hesabı açılmaz.",
+      "Üç adım. Tüpü seçin. Ürün sayfasındaki bağlantı, adını yazılmış bir mesajla WhatsApp'ı açsın. Sonra stok, fiyat ve adresi konuşalım.",
+      "Hazır mesaj bir fiş değil. Ödemeyi siteden almıyoruz. Uygunluk yazışmada ya da 0356 228 52 54'te belli olur.",
+      "Telefon servis içindir. WhatsApp sipariş ve ürün sorusu içindir. Sitede üyelik hesabı yok.",
     ],
   },
   {
     slug: "hizmet-bolgesi-tokat-merkez",
-    title: "Hizmet bölgesi neden yalnızca Tokat Merkez?",
+    title: "Neden yalnız Tokat Merkez?",
     description:
-      "Turanlar Ticaret tüp satışı ve servis talebini Tokat Merkez ile sınırlar. İlçe ve il dışı hizmet vaadi verilmez.",
+      "Tokat tüp servisi Tokat Merkez ile sınırlı. İlçe ve şehir dışına düzenli gitmiyoruz.",
     date: "2026-11-05",
     dateLabel: "5 Kasım 2026",
     paragraphs: [
-      "Turanlar Ticaret'in hizmet bölgesi Tokat Merkez'dir. İlçelere veya Tokat dışına düzenli hizmet verildiği söylenmez. Sipariş yazılırken adresin Merkez sınırında olup olmadığı birlikte kontrol edilir.",
-      "Bu sınır, yanlış teslim beklentisini baştan kapatmak içindir. Uygunluk her talepte ayrıca değerlendirilir; sitede süre veya ücretsiz servis sözü yer almaz.",
-      "Adres: Bahçelievler Mahallesi, Yazıcıoğlu Caddesi, 3. Geçit No: 47/C, Merkez / Tokat. Harita, bu adresin aramasını açar.",
+      "Tüpü Tokat Merkez'deki eve ve iş yerine bırakıyoruz. İlçeye ya da şehir dışına düzenli gitmiyoruz. Adresinizi yazın, Merkez'de mi birlikte bakalım.",
+      "Ne zaman bırakılacağını da o günkü stok ve sıraya göre söyleriz. Sitede 'şu kadar dakikada gelir' diye bir cümle yok.",
+      "Dükkân Bahçelievler Mahallesi, Yazıcıoğlu Caddesi, 3. Geçit No: 47/C. Harita aynı adresi açar.",
     ],
   },
 ];

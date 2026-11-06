@@ -18,8 +18,8 @@ export function HomeContact() {
             Tokat Merkez&apos;de bize ulaşın
           </h2>
           <p className="mt-4 max-w-md text-base leading-7 text-ink-soft">
-            Sipariş WhatsApp hattından, servis talebi sabit telefondan alınır.
-            Harita, Google&apos;daki işletme kaydını açar.
+            Sipariş için WhatsApp, servis için telefon. Dükkân Bahçelievler&apos;de,
+            harita da aynı adresi açar.
           </p>
         </div>
         <div className="grid gap-8 rounded-3xl border border-navy/10 bg-paper p-6 sm:p-8 lg:col-span-7">

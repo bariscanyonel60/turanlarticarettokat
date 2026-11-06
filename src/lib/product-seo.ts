@@ -1,7 +1,22 @@
 import { formatPrice } from "@/lib/price";
 
+export function withTokatTup(text: string) {
+  const clean = text.trim();
+  if (/tokat\s+tüp/i.test(clean)) {
+    return clean;
+  }
+  const next = `Tokat tüp. ${clean}`;
+  if (next.length <= 160) {
+    return next;
+  }
+  return clean;
+}
+
 export function productPageTitle(name: string) {
-  return `${name} Tokat`;
+  if (/tokat\s+tüp/i.test(name)) {
+    return name;
+  }
+  return `Tokat Tüp: ${name}`;
 }
 
 export function buildSeoDescription(name: string, summary: string, priceKurus: number | null) {
@@ -10,7 +25,7 @@ export function buildSeoDescription(name: string, summary: string, priceKurus: n
     priceKurus == null
       ? "Güncel fiyatı WhatsApp veya telefondan sorun."
       : `Güncel fiyat ${formatPrice(priceKurus)}.`;
-  let text = `Tokat Merkez'de ${name}. ${detail}. ${priceLine}`;
+  let text = `Tokat tüp: ${name}. ${detail}. ${priceLine}`;
   const extras = [" Fiyat kartta yazar.", " Sipariş WhatsApp ile verilir."];
   for (const extra of extras) {
     if (text.length >= 140) {

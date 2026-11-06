@@ -1,150 +1,139 @@
 import { Logo } from "@/components/brand/Logo";
-import { SocialLinks } from "@/components/shared/SocialLinks";
 import { MediaCredit } from "@/components/shared/MediaCredit";
 import { Container } from "@/components/ui/Container";
-import { business, businessHours, fullAddress } from "@/data/business";
+import { business, hoursLabel } from "@/data/business";
 import { corporateLinks, legalLinks, navItems } from "@/data/navigation";
-import { showcaseGroupId, showcaseGroups } from "@/data/showcase";
-import { getProducts } from "@/lib/catalog";
+import { showcaseGroups } from "@/data/showcase";
 import { mapsSearchUrl } from "@/lib/maps";
 import { generalWhatsappUrl } from "@/lib/whatsapp";
 import { cacheLife } from "next/cache";
 import Link from "next/link";
+import type { ReactNode } from "react";
 
-export async function Footer() {
-  const products = await getProducts();
+const pageLinks = [
+  ...navItems.filter((item) => item.href !== "/kurumsal"),
+  ...corporateLinks.filter(
+    (item) => item.href === "/hakkimizda" || item.href === "/blog" || item.href === "/sss",
+  ),
+];
+
+const { street, line, district, city, postalCode } = business.address;
+
+export function Footer() {
   return (
     <footer className="bg-navy text-cream">
-      <Container className="flex flex-col gap-5 border-b border-white/10 py-8 sm:flex-row sm:items-center sm:justify-between">
-        <div>
-          <p className="font-display text-2xl tracking-[-0.03em] sm:text-3xl">
-            Tokat Merkez için bize ulaşın
-          </p>
-          <p className="mt-2 max-w-xl text-sm leading-6 text-mist">
-            Sipariş WhatsApp hattından, servis talebi telefondan alınır. Kapanış{" "}
-            {businessHours.closingTime}. Açılış saati ve çalışma günleri telefonda öğrenilir.
-          </p>
-        </div>
-        <div className="flex flex-col gap-2 sm:flex-row">
-          <a
-            href={`tel:${business.phoneTel}`}
-            className="inline-flex min-h-12 items-center justify-center rounded-xl bg-white px-5 text-base font-semibold text-navy"
-          >
-            Ara {business.phoneDisplay}
-          </a>
-          <a
-            href={generalWhatsappUrl()}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex min-h-12 items-center justify-center rounded-xl bg-whatsapp px-5 text-base font-semibold text-white"
-          >
-            WhatsApp sipariş
-          </a>
-        </div>
-      </Container>
-      <Container className="grid gap-12 py-16 sm:grid-cols-2 lg:grid-cols-12 lg:py-20">
-        <div className="lg:col-span-3">
-          <Link href="/" aria-label="Turanlar Ticaret ana sayfa" className="inline-flex rounded-2xl bg-cream px-4 py-3">
-            <Logo />
-          </Link>
-          <p className="mt-5 max-w-sm text-base leading-7 text-mist">
-            {business.foundedYear}&apos;den bugüne {business.shortDescription}
-          </p>
-          <p className="mt-4 text-sm text-mist">Kapanış: {businessHours.closingTime}</p>
-        </div>
-        <div className="lg:col-span-3">
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-mist">
-            Sayfalar
-          </p>
-          <ul className="mt-4 space-y-3 text-base font-medium">
-            {navItems.map((item) => (
-              <li key={item.href}>
-                <Link href={item.href} className="hover:text-white">
-                  {item.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-          <p className="mt-8 text-xs font-semibold uppercase tracking-[0.18em] text-mist">
-            Kurumsal
-          </p>
-          <ul className="mt-4 space-y-3 text-base font-medium">
-            {corporateLinks.map((item) => (
-              <li key={item.href}>
-                <Link href={item.href} className="hover:text-white">
-                  {item.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className="lg:col-span-3">
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-mist">
-            Ürünler
-          </p>
-          <div className="mt-4 space-y-5">
-            {showcaseGroups.map((group) => {
-              const items = products.filter((product) => showcaseGroupId(product) === group.id);
-              if (items.length === 0) {
-                return null;
-              }
-              return (
-                <div key={group.id}>
-                  <p className="text-sm font-semibold text-white">{group.name}</p>
-                  <ul className="mt-2 space-y-2 text-sm font-medium">
-                    {items.map((product) => (
-                      <li key={product.slug}>
-                        <Link href={`/urunler/${product.slug}`} className="hover:text-white">
-                          {product.name}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-        <div className="lg:col-span-3">
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-mist">
-            İletişim
-          </p>
-          <address className="mt-4 space-y-3 text-base font-medium not-italic leading-7">
-            <p>{fullAddress()}</p>
-            <p>
-              <a href={`tel:${business.phoneTel}`} className="hover:text-white">
-                {business.phoneDisplay}
-              </a>
+      <Container className="py-10 lg:py-12">
+        <div className="grid gap-10 lg:grid-cols-12 lg:gap-8">
+          <div className="lg:col-span-4">
+            <Link
+              href="/"
+              aria-label="Turanlar Ticaret ana sayfa"
+              className="inline-flex rounded-2xl bg-cream px-3 py-2"
+            >
+              <Logo />
+            </Link>
+            <p className="mt-4 max-w-xs text-sm leading-6 text-mist">
+              1977&apos;den beri Tokat Merkez&apos;de Hürgaz tüp. Sipariş WhatsApp&apos;tan, servis
+              telefondan.
             </p>
-            <p>
+            <p className="mt-4 text-sm font-semibold text-white">Açık {hoursLabel()}</p>
+            <p className="mt-1 text-sm text-mist">Açık günler telefonda öğrenilir.</p>
+            <div className="mt-5 flex flex-wrap gap-2">
+              <a
+                href={`tel:${business.phoneTel}`}
+                className="inline-flex min-h-10 items-center rounded-lg bg-white px-3 text-sm font-semibold text-navy"
+              >
+                Ara {business.phoneDisplay}
+              </a>
               <a
                 href={generalWhatsappUrl()}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-white"
+                className="inline-flex min-h-10 items-center rounded-lg bg-whatsapp px-3 text-sm font-semibold text-white"
               >
-                WhatsApp {business.whatsappDisplay}
+                WhatsApp
               </a>
-            </p>
-            <p>
-              <a
-                href={mapsSearchUrl()}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-white"
-              >
-                Google Haritalar&apos;da aç
-              </a>
-            </p>
-            <SocialLinks className="space-y-3" linkClassName="hover:text-white" />
-          </address>
+            </div>
+          </div>
+          <div className="grid gap-8 sm:grid-cols-3 lg:col-span-8">
+            <FooterColumn title="Sayfalar">
+              {pageLinks.map((item) => (
+                <li key={item.href}>
+                  <Link href={item.href} className="hover:text-white">
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </FooterColumn>
+            <FooterColumn title="Vitrin">
+              {showcaseGroups.map((group) => (
+                <li key={group.id}>
+                  <Link href={`/urunler#grup-${group.id}`} className="hover:text-white">
+                    {group.name}
+                  </Link>
+                </li>
+              ))}
+            </FooterColumn>
+            <div>
+              <p className="border-b border-white/15 pb-2 text-xs font-semibold tracking-[0.14em] text-white/60">
+                İletişim
+              </p>
+              <address className="mt-3 space-y-1 text-sm leading-6 not-italic text-cream/90">
+                <p>{street}</p>
+                <p>{line}</p>
+                <p>
+                  {district} / {city}, {postalCode}
+                </p>
+              </address>
+              <ul className="mt-3 space-y-2 text-sm text-cream/90">
+                <li>
+                  <a href={`tel:${business.phoneTel}`} className="hover:text-white">
+                    {business.phoneDisplay}
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href={generalWhatsappUrl()}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-white"
+                  >
+                    WhatsApp {business.whatsappDisplay}
+                  </a>
+                </li>
+                <li>
+                  <a href={mapsSearchUrl()} target="_blank" rel="noopener noreferrer" className="hover:text-white">
+                    Haritada aç
+                  </a>
+                </li>
+                <li className="flex gap-4 pt-1">
+                  <a
+                    href={business.instagramUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-white"
+                  >
+                    Instagram
+                  </a>
+                  <a
+                    href={business.googleProfileUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-white"
+                  >
+                    Google
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </Container>
       <div className="border-t border-white/10">
-        <Container className="flex flex-col gap-4 py-5 text-sm text-mist sm:flex-row sm:items-center sm:justify-between">
+        <Container className="flex flex-col gap-4 py-4 lg:flex-row lg:items-center lg:justify-between">
           <Copyright />
           <nav aria-label="Yasal sayfalar">
-            <ul className="flex flex-wrap gap-x-4 gap-y-2">
+            <ul className="flex flex-wrap gap-x-4 gap-y-2 text-sm text-mist">
               {legalLinks.map((item) => (
                 <li key={item.href}>
                   <Link href={item.href} className="hover:text-white">
@@ -154,10 +143,6 @@ export async function Footer() {
               ))}
             </ul>
           </nav>
-        </Container>
-      </div>
-      <div className="border-t border-white/15 bg-navy-deep">
-        <Container className="flex justify-center py-5">
           <MediaCredit tone="onNavy" />
         </Container>
       </div>
@@ -165,13 +150,20 @@ export async function Footer() {
   );
 }
 
+function FooterColumn({ title, children }: { title: string; children: ReactNode }) {
+  return (
+    <div>
+      <p className="border-b border-white/15 pb-2 text-xs font-semibold tracking-[0.14em] text-white/60">
+        {title}
+      </p>
+      <ul className="mt-3 space-y-2 text-sm leading-6 text-cream/90">{children}</ul>
+    </div>
+  );
+}
+
 async function Copyright() {
   "use cache";
   cacheLife("weeks");
   const year = new Date().getFullYear();
-  return (
-    <p>
-      © {year} — Turanlar Ticaret. Tüm hakları saklıdır.
-    </p>
-  );
+  return <p className="text-sm text-mist">© {year} — Turanlar Ticaret. Tüm hakları saklıdır.</p>;
 }

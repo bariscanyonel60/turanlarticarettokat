@@ -1,3 +1,4 @@
+import { HoverZoom } from "@/components/products/HoverZoom";
 import { ProductGallery } from "@/components/products/ProductGallery";
 import { ProductGrid } from "@/components/products/ProductGrid";
 import { ProductVisual } from "@/components/products/ProductVisual";
@@ -10,9 +11,10 @@ import { business } from "@/data/business";
 import { getCategory } from "@/data/products";
 import { cloudinaryDeliveryUrl } from "@/lib/cloudinary";
 import { getProducts } from "@/lib/catalog";
+import { imageAlt } from "@/lib/image-alt";
 import { formatPrice } from "@/lib/price";
 import { buildMetadata, faqJsonLd, productJsonLd } from "@/lib/seo";
-import { productPageTitle } from "@/lib/product-seo";
+import { productPageTitle, withTokatTup } from "@/lib/product-seo";
 import { productWhatsappUrl } from "@/lib/whatsapp";
 import type { Product } from "@/types/product";
 import { MessageCircle, Phone } from "lucide-react";
@@ -41,7 +43,7 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
 
   return buildMetadata({
     title: productPageTitle(product.name),
-    description: product.seoDescription,
+    description: withTokatTup(product.seoDescription),
     path: `/urunler/${product.slug}`,
     openGraphType: "product",
     image: photo
@@ -49,7 +51,7 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
           url: cloudinaryDeliveryUrl(photo.src),
           width: photo.width,
           height: photo.height,
-          alt: photo.alt,
+          alt: imageAlt(photo.alt),
         }
       : undefined,
   });
@@ -99,25 +101,33 @@ function ProductView({ product, others }: { product: Product; others: Product[] 
               {photos ? (
                 <ProductGallery photos={photos} />
               ) : (
-                <ProductVisual
-                  image={product.image}
-                  priority
-                  sizes="(min-width: 1024px) 55vw, 100vw"
-                  className="h-auto w-full object-contain p-8"
-                />
+                <div className="relative aspect-square">
+                  <HoverZoom>
+                    <ProductVisual
+                      image={product.image}
+                      priority
+                      sizes="(min-width: 1024px) 55vw, 100vw"
+                      className="h-full w-full object-contain p-8"
+                    />
+                  </HoverZoom>
+                </div>
               )}
             </div>
             <div className="rounded-[1.6rem] border border-navy/10 bg-white p-6 shadow-[0_24px_50px_-40px_rgba(12,35,72,0.7)] sm:p-8 lg:sticky lg:top-24">
               <p className="text-xs font-bold uppercase tracking-[0.18em] text-navy">
                 {category.name}
               </p>
-              <h1 className="mt-3 font-display text-4xl tracking-[-0.045em] text-navy sm:text-5xl">
+              <h1 className="mt-3 font-display text-4xl leading-tight tracking-normal text-navy [word-spacing:0.25em] sm:text-5xl">
                 {product.name}
               </h1>
-              <p className="mt-4 text-base leading-7 text-ink">{product.summary}</p>
+              <p className="mt-4 text-base leading-7 text-ink [word-spacing:0.25em]">
+                {product.summary}
+              </p>
               <div className="mt-6">
                 {product.priceKurus == null ? (
-                  <p className="text-sm font-medium text-[#3d4a5c]">Fiyat için sorun</p>
+                  <p className="text-base leading-7 text-[#3d4a5c] [word-spacing:0.25em]">
+                    Fiyat için sorun
+                  </p>
                 ) : (
                   <>
                     <p className="text-sm font-semibold text-ink">Güncel fiyat</p>
@@ -135,22 +145,38 @@ function ProductView({ product, others }: { product: Product; others: Product[] 
                   </>
                 )}
               </div>
-              <dl className="mt-6 space-y-3 text-sm">
-                <div className="flex justify-between gap-4 border-t border-navy/10 pt-3">
-                  <dt className="text-ink">Kullanım</dt>
-                  <dd className="font-semibold text-ink">{product.usage}</dd>
+              <dl className="mt-6 grid gap-3 sm:grid-cols-3">
+                <div className="rounded-xl bg-paper px-4 py-3">
+                  <dt className="text-xs font-semibold uppercase tracking-[0.14em] text-[#3d4a5c]">
+                    Kullanım
+                  </dt>
+                  <dd className="mt-1 text-base font-semibold leading-6 text-navy [word-spacing:0.25em]">
+                    {product.usage}
+                  </dd>
                 </div>
                 {product.capacity ? (
-                  <div className="flex justify-between gap-4 border-t border-navy/10 pt-3">
-                    <dt className="text-ink">Kapasite</dt>
-                    <dd className="font-semibold text-ink">{product.capacity}</dd>
+                  <div className="rounded-xl bg-paper px-4 py-3">
+                    <dt className="text-xs font-semibold uppercase tracking-[0.14em] text-[#3d4a5c]">
+                      Ölçü
+                    </dt>
+                    <dd className="mt-1 text-base font-semibold leading-6 text-navy [word-spacing:0.25em]">
+                      {product.capacity}
+                    </dd>
                   </div>
                 ) : null}
-                <div className="flex justify-between gap-4 border-t border-navy/10 pt-3">
-                  <dt className="text-ink">Bölge</dt>
-                  <dd className="font-semibold text-ink">{business.area}</dd>
+                <div className="rounded-xl bg-paper px-4 py-3">
+                  <dt className="text-xs font-semibold uppercase tracking-[0.14em] text-[#3d4a5c]">
+                    Bölge
+                  </dt>
+                  <dd className="mt-1 text-base font-semibold leading-6 text-navy [word-spacing:0.25em]">
+                    {business.area}
+                  </dd>
                 </div>
               </dl>
+              <p className="mt-4 text-sm leading-6 text-ink [word-spacing:0.25em]">
+                {product.priceKurus == null ? "Fiyat kartta yazar. " : null}
+                Sipariş WhatsApp ile verilir, servis talebi telefondan alınır.
+              </p>
               <div className="mt-8 flex flex-col gap-3">
                 <Button href={productWhatsappUrl(product.name)} variant="whatsapp" className="w-full">
                   <MessageCircle className="size-4" aria-hidden />

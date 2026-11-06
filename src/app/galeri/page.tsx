@@ -3,14 +3,15 @@ import { JsonLd } from "@/components/shared/JsonLd";
 import { Container } from "@/components/ui/Container";
 import { getGalleryImages } from "@/lib/gallery";
 import { cloudinaryDeliveryUrl } from "@/lib/cloudinary";
+import { imageAlt } from "@/lib/image-alt";
 import { buildMetadata } from "@/lib/seo";
 import { getSiteUrl } from "@/lib/site";
 import Image from "next/image";
 import { Suspense } from "react";
 
 export const metadata = buildMetadata({
-  title: "Tokat Merkez Galeri",
-  description: "Turanlar Ticaret'in Tokat Merkez'de paylaştığı görseller.",
+  title: "Tokat Tüp Galeri",
+  description: "Tokat tüp dükkânından görseller. Turanlar Ticaret vitrini ve ürün fotoğrafları.",
   path: "/galeri",
 });
 
@@ -25,10 +26,10 @@ export default function GalleryPage() {
           ]}
         />
         <h1 className="mt-6 font-display text-4xl tracking-[-0.045em] text-navy sm:text-6xl">
-          Tokat Merkez Galeri
+          Tokat tüp galerisi
         </h1>
         <p className="mt-4 max-w-2xl text-base leading-7 text-ink-soft">
-          Turanlar Ticaret&apos;in Tokat Merkez&apos;de paylaştığı görseller.
+          Dükkândan ve vitrinden kareler. Sipariş için ürüne bakıp WhatsApp&apos;tan yazmanız yeterli.
         </p>
         <Suspense fallback={<p className="mt-10 text-sm text-ink-soft">Galeri yükleniyor.</p>}>
           <GalleryImages />
@@ -60,7 +61,7 @@ async function GalleryImages() {
           <li key={image.id} className="overflow-hidden rounded-2xl bg-white">
             <Image
               src={cloudinaryDeliveryUrl(image.src)}
-              alt={image.alt}
+              alt={imageAlt(image.alt)}
               width={image.width}
               height={image.height}
               sizes="(max-width: 639px) 50vw, (max-width: 1023px) 33vw, 280px"

@@ -59,7 +59,7 @@ export default async function AdminPage() {
                 />
               ) : (
                 <span className="grid aspect-square place-items-center bg-paper text-sm font-semibold text-ink-soft">
-                  Çizim
+                  Fotoğraf yok
                 </span>
               )}
               <span className="block px-4 pt-3 font-display text-lg leading-tight tracking-[-0.03em] text-navy">

@@ -29,12 +29,6 @@ const nextConfig: NextConfig = {
   },
   turbopack: {
     root: path.resolve(process.cwd()),
-    rules: {
-      "*.css": {
-        loaders: ["@tailwindcss/turbopack"],
-        as: "*.css",
-      },
-    },
   },
 };
 

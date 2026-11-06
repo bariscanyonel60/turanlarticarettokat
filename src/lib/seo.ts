@@ -35,7 +35,7 @@ export function buildMetadata({
     url: new URL("/opengraph-image", getSiteUrl()).toString(),
     width: 1200,
     height: 630,
-    alt: "Turanlar Ticaret, Tokat Merkez'de Hürgaz tüp hizmeti",
+    alt: "Tokat tüp: Turanlar Ticaret vitrininde Hürgaz tüp",
   };
 
   return {
@@ -82,7 +82,7 @@ export function websiteJsonLd() {
 
 export function localBusinessJsonLd() {
   // TODO: koordinatlar doğrulanınca geo ekle.
-  // TODO: açılış saati ve çalışma günleri dolunca openingHoursSpecification ekle.
+  // Açılış 07:30, kapanış 22:00. Günler doğrulanmadan openingHoursSpecification yazılmaz.
   const hours =
     businessHours.openingTime && businessHours.workingDays
       ? {

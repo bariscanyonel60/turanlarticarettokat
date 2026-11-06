@@ -34,15 +34,15 @@ export function OrderSteps() {
           </ol>
         </div>
         <p className="mt-10 max-w-2xl text-base leading-7 text-ink-soft">
-          Görüşme bittikten sonra{" "}
-          <Link href="/tesekkurler" className="font-semibold text-navy underline">
-            teşekkür sayfasına
-          </Link>{" "}
-          dönebilir, tüp çeşitlerini{" "}
+          Tüp çeşitlerine{" "}
           <Link href="/urunler" className="font-semibold text-navy underline">
             ürün sayfasından
           </Link>{" "}
-          inceleyebilirsiniz.
+          bakın. Yazışma bitince{" "}
+          <Link href="/tesekkurler" className="font-semibold text-navy underline">
+            teşekkür sayfası
+          </Link>{" "}
+          açılır; sipariş orada tamamlanmış sayılmaz.
         </p>
       </Container>
     </section>

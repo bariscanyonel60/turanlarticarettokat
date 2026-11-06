@@ -7,7 +7,7 @@ import Link from "next/link";
 export const metadata = buildMetadata({
   title: "Tokat Tüp Yazıları",
   description:
-    "Tokat tüp, güvenlik, ekipman, mangal, ısıtıcı ve kamp ocağı üzerine Turanlar Ticaret yazıları.",
+    "Tokat tüp siparişi, ev tüpü, piknik tüpü, güvenlik ve kamp notları. Turanlar Ticaret, Tokat Merkez.",
   path: "/blog",
 });
 
@@ -17,7 +17,7 @@ export default function BlogPage() {
       <PageHeader
         eyebrow="Blog"
         title="Tokat Tüp yazıları"
-        lede="Tokat Merkez'de tüp, tüp ekipmanı, mangal, soba, ısıtıcı ve kamp ürünü. Güvenlik notları genel bilgidir; model ve fiyat WhatsApp'ta netleşir."
+        lede="Sipariş, ev tüpü, piknik tüpü ve günlük kullanım notları. Model ve fiyat için WhatsApp'tan yazın."
         crumbs={[
           { name: "Tokat Tüp", path: "/" },
           { name: "Kurumsal", path: "/kurumsal" },

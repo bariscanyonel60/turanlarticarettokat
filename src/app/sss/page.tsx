@@ -9,7 +9,7 @@ import { generalWhatsappUrl } from "@/lib/whatsapp";
 
 const title = "Tokat Tüp Sıkça Sorulan Sorular";
 const description =
-  "Tokat tüp siparişi, Tokat Merkez ev servisi, Hürgaz tüp, piknik tüpü, sanayi tüpü ve güncel fiyat için sıkça sorulan sorular. Turanlar Ticaret.";
+  "Tokat tüp siparişi, eve bırakma, Hürgaz tüp ve fiyat hakkında kısa cevaplar. Turanlar Ticaret, Tokat Merkez.";
 
 export const metadata = buildMetadata({
   title,
@@ -27,8 +27,8 @@ export default function FaqPage() {
           { name: "Sıkça Sorulan Sorular", path: "/sss" },
         ]}
         eyebrow="Tokat Tüp"
-        title="Sıkça Sorulan Sorular"
-        lede={description}
+        title="Sıkça sorulan sorular"
+        lede="Sipariş, eve bırakma ve fiyat için gelen sorular. Aradığınız burada yoksa telefonu çevirin."
       />
       <section className="py-14 sm:py-20" aria-label="Sorular ve cevaplar">
         <Container>

@@ -12,27 +12,27 @@ export const categories: ProductCategory[] = [
   {
     id: "ev-tipi",
     name: "Ev Tipi Tüpler",
-    description: "Evlerde mutfak ve günlük kullanım için tercih edilen tüpler.",
+    description: "Mutfakta kullanılan 2 kg ve 12 kg Hürgaz tüpler.",
   },
   {
     id: "piknik",
     name: "Piknik Tüpleri",
-    description: "Kamp, piknik ve taşınabilir kullanım ihtiyaçları.",
+    description: "Kamp ve taşınabilir pişirme için piknik tüpü.",
   },
   {
     id: "sanayi",
     name: "Sanayi Tipi Tüpler",
-    description: "İşletmeler ve uygun endüstriyel kullanım alanları.",
+    description: "İş yeri için 24 kg sanayi tüpü.",
   },
   {
     id: "ticari",
     name: "Ticari Kullanım Tüpleri",
-    description: "Restoran, kafe ve ticari mutfak ihtiyaçları.",
+    description: "Lokanta ve ticari mutfaklar için tüp.",
   },
   {
     id: "diger",
     name: "Diğer Tüp Çeşitleri",
-    description: "İşletmenin stok ve ürün kataloğunda bulunan diğer seçenekler.",
+    description: "Stoktaki diğer tüp çeşitleri.",
   },
   {
     id: "kamp-ekipman",
@@ -49,13 +49,13 @@ export const products: Product[] = [
     summary: "Mutfak ve günlük kullanım için 2 kg ev tipi tüp.",
     usage: "Ev ve mutfak",
     seoDescription:
-      "Tokat Merkez'de 2 kg Hürgaz ev tipi tüp. Mutfak kullanımı için Turanlar Ticaret'e WhatsApp'tan yazın; servis talebi telefonla alınır.",
+      "Tokat tüp: 2 kg Hürgaz ev tipi tüp. Mutfak için Turanlar Ticaret'e WhatsApp'tan yazın, servis için arayın.",
     priceKurus: null,
     capacity: "2 kg",
     image: {
       kind: "photo",
       src: "https://res.cloudinary.com/ddm7ouuwk/image/upload/v1793955057/turanlar-ticaret/products/ev-tipi-2kg.jpg",
-      alt: "Hürgaz 2 kg ev tipi gümüş LPG tüpü",
+      alt: "Tokat tüp, Hürgaz 2 kg ev tipi gümüş LPG tüpü",
       width: 1024,
       height: 1024,
     },
@@ -67,13 +67,13 @@ export const products: Product[] = [
     summary: "Mutfak ve günlük kullanım için 12 kg ev tüpü.",
     usage: "Ev ve mutfak",
     seoDescription:
-      "Tokat Merkez'de 12 kg Ev Tüpü, Turanlar Ticaret vitrininde. Mutfak ve günlük kullanım için 12 kg ev tüpü. Güncel fiyatı WhatsApp veya telefondan sorun.",
+      "Tokat tüp: 12 kg Hürgaz ev tüpü. Günlük mutfak için. Güncel fiyatı WhatsApp veya telefondan sorun.",
     priceKurus: null,
     capacity: "12 kg",
     image: {
       kind: "photo",
       src: "https://res.cloudinary.com/ddm7ouuwk/image/upload/v1793955057/turanlar-ticaret/products/ev-12kg.jpg",
-      alt: "Hürgaz 12 kg ev tipi gümüş LPG tüpü",
+      alt: "Tokat tüp, Hürgaz 12 kg ev tipi gümüş LPG tüpü",
       width: 1024,
       height: 1024,
     },
@@ -81,7 +81,7 @@ export const products: Product[] = [
       {
         kind: "photo",
         src: "https://res.cloudinary.com/ddm7ouuwk/image/upload/v1793955058/turanlar-ticaret/products/ev-12kg-mavi.jpg",
-        alt: "Hürgaz 12 kg ev tipi mavi LPG tüpü",
+        alt: "Tokat tüp, Hürgaz 12 kg ev tipi mavi LPG tüpü",
         width: 682,
         height: 1024,
       },
@@ -91,16 +91,16 @@ export const products: Product[] = [
     slug: "piknik-tupu",
     name: "Piknik Tüpü",
     categoryId: "piknik",
-    summary: "Kamp, piknik ve taşınabilir kullanım için tercih edilen tüpler.",
+    summary: "Kamp ve taşınabilir pişirme için mavi piknik tüpü.",
     usage: "Kamp ve piknik",
     seoDescription:
-      "Tokat piknik tüpü için Turanlar Ticaret. Tokat Merkez'de taşınabilir tüp siparişini WhatsApp üzerinden iletebilirsiniz.",
+      "Tokat tüp: mavi piknik tüpü. Kamp ve taşınabilir pişirme için. Siparişi WhatsApp'tan bırakın.",
     priceKurus: null,
     capacity: null,
     image: {
       kind: "photo",
       src: "https://res.cloudinary.com/ddm7ouuwk/image/upload/v1793958076/turanlar-ticaret/products/piknik-tupu.jpg",
-      alt: "Turanlar Ticaret'te satılan mavi piknik tüpü",
+      alt: "Tokat tüp, Turanlar Ticaret'te satılan mavi piknik tüpü",
       width: 1024,
       height: 1024,
     },
@@ -109,16 +109,16 @@ export const products: Product[] = [
     slug: "sanayi-tipi-tup",
     name: "24 kg Sanayi Tüpü",
     categoryId: "sanayi",
-    summary: "İşletmeler ve uygun endüstriyel kullanım için 24 kg sanayi tüpü.",
+    summary: "İş yeri için 24 kg Hürgaz sanayi tüpü.",
     usage: "İş yeri ve sanayi",
     seoDescription:
-      "Tokat Merkez'de 24 kg sanayi tüpü. Turanlar Ticaret, işletmeler için Hürgaz sanayi tüplerinde WhatsApp siparişi ve telefonla servis talebi alır.",
+      "Tokat tüp: 24 kg Hürgaz sanayi tüpü. İş yeri için. Sipariş WhatsApp'tan, servis telefondan.",
     priceKurus: null,
     capacity: "24 kg",
     image: {
       kind: "photo",
       src: "https://res.cloudinary.com/ddm7ouuwk/image/upload/v1793955059/turanlar-ticaret/products/sanayi-24kg.jpg",
-      alt: "Hürgaz 24 kg sanayi tipi gümüş LPG tüpü",
+      alt: "Tokat tüp, Hürgaz 24 kg sanayi tipi gümüş LPG tüpü",
       width: 682,
       height: 1024,
     },
@@ -136,7 +136,7 @@ export const products: Product[] = [
     image: {
       kind: "photo",
       src: "https://res.cloudinary.com/ddm7ouuwk/image/upload/v1793955064/turanlar-ticaret/products/gonen-soba.jpg",
-      alt: "Gönen kahverengi emaye soba",
+      alt: "Tokat tüp, Gönen kahverengi emaye soba",
       width: 768,
       height: 1024,
     },
@@ -154,7 +154,7 @@ export const products: Product[] = [
     image: {
       kind: "photo",
       src: "https://res.cloudinary.com/ddm7ouuwk/image/upload/v1793955064/turanlar-ticaret/products/ozenler-semaver.jpg",
-      alt: "Özenler krom semaver",
+      alt: "Tokat tüp, Özenler krom semaver",
       width: 768,
       height: 1024,
     },
@@ -172,7 +172,7 @@ export const products: Product[] = [
     image: {
       kind: "photo",
       src: "https://res.cloudinary.com/ddm7ouuwk/image/upload/v1793955065/turanlar-ticaret/products/kouns-kuzine.jpg",
-      alt: "Kouns kahverengi emaye kuzine",
+      alt: "Tokat tüp, Kouns kahverengi emaye kuzine",
       width: 1024,
       height: 682,
     },
@@ -190,7 +190,7 @@ export const products: Product[] = [
     image: {
       kind: "photo",
       src: "https://res.cloudinary.com/ddm7ouuwk/image/upload/v1793957335/turanlar-ticaret/products/aorcamp-pr50.jpg",
-      alt: "Aorcamp PR-50 kamp ocağı",
+      alt: "Tokat tüp, Aorcamp PR-50 kamp ocağı",
       width: 1024,
       height: 682,
     },
@@ -208,7 +208,7 @@ export const products: Product[] = [
     image: {
       kind: "photo",
       src: "https://res.cloudinary.com/ddm7ouuwk/image/upload/v1793957471/turanlar-ticaret/products/gaz-salome-seti.jpg",
-      alt: "Mavi hortumlu gaz şalomesi seti",
+      alt: "Tokat tüp, Mavi hortumlu gaz şalomesi seti",
       width: 1024,
       height: 682,
     },
@@ -226,7 +226,7 @@ export const products: Product[] = [
     image: {
       kind: "photo",
       src: "https://res.cloudinary.com/ddm7ouuwk/image/upload/v1793957472/turanlar-ticaret/products/mupa-elektrikli-ocak.jpg",
-      alt: "MUPA tekli elektrikli ocak",
+      alt: "Tokat tüp, MUPA tekli elektrikli ocak",
       width: 1024,
       height: 682,
     },
@@ -244,7 +244,7 @@ export const products: Product[] = [
     image: {
       kind: "photo",
       src: "https://res.cloudinary.com/ddm7ouuwk/image/upload/v1793957629/turanlar-ticaret/products/femas-dortlu-ocak.jpg",
-      alt: "FEMAS dört gözlü beyaz ocak",
+      alt: "Tokat tüp, FEMAS dört gözlü beyaz ocak",
       width: 1024,
       height: 512,
     },
@@ -262,7 +262,7 @@ export const products: Product[] = [
     image: {
       kind: "photo",
       src: "https://res.cloudinary.com/ddm7ouuwk/image/upload/v1793957630/turanlar-ticaret/products/femas-ikili-ocak.jpg",
-      alt: "FEMAS iki gözlü beyaz ocak",
+      alt: "Tokat tüp, FEMAS iki gözlü beyaz ocak",
       width: 1024,
       height: 512,
     },
@@ -280,7 +280,7 @@ export const products: Product[] = [
     image: {
       kind: "photo",
       src: "https://res.cloudinary.com/ddm7ouuwk/image/upload/v1793957821/turanlar-ticaret/products/orgaz-kamp-ocagi.jpg",
-      alt: "Orgaz kamp ocağı",
+      alt: "Tokat tüp, Orgaz kamp ocağı",
       width: 1024,
       height: 682,
     },
@@ -298,7 +298,7 @@ export const products: Product[] = [
     image: {
       kind: "photo",
       src: "https://res.cloudinary.com/ddm7ouuwk/image/upload/v1793957822/turanlar-ticaret/products/orgaz-regulator-300-11.jpg",
-      alt: "Orgaz 300-11 LPG regülatör",
+      alt: "Tokat tüp, Orgaz 300-11 LPG regülatör",
       width: 1024,
       height: 682,
     },
@@ -316,7 +316,7 @@ export const products: Product[] = [
     image: {
       kind: "photo",
       src: "https://res.cloudinary.com/ddm7ouuwk/image/upload/v1793957930/turanlar-ticaret/products/orgaz-dedantor-mt-300-20.jpg",
-      alt: "Orgaz MT-300-20 kırmızı LPG dedantör",
+      alt: "Tokat tüp, Orgaz MT-300-20 kırmızı LPG dedantör",
       width: 1024,
       height: 682,
     },
@@ -334,7 +334,7 @@ export const products: Product[] = [
     image: {
       kind: "photo",
       src: "https://res.cloudinary.com/ddm7ouuwk/image/upload/v1793958637/turanlar-ticaret/products/orgaz-dedantor-yb-150.jpg",
-      alt: "Orgaz YB-150 yüksek basınç LPG dedantör",
+      alt: "Tokat tüp, Orgaz YB-150 yüksek basınç LPG dedantör",
       width: 1024,
       height: 682,
     },
@@ -352,7 +352,7 @@ export const products: Product[] = [
     image: {
       kind: "photo",
       src: "https://res.cloudinary.com/ddm7ouuwk/image/upload/v1793962937/turanlar-ticaret/products/tuplu-sac-tava-45-kapak.png",
-      alt: "Tüplü saç tava 45 cm, çini desenli tüp üzerinde metal sac",
+      alt: "Tokat tüp, Tüplü saç tava 45 cm, çini desenli tüp üzerinde metal sac",
       width: 683,
       height: 560,
     },
@@ -360,14 +360,14 @@ export const products: Product[] = [
       {
         kind: "photo",
         src: "https://res.cloudinary.com/ddm7ouuwk/image/upload/v1793962935/turanlar-ticaret/products/tuplu-sac-tava-45-gozleme.png",
-        alt: "Tüplü saç tavada üstte gözleme, altta kavurma",
+        alt: "Tokat tüp, Tüplü saç tavada üstte gözleme, altta kavurma",
         width: 751,
         height: 523,
       },
       {
         kind: "photo",
         src: "https://res.cloudinary.com/ddm7ouuwk/image/upload/v1793962936/turanlar-ticaret/products/tuplu-sac-tava-45-siyah.png",
-        alt: "Tüplü saç tava, siyah sac yüzeyiyle",
+        alt: "Tokat tüp, Tüplü saç tava, siyah sac yüzeyiyle",
         width: 654,
         height: 485,
       },
@@ -386,7 +386,7 @@ export const products: Product[] = [
     image: {
       kind: "photo",
       src: "https://res.cloudinary.com/ddm7ouuwk/image/upload/v1793963060/turanlar-ticaret/products/samdan-1003-doner-firin-on.png",
-      alt: "Şamdan 1003 kırmızı döner yuvarlak fırın",
+      alt: "Tokat tüp, Şamdan 1003 kırmızı döner yuvarlak fırın",
       width: 565,
       height: 654,
     },
@@ -394,7 +394,7 @@ export const products: Product[] = [
       {
         kind: "photo",
         src: "https://res.cloudinary.com/ddm7ouuwk/image/upload/v1793963061/turanlar-ticaret/products/samdan-1003-doner-firin-yan.png",
-        alt: "Şamdan 1003 döner yuvarlak fırın, yan görünüm",
+        alt: "Tokat tüp, Şamdan 1003 döner yuvarlak fırın, yan görünüm",
         width: 571,
         height: 673,
       },
@@ -413,7 +413,7 @@ export const products: Product[] = [
     image: {
       kind: "photo",
       src: "https://res.cloudinary.com/ddm7ouuwk/image/upload/v1793963135/turanlar-ticaret/products/gurme-mk101-katmer-saci.jpg",
-      alt: "Gurme Mk101 elektrikli ayarlanabilir termostatlı katmer sacı",
+      alt: "Tokat tüp, Gurme Mk101 elektrikli ayarlanabilir termostatlı katmer sacı",
       width: 1024,
       height: 676,
     },
@@ -431,7 +431,7 @@ export const products: Product[] = [
     image: {
       kind: "photo",
       src: "https://res.cloudinary.com/ddm7ouuwk/image/upload/v1793963497/turanlar-ticaret/products/lav-tasli-tuplu-mangal-on.png",
-      alt: "Büyük boy lav taşlı tüplü mangal, 32x54x22 cm",
+      alt: "Tokat tüp, Büyük boy lav taşlı tüplü mangal, 32x54x22 cm",
       width: 504,
       height: 615,
     },
@@ -439,7 +439,7 @@ export const products: Product[] = [
       {
         kind: "photo",
         src: "https://res.cloudinary.com/ddm7ouuwk/image/upload/v1793963499/turanlar-ticaret/products/lav-tasli-tuplu-mangal-ust.png",
-        alt: "Lav taşlı tüplü mangalın ızgara üst görünümü",
+        alt: "Tokat tüp, Lav taşlı tüplü mangalın ızgara üst görünümü",
         width: 539,
         height: 451,
       },
@@ -459,7 +459,7 @@ export const products: Product[] = [
     image: {
       kind: "photo",
       src: "https://res.cloudinary.com/ddm7ouuwk/image/upload/v1793963605/turanlar-ticaret/products/beyaz-surgulu-aspirator.png",
-      alt: "Beyaz sürgülü aspiratör",
+      alt: "Tokat tüp, Beyaz sürgülü aspiratör",
       width: 824,
       height: 622,
     },
@@ -477,7 +477,7 @@ export const products: Product[] = [
     image: {
       kind: "photo",
       src: "https://res.cloudinary.com/ddm7ouuwk/image/upload/v1793963683/turanlar-ticaret/products/demaver-cay-makinesi.png",
-      alt: "Demaver çelik çay makinesi, 2 lt",
+      alt: "Tokat tüp, Demaver çelik çay makinesi, 2 lt",
       width: 503,
       height: 591,
     },
@@ -485,7 +485,7 @@ export const products: Product[] = [
       {
         kind: "photo",
         src: "https://res.cloudinary.com/ddm7ouuwk/image/upload/v1793963684/turanlar-ticaret/products/demaver-cay-makinesi-parca.png",
-        alt: "Demaver çelik çay makinesi, demlik ve süzgeç ayrı",
+        alt: "Tokat tüp, Demaver çelik çay makinesi, demlik ve süzgeç ayrı",
         width: 428,
         height: 555,
       },
@@ -504,7 +504,7 @@ export const products: Product[] = [
     image: {
       kind: "photo",
       src: "https://res.cloudinary.com/ddm7ouuwk/image/upload/v1793963843/turanlar-ticaret/products/orgaz-lantern-l-627.png",
-      alt: "Orgaz L-627 büyük kamp lambası ve kutusu",
+      alt: "Tokat tüp, Orgaz L-627 büyük kamp lambası ve kutusu",
       width: 545,
       height: 546,
     },
@@ -512,7 +512,7 @@ export const products: Product[] = [
       {
         kind: "photo",
         src: "https://res.cloudinary.com/ddm7ouuwk/image/upload/v1793963844/turanlar-ticaret/products/orgaz-lantern-l-627-yakin.png",
-        alt: "Orgaz L-627 kamp lambası, yakın plan",
+        alt: "Tokat tüp, Orgaz L-627 kamp lambası, yakın plan",
         width: 547,
         height: 546,
       },
@@ -531,7 +531,7 @@ export const products: Product[] = [
     image: {
       kind: "photo",
       src: "https://res.cloudinary.com/ddm7ouuwk/image/upload/v1793963901/turanlar-ticaret/products/orgaz-dedantorlu-kamp-sobasi.png",
-      alt: "Orgaz dedantörlü kamp sobası",
+      alt: "Tokat tüp, Orgaz dedantörlü kamp sobası",
       width: 490,
       height: 567,
     },
@@ -550,7 +550,7 @@ export const products: Product[] = [
     image: {
       kind: "photo",
       src: "https://res.cloudinary.com/ddm7ouuwk/image/upload/v1793963979/turanlar-ticaret/products/aorcamp-cx-500-purmuz-set.png",
-      alt: "Aorcamp çakmaklı kartuş pürmüz set, gaz kartuşu ile",
+      alt: "Tokat tüp, Aorcamp çakmaklı kartuş pürmüz set, gaz kartuşu ile",
       width: 473,
       height: 568,
     },
@@ -558,14 +558,14 @@ export const products: Product[] = [
       {
         kind: "photo",
         src: "https://res.cloudinary.com/ddm7ouuwk/image/upload/v1793963980/turanlar-ticaret/products/aorcamp-cx-500-purmuz-yan.png",
-        alt: "Aorcamp çakmaklı kartuş pürmüz, yan görünüm",
+        alt: "Tokat tüp, Aorcamp çakmaklı kartuş pürmüz, yan görünüm",
         width: 821,
         height: 695,
       },
       {
         kind: "photo",
         src: "https://res.cloudinary.com/ddm7ouuwk/image/upload/v1793963981/turanlar-ticaret/products/aorcamp-cx-500-purmuz-baglanti.png",
-        alt: "Aorcamp çakmaklı kartuş pürmüz, kartuş bağlantısı",
+        alt: "Tokat tüp, Aorcamp çakmaklı kartuş pürmüz, kartuş bağlantısı",
         width: 811,
         height: 704,
       },
@@ -585,7 +585,7 @@ export const products: Product[] = [
     image: {
       kind: "photo",
       src: "https://res.cloudinary.com/ddm7ouuwk/image/upload/v1793964111/turanlar-ticaret/products/lt-44-tost-makinesi.png",
-      alt: "LT-44 kırmızı tost makinesi",
+      alt: "Tokat tüp, LT-44 kırmızı tost makinesi",
       width: 584,
       height: 469,
     },
@@ -593,14 +593,14 @@ export const products: Product[] = [
       {
         kind: "photo",
         src: "https://res.cloudinary.com/ddm7ouuwk/image/upload/v1793964111/turanlar-ticaret/products/lt-44-tost-makinesi-acik.png",
-        alt: "LT-44 tost makinesi, ızgaralar açık",
+        alt: "Tokat tüp, LT-44 tost makinesi, ızgaralar açık",
         width: 573,
         height: 474,
       },
       {
         kind: "photo",
         src: "https://res.cloudinary.com/ddm7ouuwk/image/upload/v1793964112/turanlar-ticaret/products/lt-44-tost-makinesi-yan.png",
-        alt: "LT-44 tost makinesi, yan görünüm",
+        alt: "Tokat tüp, LT-44 tost makinesi, yan görünüm",
         width: 565,
         height: 455,
       },
@@ -619,7 +619,7 @@ export const products: Product[] = [
     image: {
       kind: "photo",
       src: "https://res.cloudinary.com/ddm7ouuwk/image/upload/v1793964234/turanlar-ticaret/products/nazar-reso-yakiti-1-litre.png",
-      alt: "Nazar jel reşo yakıtı, 1 litre",
+      alt: "Tokat tüp, Nazar jel reşo yakıtı, 1 litre",
       width: 286,
       height: 501,
     },
@@ -637,7 +637,7 @@ export const products: Product[] = [
     image: {
       kind: "photo",
       src: "https://res.cloudinary.com/ddm7ouuwk/image/upload/v1793964301/turanlar-ticaret/products/tuplu-sac-ekmek-katmer-60.jpg",
-      alt: "60 cm tüplü ekmek ve katmer sacı, hortum ve vana seti ile",
+      alt: "Tokat tüp, 60 cm tüplü ekmek ve katmer sacı, hortum ve vana seti ile",
       width: 935,
       height: 1024,
     },
@@ -655,7 +655,7 @@ export const products: Product[] = [
     image: {
       kind: "photo",
       src: "https://res.cloudinary.com/ddm7ouuwk/image/upload/v1793965044/turanlar-ticaret/products/aorcamp-227-gram-gaz-kartusu.png",
-      alt: "Aorcamp 227 gram gaz kartuşu",
+      alt: "Tokat tüp, Aorcamp 227 gram gaz kartuşu",
       width: 433,
       height: 525,
     },

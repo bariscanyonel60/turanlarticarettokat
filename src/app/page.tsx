@@ -12,9 +12,9 @@ import { getProducts } from "@/lib/catalog";
 import { faqJsonLd, productListJsonLd, buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Tokat Tüp | Turanlar Ticaret",
+  title: "Tokat Tüp Siparişi | Turanlar Ticaret Tokat Merkez",
   description:
-    "Tokat tüp siparişi için Turanlar Ticaret. 1977'den bugüne Tokat Merkez'de Hürgaz ev, piknik ve sanayi tüpü. WhatsApp ile sipariş, telefonla servis.",
+    "Tokat tüp siparişi Bahçelievler'deki Turanlar Ticaret'ten. 1977'den beri Hürgaz ev, piknik ve sanayi tüpü. WhatsApp'tan yazın, servis için arayın.",
   path: "/",
   absoluteTitle: true,
 });

@@ -15,11 +15,11 @@ export function ServiceBanner() {
             Sipariş ve servis
           </p>
           <h2 className="mt-4 max-w-xl font-display text-4xl leading-[1.05] tracking-[-0.045em] sm:text-6xl">
-            Tüp Siparişiniz İçin Bize Ulaşın
+            Tokat tüp için yazın ya da arayın
           </h2>
           <p className="mt-5 max-w-xl text-base leading-7 text-mist sm:text-lg">
-            Tokat Merkez&apos;de tüp ihtiyacınız için Turanlar Ticaret ile kolayca
-            iletişime geçin.
+            Siparişi WhatsApp&apos;tan bırakın. Servis için sabit telefonu arayın. Tüpü
+            Tokat Merkez&apos;e bırakıyoruz.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Button href={generalWhatsappUrl()} variant="whatsapp" className="w-full sm:w-auto">

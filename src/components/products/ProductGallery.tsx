@@ -1,6 +1,8 @@
 "use client";
 
+import { HoverZoom } from "@/components/products/HoverZoom";
 import { cloudinaryDeliveryUrl } from "@/lib/cloudinary";
+import { imageAlt } from "@/lib/image-alt";
 import type { ProductPhoto } from "@/types/product";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
@@ -46,14 +48,16 @@ export function ProductGallery({ photos }: { photos: ProductPhoto[] }) {
               aria-hidden={photoIndex === index ? undefined : true}
             >
               <div className="absolute inset-4 sm:inset-8">
-                <Image
-                  src={cloudinaryDeliveryUrl(photo.src)}
-                  alt={photo.alt}
-                  fill
-                  priority={photoIndex === 0}
-                  sizes="(min-width: 1024px) 55vw, 100vw"
-                  className="object-contain"
-                />
+                <HoverZoom>
+                  <Image
+                    src={cloudinaryDeliveryUrl(photo.src)}
+                    alt={imageAlt(photo.alt)}
+                    fill
+                    priority={photoIndex === 0}
+                    sizes="(min-width: 1024px) 55vw, 100vw"
+                    className="object-contain"
+                  />
+                </HoverZoom>
               </div>
             </div>
           ))}

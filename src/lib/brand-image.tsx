@@ -44,11 +44,11 @@ export function createBrandImage() {
             color: "#0C2348",
           }}
         >
-          <div style={{ display: "flex" }}>Tokat&apos;ta güvenilir</div>
-          <div style={{ display: "flex" }}>tüp hizmeti</div>
+          <div style={{ display: "flex" }}>Tokat tüp</div>
+          <div style={{ display: "flex" }}>siparişi</div>
         </div>
         <div style={{ display: "flex", fontSize: 28, color: "#4E5968" }}>
-          Hürgaz ürünleri · WhatsApp sipariş
+          1977&apos;den beri Tokat Merkez
         </div>
       </div>
     ),

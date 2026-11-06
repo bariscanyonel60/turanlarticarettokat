@@ -1,5 +1,6 @@
 import { CylinderArt } from "@/components/brand/CylinderArt";
 import { cloudinaryDeliveryUrl } from "@/lib/cloudinary";
+import { imageAlt } from "@/lib/image-alt";
 import type { ProductImage } from "@/types/product";
 import Image from "next/image";
 
@@ -21,7 +22,7 @@ export function ProductVisual({
       return (
         <Image
           src={cloudinaryDeliveryUrl(image.src)}
-          alt={image.alt}
+          alt={imageAlt(image.alt)}
           width={image.width}
           height={image.height}
           priority={priority}

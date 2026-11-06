@@ -11,13 +11,6 @@ import { useActionState, useState } from "react";
 type EditableProduct = Product & { id: number; sortOrder: number };
 
 const initialState: AdminFormState = { error: "" };
-const tubeOptions = [
-  { id: "ev-tipi", label: "Ev tipi" },
-  { id: "piknik", label: "Piknik" },
-  { id: "sanayi", label: "Sanayi" },
-  { id: "ticari", label: "Ticari" },
-  { id: "diger", label: "Diğer" },
-] as const;
 
 const fieldClass = "min-h-12 rounded-xl border border-navy/15 bg-white px-4 font-medium";
 
@@ -31,7 +24,6 @@ export function ProductForm({
   const [state, action, pending] = useActionState(saveProductAction, initialState);
   const [slugTouched, setSlugTouched] = useState(Boolean(product));
   const [slug, setSlug] = useState(product?.slug ?? "");
-  const [imageKind, setImageKind] = useState(product?.image.kind ?? "photo");
   const [mainPreview, setMainPreview] = useState<string | null>(null);
   const [galleryPreviews, setGalleryPreviews] = useState<string[]>([]);
   const photo = product?.image.kind === "photo" ? product.image : null;
@@ -136,31 +128,8 @@ export function ProductForm({
         </label>
       </div>
       <div className="grid content-start gap-5">
-        <fieldset className="grid gap-3 rounded-[1.4rem] border border-navy/10 bg-white p-5">
-          <legend className="px-1 text-sm font-semibold text-navy">Görsel türü</legend>
-          <label className="flex items-center gap-2 text-sm font-medium">
-            <input
-              type="radio"
-              name="imageKind"
-              value="photo"
-              checked={imageKind === "photo"}
-              onChange={() => setImageKind("photo")}
-            />
-            Fotoğraf
-          </label>
-          <label className="flex items-center gap-2 text-sm font-medium">
-            <input
-              type="radio"
-              name="imageKind"
-              value="illustration"
-              checked={imageKind === "illustration"}
-              onChange={() => setImageKind("illustration")}
-            />
-            Çizim
-          </label>
-        </fieldset>
-        {imageKind === "photo" ? (
-          <div className="grid gap-4 rounded-[1.4rem] border border-navy/10 bg-white p-5">
+        <input type="hidden" name="imageKind" value="photo" />
+        <div className="grid gap-4 rounded-[1.4rem] border border-navy/10 bg-white p-5">
             <p className="text-sm font-semibold text-navy">Ürün görseli</p>
             <DropZone
               name="image"
@@ -219,23 +188,7 @@ export function ProductForm({
                 ))}
               </ul>
             ) : null}
-          </div>
-        ) : (
-          <label className="grid gap-2 rounded-[1.4rem] border border-navy/10 bg-white p-5 text-sm font-semibold text-navy">
-            Çizim türü
-            <select
-              name="variant"
-              defaultValue={product?.image.kind === "illustration" ? product.image.variant : "ticari"}
-              className={fieldClass}
-            >
-              {tubeOptions.map((option) => (
-                <option key={option.id} value={option.id}>
-                  {option.label}
-                </option>
-              ))}
-            </select>
-          </label>
-        )}
+        </div>
         <button
           type="submit"
           disabled={pending}

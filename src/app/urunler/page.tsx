@@ -8,7 +8,7 @@ import { buildMetadata, productListJsonLd } from "@/lib/seo";
 export const metadata = buildMetadata({
   title: "Tokat Tüp ve Kamp Ürünleri",
   description:
-    "Tokat Merkez'de Hürgaz tüp, soba, ocak ve kamp ürünleri. Fiyat kartta yazar, sipariş WhatsApp ile verilir.",
+    "Tokat tüp vitrini: Hürgaz ev, piknik ve sanayi tüpü, soba ve ocak. Fiyat kartta yazar, sipariş WhatsApp'tan.",
   path: "/urunler",
 });
 
@@ -29,9 +29,8 @@ export default async function ProductsPage() {
             Tokat Tüp Ürünleri
           </h1>
           <p className="mt-5 max-w-2xl text-base leading-7 text-ink-soft sm:text-lg">
-            Tokat Tüp vitrini: fotoğrafı olan tüp, soba, kuzine, semaver, ocak ve
-            bağlantı parçaları. Tokat Merkez siparişi WhatsApp ile verilir. Fiyat
-            ürün kartında yazar.
+            Ev tüpü, piknik tüpü, sanayi tüpü, soba ve ocak. Fiyatı kartta görürsünüz.
+            Siparişi WhatsApp&apos;tan bırakın, servis için arayın.
           </p>
         </Container>
       </section>

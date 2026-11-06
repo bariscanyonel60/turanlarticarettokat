@@ -5,7 +5,7 @@ export const business = {
   /** İşletmenin bildirdiği hizmete başlama yılı. */
   foundedYear: 1977,
   shortDescription:
-    "Tokat Merkez'de Tokat Tüp hizmeti veren yerel işletme. Hürgaz tüp çeşitlerinin satışını yapar. Sipariş WhatsApp üzerinden, servis talebi telefonla alınır.",
+    "Tokat tüp için Turanlar Ticaret. 1977'den beri Tokat Merkez'de Hürgaz tüp satıyoruz. Sipariş WhatsApp'tan, servis telefondan.",
   address: {
     street: "Bahçelievler Mahallesi, Yazıcıoğlu Caddesi",
     line: "3. Geçit No: 47/C",
@@ -26,9 +26,8 @@ export const business = {
 } as const;
 
 /**
- * TODO: tam çalışma saatleri.
- * Açılış saati ve çalışma günleri doğrulanmadan doldurulmamalıdır.
- * Kapanış saati işletme tarafından 22:00 olarak paylaşılmıştır.
+ * Açılış ve kapanış işletmenin bildirdiği aralıktır.
+ * Haftanın hangi günleri açık olduğu ayrıca doğrulanmadı; uydurulmaz.
  */
 export const businessHours: {
   closingTime: string;
@@ -36,7 +35,7 @@ export const businessHours: {
   workingDays: string | null;
 } = {
   closingTime: "22:00",
-  openingTime: null,
+  openingTime: "07:30",
   workingDays: null,
 };
 
@@ -50,6 +49,14 @@ export const shopPhoto: {
   width: number;
   height: number;
 } | null = null;
+
+/** Hakkımızda sayfasındaki afiş. Dükkân fotoğrafı ve Hakkımızda metni bir arada. */
+export const aboutBanner = {
+  src: "https://res.cloudinary.com/ddm7ouuwk/image/upload/v1793988296/turanlar-ticaret/branding/hakkimizda.jpg",
+  alt: "Tokat tüp dükkânının vitrini. Camda Hürgaz tüpler, ocak ve sobalar.",
+  width: 1024,
+  height: 576,
+} as const;
 
 /**
  * TODO: mahalle listesi doğrulanınca hizmet bölgesine ekle.
@@ -67,6 +74,13 @@ export const servicePhoto: {
   width: number;
   height: number;
 } | null = null;
+
+export function hoursLabel() {
+  if (!businessHours.openingTime) {
+    return `Kapanış ${businessHours.closingTime}`;
+  }
+  return `${businessHours.openingTime} – ${businessHours.closingTime}`;
+}
 
 export function fullAddress() {
   const { street, line, district, city, postalCode } = business.address;

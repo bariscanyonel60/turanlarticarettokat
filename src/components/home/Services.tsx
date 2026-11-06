@@ -32,7 +32,7 @@ export function Services() {
             Tokat Tüp Hizmetleri
           </h2>
           <p className="mt-4 text-base leading-7 text-ink-soft">
-            Satış ve servis yalnızca Tokat Merkez için planlanır.
+            Tüpü Tokat Merkez&apos;e bırakıyoruz. Sipariş WhatsApp&apos;tan, servis telefondan.
           </p>
         </div>
         <ol className="mt-12 divide-y divide-navy/10 border-y border-navy/10">
