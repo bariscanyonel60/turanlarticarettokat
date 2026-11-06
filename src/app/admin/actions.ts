@@ -10,7 +10,6 @@ import {
   deleteProduct,
   getProductRecord,
   isCategoryId,
-  isTubeCategory,
   saveProduct,
   seedCatalogFromSite,
   type StoredPhoto,
@@ -84,6 +83,7 @@ export async function logoutAction() {
 }
 
 export async function setupCatalogAction(_previous: AdminFormState): Promise<AdminFormState> {
+  void _previous;
   await requireAdminAction();
   try {
     await seedCatalogFromSite();
@@ -137,7 +137,6 @@ export async function saveProductAction(
     const sortOrder = sortText ? Number(sortText) : 0;
     const imageKind = text(formData, "imageKind");
     const alt = text(formData, "alt") || name;
-    const variant = text(formData, "variant");
     const seoDescription = buildSeoDescription(name, summary, priceKurus);
 
     if (!name || !slug || !summary || !usage) {
@@ -154,12 +153,7 @@ export async function saveProductAction(
     }
 
     let image: ProductImage;
-    if (imageKind === "illustration") {
-      if (!isTubeCategory(variant)) {
-        return { error: "Çizim türünü seçin." };
-      }
-      image = { kind: "illustration", variant };
-    } else if (imageKind === "photo") {
+    if (imageKind === "photo") {
       const file = imageFiles(formData, "image")[0] ?? null;
       const current = existing?.image.kind === "photo" ? existing.image : null;
       const uploaded = file

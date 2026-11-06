@@ -1,31 +1,31 @@
 export const services = [
   {
     id: "ev",
-    title: "Ev Tipi Tüp Satışı",
-    summary: "Mutfak ve günlük kullanım için ev tipi tüpler.",
+    title: "Ev tüpü",
+    summary: "Mutfak için 2 kg ve 12 kg Hürgaz tüp.",
     detail:
-      "Tokat Merkez'deki evler için mutfak ve günlük kullanıma yönelik tüp çeşitlerini satıyoruz. Hangi seçeneğin uygun olduğunu, stok durumunu ve servis imkânını WhatsApp veya telefonla netleştiriyoruz.",
+      "Evde ocak, çay ve günlük yemek için küçük ya da büyük tüp bakıyorsanız ikisini de sorun. Hangisi stokta, WhatsApp'tan ya da telefondan söyleyelim.",
   },
   {
     id: "isletme",
-    title: "İşletmelere Tüp Tedariği",
-    summary: "İş yeri, restoran ve ticari mutfaklar için tüp tedariki.",
+    title: "İş yerine tüp",
+    summary: "Lokanta, kafe ve iş yeri için tüp.",
     detail:
-      "Tokat Merkez'de faaliyet gösteren işletmelerin tüp ihtiyacını dinleyip uygun çeşidi birlikte belirliyoruz. Teslimat süresi veya ücretsiz servis gibi doğrulanmamış bir vaat paylaşmıyoruz; uygunluk sipariş sırasında konuşulur.",
+      "Tokat Merkez'deki iş yerlerine tüp bırakıyoruz. Kaç tane ve hangi çeşit lazım, yazın. Ne zaman bırakılacağını siparişte konuşuruz.",
   },
   {
     id: "servis",
-    title: "Tokat Merkez Tüp Servisi",
-    summary: "Servis bölgesi Tokat Merkez ile sınırlıdır.",
+    title: "Tokat Merkez'e servis",
+    summary: "Tüpü Tokat Merkez içine bırakıyoruz.",
     detail:
-      "Tüp servisi yalnızca Tokat Merkez için geçerlidir. İlçelere veya Tokat dışına hizmet verildiği belirtilmez. Servis talebini sabit telefondan iletebilir, siparişinizi WhatsApp hattından yazabilirsiniz.",
+      "Servis Tokat Merkez ile sınırlı. İlçeye ya da şehir dışına düzenli gitmiyoruz. Servis için sabit telefonu arayın, sipariş için WhatsApp yeter.",
   },
   {
     id: "whatsapp",
-    title: "WhatsApp ile Kolay Sipariş",
-    summary: "Ürün adı hazır mesaja yazılır, fiyat kartta yazar.",
+    title: "WhatsApp'tan sipariş",
+    summary: "Ürüne tıklayınca mesaj, tüpün adıyla açılır.",
     detail:
-      "Sitede sepet ve online ödeme yoktur. Bir tüp çeşidini seçtiğinizde WhatsApp, ürün adını içeren bir mesajla açılır. Fiyat, stok ve Tokat Merkez servis durumu bu yazışmada netleşir.",
+      "Sitede sepet yok. Tüpü seçince WhatsApp hazır bir mesajla açılır. Fiyatı ve Tokat Merkez'e bırakıp bırakamayacağımızı orada netleştiririz.",
   },
 ] as const;
 
@@ -34,27 +34,27 @@ export type ServiceId = (typeof services)[number]["id"];
 export const orderSteps = [
   {
     number: "01",
-    title: "Tüp Çeşidini Seç",
-    text: "Ev, piknik ve sanayi tüpleri ile vitrindeki soba, ocak ve bağlantı parçaları arasından ihtiyacınıza uygun olanı belirleyin.",
+    title: "Tüpü seçin",
+    text: "Ev, piknik ya da sanayi tüpüne bakın. Vitrinde soba, ocak ve bağlantı parçaları da var.",
   },
   {
     number: "02",
-    title: "WhatsApp'tan Bize Yaz",
-    text: "Sipariş bağlantısı, seçtiğiniz ürünün adını içeren hazır bir mesajla WhatsApp'ı açar.",
+    title: "WhatsApp'tan yazın",
+    text: "Sipariş bağlantısı, seçtiğiniz ürünün adını mesaja koyup WhatsApp'ı açar.",
   },
   {
     number: "03",
-    title: "Servis ve Sipariş Detaylarını Netleştir",
-    text: "Tokat Merkez için stok, fiyat ve servis uygunluğunu birlikte konuşup siparişi netleştiririz.",
+    title: "Yeri ve saati konuşun",
+    text: "Stok, fiyat ve Tokat Merkez'e bırakma işini birlikte netleştiririz.",
   },
 ] as const;
 
 export const aboutCopy = {
-  title: "1977'den bugüne Tokat Merkez",
-  lead: "Tokat Tüp için Turanlar Ticaret, 1977'den bugüne Tokat Merkez'de hizmet verir. Yıllar boyu güvenli, samimi ve dürüst bir alışveriş gerçekleştirir.",
+  title: "1977'den beri Tokat'ta",
+  lead: "Tokat tüp lazım olduğunda Bahçelievler'deki dükkâna yazın. Turanlar Ticaret 1977'den beri Tokat Merkez'de Hürgaz tüp satıyor.",
   paragraphs: [
-    "Hürgaz ev tipi, piknik tipi ve sanayi tipi tüplerin satışını Tokat Merkez'de yaparız. Soba, kuzine, semaver, ocak ve bağlantı parçaları da vitrindedir.",
-    "Sipariş WhatsApp hattından, servis talebi sabit telefondan alınır. Sitede fiyat, sepet veya online ödeme yer almaz. Stok, fiyat ve servis uygunluğu her siparişte ayrıca konuşulur.",
-    "Hizmet bölgesi Tokat Merkez'dir. Müşteri sayısı veya yetkili bayi unvanı gibi paylaşılmamış bilgiler bu sitede kullanılmaz.",
+    "Ev için 2 kg ve 12 kg tüp, piknik tüpü ve iş yeri için 24 kg sanayi tüpü var. Yanında soba, kuzine, semaver, ocak ve bağlantı parçaları da duruyor.",
+    "Siparişi WhatsApp'tan bırakın. Servis için sabit telefonu arayın. Fiyat ve stok o günkü duruma göre söylenir.",
+    "Tüpü Tokat Merkez'e bırakıyoruz. İlçe ve il dışına düzenli servis yok. Dükkân 07:30 ile 22:00 arasında açık. Hangi günler çalıştığımızı arayınca öğrenirsiniz.",
   ],
 } as const;

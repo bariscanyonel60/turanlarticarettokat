@@ -5,7 +5,7 @@ import { useMenu } from "@/components/layout/Providers";
 import { MediaCredit } from "@/components/shared/MediaCredit";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
-import { business, businessHours } from "@/data/business";
+import { business, hoursLabel } from "@/data/business";
 import { isItemActive, isNavActive, navItems, type NavItem } from "@/data/navigation";
 import { cn } from "@/lib/cn";
 import { generalWhatsappUrl } from "@/lib/whatsapp";
@@ -66,7 +66,9 @@ export function Header() {
     <div className="sticky top-0 z-50" style={{ "--header-h": headerHeight } as CSSProperties}>
       <div className="hidden border-b border-white/10 bg-navy text-cream md:block">
         <Container className="flex h-11 items-center justify-between gap-4 text-sm font-semibold">
-          <p className="truncate">Tokat Merkez tüp siparişi · kapanış {businessHours.closingTime}</p>
+          <p className="truncate">
+            Tokat Merkez tüp siparişi · {hoursLabel()}
+          </p>
           <div className="flex shrink-0 items-center gap-2">
             <a
               href={`tel:${business.phoneTel}`}

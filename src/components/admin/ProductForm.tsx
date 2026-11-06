@@ -6,18 +6,11 @@ import { slugify } from "@/lib/slug";
 import type { Product, ProductCategory } from "@/types/product";
 import { ImagePlus } from "lucide-react";
 import Image from "next/image";
-import { useActionState, useEffect, useState } from "react";
+import { useActionState, useState } from "react";
 
 type EditableProduct = Product & { id: number; sortOrder: number };
 
 const initialState: AdminFormState = { error: "" };
-const tubeOptions = [
-  { id: "ev-tipi", label: "Ev tipi" },
-  { id: "piknik", label: "Piknik" },
-  { id: "sanayi", label: "Sanayi" },
-  { id: "ticari", label: "Ticari" },
-  { id: "diger", label: "Diğer" },
-] as const;
 
 const fieldClass = "min-h-12 rounded-xl border border-navy/15 bg-white px-4 font-medium";
 
@@ -31,11 +24,8 @@ export function ProductForm({
   const [state, action, pending] = useActionState(saveProductAction, initialState);
   const [slugTouched, setSlugTouched] = useState(Boolean(product));
   const [slug, setSlug] = useState(product?.slug ?? "");
-  const [imageKind, setImageKind] = useState(product?.image.kind ?? "photo");
-  const [mainFile, setMainFile] = useState<File | null>(null);
-  const [galleryFiles, setGalleryFiles] = useState<File[]>([]);
-  const mainPreview = useObjectUrl(mainFile);
-  const galleryPreviews = useObjectUrls(galleryFiles);
+  const [mainPreview, setMainPreview] = useState<string | null>(null);
+  const [galleryPreviews, setGalleryPreviews] = useState<string[]>([]);
   const photo = product?.image.kind === "photo" ? product.image : null;
   const gallery = product?.gallery ?? [];
 
@@ -138,38 +128,21 @@ export function ProductForm({
         </label>
       </div>
       <div className="grid content-start gap-5">
-        <fieldset className="grid gap-3 rounded-[1.4rem] border border-navy/10 bg-white p-5">
-          <legend className="px-1 text-sm font-semibold text-navy">Görsel türü</legend>
-          <label className="flex items-center gap-2 text-sm font-medium">
-            <input
-              type="radio"
-              name="imageKind"
-              value="photo"
-              checked={imageKind === "photo"}
-              onChange={() => setImageKind("photo")}
-            />
-            Fotoğraf
-          </label>
-          <label className="flex items-center gap-2 text-sm font-medium">
-            <input
-              type="radio"
-              name="imageKind"
-              value="illustration"
-              checked={imageKind === "illustration"}
-              onChange={() => setImageKind("illustration")}
-            />
-            Çizim
-          </label>
-        </fieldset>
-        {imageKind === "photo" ? (
-          <div className="grid gap-4 rounded-[1.4rem] border border-navy/10 bg-white p-5">
+        <input type="hidden" name="imageKind" value="photo" />
+        <div className="grid gap-4 rounded-[1.4rem] border border-navy/10 bg-white p-5">
             <p className="text-sm font-semibold text-navy">Ürün görseli</p>
             <DropZone
               name="image"
               preview={mainPreview ?? photo?.src}
               previewAlt={photo?.alt ?? "Seçilen ürün görseli"}
               label={photo ? "Görseli değiştir" : "Görsel seçin"}
-              onFiles={(files) => setMainFile(files[0] ?? null)}
+              onFiles={(files) => {
+                const file = files[0] ?? null;
+                setMainPreview((current) => {
+                  if (current) URL.revokeObjectURL(current);
+                  return file ? URL.createObjectURL(file) : null;
+                });
+              }}
             />
             {gallery.length > 0 ? (
               <ul className="grid grid-cols-3 gap-2">
@@ -197,7 +170,12 @@ export function ProductForm({
               name="gallery"
               multiple
               label="Galeriye görsel ekle"
-              onFiles={setGalleryFiles}
+              onFiles={(files) => {
+                setGalleryPreviews((current) => {
+                  for (const url of current) URL.revokeObjectURL(url);
+                  return files.map((file) => URL.createObjectURL(file));
+                });
+              }}
             />
             {galleryPreviews.length > 0 ? (
               <ul className="grid grid-cols-3 gap-2">
@@ -210,23 +188,7 @@ export function ProductForm({
                 ))}
               </ul>
             ) : null}
-          </div>
-        ) : (
-          <label className="grid gap-2 rounded-[1.4rem] border border-navy/10 bg-white p-5 text-sm font-semibold text-navy">
-            Çizim türü
-            <select
-              name="variant"
-              defaultValue={product?.image.kind === "illustration" ? product.image.variant : "ticari"}
-              className={fieldClass}
-            >
-              {tubeOptions.map((option) => (
-                <option key={option.id} value={option.id}>
-                  {option.label}
-                </option>
-              ))}
-            </select>
-          </label>
-        )}
+        </div>
         <button
           type="submit"
           disabled={pending}
@@ -302,30 +264,4 @@ function DropZone({
       />
     </label>
   );
-}
-
-function useObjectUrl(file: File | null) {
-  const [url, setUrl] = useState<string | null>(null);
-  useEffect(() => {
-    if (!file) {
-      setUrl(null);
-      return;
-    }
-    const next = URL.createObjectURL(file);
-    setUrl(next);
-    return () => URL.revokeObjectURL(next);
-  }, [file]);
-  return url;
-}
-
-function useObjectUrls(files: File[]) {
-  const [urls, setUrls] = useState<string[]>([]);
-  useEffect(() => {
-    const next = files.map((file) => URL.createObjectURL(file));
-    setUrls(next);
-    return () => {
-      for (const url of next) URL.revokeObjectURL(url);
-    };
-  }, [files]);
-  return urls;
 }

@@ -5,6 +5,17 @@ const nextConfig: NextConfig = {
   cacheComponents: true,
   partialPrefetching: true,
   poweredByHeader: false,
+  trailingSlash: false,
+  async redirects() {
+    return [
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "turanlarticaret.com" }],
+        destination: "https://www.turanlarticaret.com/:path*",
+        permanent: true,
+      },
+    ];
+  },
   images: {
     formats: ["image/avif", "image/webp"],
     remotePatterns: [
@@ -18,12 +29,6 @@ const nextConfig: NextConfig = {
   },
   turbopack: {
     root: path.resolve(process.cwd()),
-    rules: {
-      "*.css": {
-        loaders: ["@tailwindcss/turbopack"],
-        as: "*.css",
-      },
-    },
   },
 };
 

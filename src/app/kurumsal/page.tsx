@@ -9,22 +9,22 @@ import Link from "next/link";
 export const metadata = buildMetadata({
   title: "Kurumsal",
   description:
-    "Tokat Tüp için Turanlar Ticaret kurumsal sayfaları: hakkımızda, blog, sıkça sorulan sorular, KVKK, gizlilik ve çerez politikası. Hizmet Tokat Merkez'dedir.",
+    "Tokat tüp için Turanlar Ticaret. Hakkımızda, sipariş notları ve iletişim. Hizmet Tokat Merkez'de.",
   path: "/kurumsal",
 });
 
 const principles = [
   {
-    title: "Güvenli",
-    text: "Sipariş ve servis konuşması açık kanallardan yürür. Stok, fiyat ve servis uygunluğu her talepte ayrıca netleşir.",
+    title: "Sipariş",
+    text: "Tüpü seçin, WhatsApp'tan yazın. Fiyat ve stok o gün neyse onu söyleriz.",
   },
   {
-    title: "Samimi",
-    text: "Tokat Merkez'de yıllardır aynı işletmeyle, doğrudan telefon ve WhatsApp üzerinden konuşulur.",
+    title: "Servis",
+    text: "Tüpü Tokat Merkez'deki eve ya da iş yerine bırakıyoruz. Servis için sabit telefonu arayın.",
   },
   {
-    title: "Dürüst",
-    text: "Sitede doğrulanmamış süre, ücretsiz servis veya yetki iddiası yer almaz. Hizmet bölgesi Tokat Merkez'dir.",
+    title: "Saat",
+    text: "Dükkân 07:30 ile 22:00 arasında açık. Hangi günler çalıştığımızı arayınca öğrenirsiniz.",
   },
 ] as const;
 
@@ -34,7 +34,7 @@ export default function CorporatePage() {
       <PageHeader
         eyebrow="Kurumsal"
         title="1977'den bugüne Tokat Merkez"
-        lede="Turanlar Ticaret, 1977'den bugüne Tokat Merkez'de hizmet verir. Yıllar boyu güvenli, samimi ve dürüst bir alışveriş gerçekleştirir."
+        lede="1977'den beri Tokat Merkez'deyiz. Tokat tüp için Bahçelievler'deki dükkâna yazmanız yeterli."
         crumbs={[
           { name: "Tokat Tüp", path: "/" },
           { name: "Kurumsal", path: "/kurumsal" },
@@ -46,9 +46,9 @@ export default function CorporatePage() {
             {business.foundedYear}
           </p>
           <p className="mt-4 max-w-2xl text-base leading-7 text-ink-soft">
-            Tokat Tüp araması {business.name} içindir. {business.area} sınırında{" "}
-            {business.brandSold} tüp çeşitlerinin satışını yapar. Sipariş WhatsApp,
-            servis talebi sabit telefon üzerinden alınır.
+            {business.name}, {business.area}&apos;de {business.brandSold} tüp satar.
+            Sipariş WhatsApp&apos;tan, servis telefondan. İlçe ve şehir dışına düzenli
+            gitmiyoruz.
           </p>
           <ul className="mt-12 grid gap-4 md:grid-cols-3">
             {principles.map((item) => (

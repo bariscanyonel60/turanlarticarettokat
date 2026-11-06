@@ -6,7 +6,7 @@ import { getSiteUrl } from "@/lib/site";
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const products = await getProducts();
   const siteUrl = getSiteUrl();
-  const lastModified = "2026-11-05";
+  const lastModified = "2026-11-06";
   const staticPaths = [
     "/",
     "/urunler",

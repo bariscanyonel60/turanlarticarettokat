@@ -13,8 +13,8 @@ export function HomeFaq() {
           Tokat tüp siparişi hakkında
         </h2>
         <p className="mt-4 max-w-2xl text-base leading-7 text-ink-soft">
-          Tokat Merkez&apos;de Hürgaz ev, piknik ve sanayi tüpü siparişi, servis
-          bölgesi ve fiyat bilgisi için gelen sorular.
+          Sipariş, eve bırakma ve fiyat için en çok sorulanlar. Cevabı burada yoksa
+          arayın, söyleyelim.
         </p>
         <div className="mt-10">
           <FaqList headingLevel="h3" />

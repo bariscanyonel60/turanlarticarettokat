@@ -12,7 +12,7 @@ import { MapPin, MessageCircle, Phone } from "lucide-react";
 export const metadata = buildMetadata({
   title: "Tokat Tüp Siparişi İletişim",
   description:
-    "Tokat Tüp siparişi için Turanlar Ticaret. Bahçelievler, Yazıcıoğlu Caddesi, Tokat Merkez. Telefon 0356 228 52 54, WhatsApp ile tüp siparişi.",
+    "Tokat tüp siparişi için Turanlar Ticaret, Bahçelievler Yazıcıoğlu Caddesi. Telefon 0356 228 52 54, WhatsApp aynı iş için.",
   path: "/iletisim",
 });
 
@@ -31,9 +31,8 @@ export default function ContactPage() {
             Tokat Tüp için bize ulaşın
           </h1>
           <p className="mt-5 max-w-2xl text-base leading-7 text-ink-soft sm:text-lg">
-            Tokat Tüp siparişi için WhatsApp hattını, servis talebi için sabit telefonu
-            kullanın. Adres Tokat Merkez&apos;dedir. Harita, Google&apos;daki işletme
-            kaydını gösterir.
+            Sipariş için WhatsApp, servis için telefon. Dükkân Tokat Merkez,
+            Bahçelievler&apos;de. Haritadaki işaret de aynı yeri gösterir.
           </p>
         </Container>
       </section>
@@ -105,7 +104,13 @@ export default function ContactPage() {
             </div>
           </div>
           <div className="lg:col-span-7">
-            <div className="overflow-hidden rounded-2xl border border-navy/10 bg-mist">
+            <div className="overflow-hidden rounded-2xl border border-navy/10 bg-white">
+              <div className="border-b border-navy/10 px-5 py-4">
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-navy">
+                  Haritadaki adres
+                </p>
+                <p className="mt-2 text-base leading-7 text-ink">{fullAddress()}</p>
+              </div>
               <iframe
                 title="Turanlar Ticaret adresini Google Haritalar'da göster"
                 src={mapsEmbedUrl()}
@@ -115,7 +120,7 @@ export default function ContactPage() {
               />
             </div>
             <p className="mt-3 text-sm leading-6 text-ink-soft">
-              Harita, Google&apos;daki işletme kaydını gösterir.{" "}
+              İşaret, Bahçelievler&apos;deki satış noktasını gösterir.{" "}
               <a
                 href={mapsSearchUrl()}
                 target="_blank"

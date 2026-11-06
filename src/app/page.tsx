@@ -1,4 +1,5 @@
 import { AboutPreview } from "@/components/home/AboutPreview";
+import { Reviews } from "@/components/home/Reviews";
 import { HomeContact } from "@/components/home/HomeContact";
 import { HomeFaq } from "@/components/home/HomeFaq";
 import { OrderSteps } from "@/components/home/OrderSteps";
@@ -11,9 +12,9 @@ import { getProducts } from "@/lib/catalog";
 import { faqJsonLd, productListJsonLd, buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Tokat Tüp | Turanlar Ticaret",
+  title: "Tokat Tüp Siparişi | Turanlar Ticaret Tokat Merkez",
   description:
-    "Tokat tüp siparişi için Turanlar Ticaret. 1977'den bugüne Tokat Merkez'de Hürgaz ev, piknik ve sanayi tüpü. WhatsApp ile sipariş, telefonla servis.",
+    "Tokat tüp siparişi Bahçelievler'deki Turanlar Ticaret'ten. 1977'den beri Hürgaz ev, piknik ve sanayi tüpü. WhatsApp'tan yazın, servis için arayın.",
   path: "/",
   absoluteTitle: true,
 });
@@ -30,6 +31,7 @@ export default async function HomePage() {
       <AboutPreview />
       <OrderSteps />
       <HomeFaq />
+      <Reviews />
       <HomeContact />
     </>
   );

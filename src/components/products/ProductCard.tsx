@@ -1,3 +1,4 @@
+import { HoverZoom } from "@/components/products/HoverZoom";
 import { ProductVisual } from "@/components/products/ProductVisual";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/cn";
@@ -7,38 +8,58 @@ import type { Product } from "@/types/product";
 import { MessageCircle } from "lucide-react";
 import Link from "next/link";
 
-export function ProductCard({ product }: { product: Product }) {
+export function ProductCard({
+  product,
+  priority = false,
+}: {
+  product: Product;
+  priority?: boolean;
+}) {
   return (
-    <article className="group flex h-full flex-col overflow-hidden rounded-[1.4rem] border border-navy/10 bg-white shadow-[0_24px_50px_-36px_rgba(12,35,72,0.7)] transition duration-300 motion-safe:hover:-translate-y-1 hover:border-navy/25">
-      <Link
-        href={`/urunler/${product.slug}`}
-        className="relative block aspect-square overflow-hidden bg-[radial-gradient(circle_at_50%_42%,#ffffff_0%,#f3f4f6_72%)]"
-      >
-        <span className="absolute left-3 top-3 z-10 rounded-full bg-navy px-3 py-1 text-[0.65rem] font-bold uppercase tracking-[0.16em] text-white">
-          {product.usage}
-        </span>
-        <ProductVisual
-          image={product.image}
-          className={cn(
-            "h-full w-full object-contain p-5 transition duration-500 motion-safe:group-hover:scale-[1.04]",
-            product.image.kind === "illustration" && "p-8",
-          )}
-        />
-      </Link>
-      <div className="flex flex-1 flex-col gap-3 p-4 sm:p-5">
-        <h3 className="font-display text-[1.35rem] leading-tight tracking-[-0.04em] text-navy">
-          <Link href={`/urunler/${product.slug}`} className="hover:underline">
+    <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-navy/10 bg-white shadow-[0_10px_24px_-18px_rgba(12,35,72,0.55)] md:rounded-[1.4rem] md:shadow-[0_24px_50px_-36px_rgba(12,35,72,0.7)] md:transition md:duration-300 md:hover:-translate-y-1 md:hover:border-navy/25">
+      <Link href={`/urunler/${product.slug}`} className="flex min-h-0 flex-1 flex-col">
+        <div className="relative aspect-square overflow-hidden bg-[radial-gradient(circle_at_50%_42%,#ffffff_0%,#e7eaee_78%)]">
+          <HoverZoom>
+            <ProductVisual
+              image={product.image}
+              priority={priority}
+              sizes="(max-width: 767px) 46vw, (max-width: 1023px) 50vw, 280px"
+              className={cn(
+                "h-full w-full object-contain p-2 md:p-5",
+                product.image.kind === "illustration" && "p-4 md:p-8",
+              )}
+            />
+          </HoverZoom>
+        </div>
+        <div className="flex flex-1 flex-col border-t border-navy/10 px-3 py-2.5 md:border-0 md:px-5 md:pt-5 md:pb-0">
+          <h3 className="line-clamp-2 min-h-10 text-[15px] leading-5 font-semibold tracking-normal text-navy md:min-h-0 md:font-display md:text-[1.35rem] md:leading-7 md:font-normal md:tracking-[0.01em] md:[word-spacing:0.25em]">
             {product.name}
-          </Link>
-        </h3>
-        <p className="font-display text-2xl tracking-[-0.04em] text-navy">
+          </h3>
           {product.priceKurus == null ? (
-            <span className="text-base font-semibold text-ink-soft">Fiyat için sorun</span>
+            <p className="mt-1 text-sm leading-5 text-ink-soft md:text-base md:leading-7 md:tracking-[0.02em] md:[word-spacing:0.25em]">
+              Fiyat için sorun
+            </p>
           ) : (
-            formatPrice(product.priceKurus)
+            <p className="mt-1 text-base leading-5 font-bold tracking-normal text-navy md:font-display md:text-2xl md:leading-snug md:font-normal md:[word-spacing:0.25em]">
+              {formatPrice(product.priceKurus)}
+            </p>
           )}
+        </div>
+      </Link>
+      <div className="hidden flex-1 flex-col gap-4 px-5 pt-3 pb-5 md:flex">
+        <p className="line-clamp-2 min-h-12 text-sm leading-6 text-ink [word-spacing:0.25em]">
+          {product.summary}
         </p>
-        <p className="line-clamp-2 text-sm leading-6 text-ink-soft">{product.summary}</p>
+        <dl className="grid min-h-[4.5rem] grid-cols-[5.25rem_minmax(0,1fr)] content-start gap-x-3 gap-y-2 border-t border-navy/10 pt-3 text-sm leading-5">
+          <dt className="text-ink-soft">Kullanım</dt>
+          <dd className="font-semibold text-navy">{product.usage}</dd>
+          {product.capacity ? (
+            <>
+              <dt className="text-ink-soft">Ölçü</dt>
+              <dd className="font-semibold text-navy">{product.capacity}</dd>
+            </>
+          ) : null}
+        </dl>
         <Button
           href={productWhatsappUrl(product.name)}
           variant="whatsapp"
@@ -47,6 +68,12 @@ export function ProductCard({ product }: { product: Product }) {
           <MessageCircle aria-hidden className="size-4" />
           Sipariş ver
         </Button>
+        <Link
+          href={`/urunler/${product.slug}`}
+          className="text-center text-sm leading-6 font-semibold text-navy underline decoration-navy/30 underline-offset-4"
+        >
+          Detayları gör
+        </Link>
       </div>
     </article>
   );

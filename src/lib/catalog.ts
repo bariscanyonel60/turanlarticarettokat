@@ -1,5 +1,6 @@
 import { products as seedProducts } from "@/data/products";
 import { getPool } from "@/lib/db";
+import { applyEditorial } from "@/lib/editorial";
 import type { Product, ProductCategoryId, ProductImage, TubeCategoryId } from "@/types/product";
 import { productCategoryIds } from "@/types/product";
 import type { ResultSetHeader, RowDataPacket } from "mysql2";
@@ -209,11 +210,11 @@ export async function getProducts(): Promise<Product[]> {
   try {
     const records = await readCachedProductRecords();
     if (records.length === 0) {
-      return seedProducts;
+      return seedProducts.map(applyEditorial);
     }
-    return records;
+    return records.map(applyEditorial);
   } catch {
-    return seedProducts;
+    return seedProducts.map(applyEditorial);
   }
 }
 
