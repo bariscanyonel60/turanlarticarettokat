@@ -198,8 +198,11 @@ async function readCachedProductRecords() {
   "use cache";
   cacheLife({ stale: 300, revalidate: 3600, expire: 86400 });
   cacheTag("products");
-  const records = await readProductRecords();
-  return records;
+  try {
+    return await readProductRecords();
+  } catch {
+    return [];
+  }
 }
 
 export async function getProducts(): Promise<Product[]> {

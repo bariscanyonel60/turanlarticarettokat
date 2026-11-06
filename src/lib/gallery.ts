@@ -50,7 +50,12 @@ async function readCachedGalleryImages() {
   "use cache";
   cacheLife("hours");
   cacheTag("gallery");
-  return readGalleryRows();
+  try {
+    await ensureGallerySchema();
+    return await readGalleryRows();
+  } catch {
+    return [];
+  }
 }
 
 export async function getGalleryImages() {
