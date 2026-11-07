@@ -10,11 +10,11 @@ export function HomeFaq() {
           Sıkça sorulan sorular
         </p>
         <h2 className="mt-3 max-w-3xl font-display text-3xl tracking-[-0.04em] text-navy sm:text-5xl">
-          Tokat tüp siparişi hakkında
+          Sık sorulanlar
         </h2>
         <p className="mt-4 max-w-2xl text-base leading-7 text-ink-soft">
-          Sipariş, eve bırakma ve fiyat için en çok sorulanlar. Cevabı burada yoksa
-          arayın, söyleyelim.
+          Sipariş, eve bırakma ve fiyat hakkında en çok gelen sorular. Burada yoksa arayın,
+          birlikte bakarız.
         </p>
         <div className="mt-10">
           <FaqList headingLevel="h3" />

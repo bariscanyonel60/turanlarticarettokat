@@ -8,7 +8,7 @@ export const outdoorPosts: readonly Post[] = [
     slug: "tokat-tup-guvenligi",
     title: "Tokat'ta Tüp Güvenliği",
     description:
-      "Tokat tüp kullanırken tüp dik dursun, hortum sağlam olsun. Bağlantıyı adım adım tarif etmiyoruz. Emin değilseniz arayın.",
+      "Tüp dik dursun, hortum sağlam olsun. Bağlantıyı adım adım tarif etmiyoruz. Emin değilseniz arayın.",
     links: [
       { href: "/urunler", label: "Ürün vitrini" },
       { href: "/urunler/ev-tipi-tup", label: "2 kg ev tipi tüp" },
@@ -43,7 +43,7 @@ export const outdoorPosts: readonly Post[] = [
     slug: "tokat-tup-ekipmani",
     title: "Tokat'ta Tüp Ekipmanı",
     description:
-      "Tokat tüp yanında hortum, regülatör ve dedantör ayrı sorulur. Ölçüyü mesajda yazın. Turanlar Ticaret, Tokat Merkez.",
+      "Hortum, regülatör ve dedantör ayrı sorulur. Ölçüyü mesajda yazın. Turanlar Ticaret, Tokat Merkez.",
     links: [
       { href: "/urunler", label: "Bağlantı parçaları" },
       { href: "/iletisim", label: "WhatsApp" },
@@ -70,7 +70,7 @@ export const outdoorPosts: readonly Post[] = [
     slug: "tokat-dis-mekan-isitici",
     title: "Tokat'ta Dış Mekân Isıtıcı",
     description:
-      "Dış mekân ısıtıcı ve soba ayrı ürün. Gazlıysa tüp ayrıca sorulur. Tokat tüp için Turanlar Ticaret'e yazın.",
+      "Dış mekân ısıtıcı ve soba ayrı ürün. Gazlıysa tüp ayrıca sorulur. Turanlar Ticaret'e yazın.",
     links: [
       { href: "/urunler", label: "Soba ve ısıtma" },
       { href: "/iletisim", label: "İletişim" },
@@ -86,7 +86,7 @@ export const outdoorPosts: readonly Post[] = [
       {
         heading: "Gazlıysa tüp ayrı",
         paragraphs: [
-          "Gazlı bir ısıtıcı düşünüyorsanız tüp ikinci üründür. 2 kg, 12 kg ve piknik tüpü birbirinin yerine yazılmaz. Hangisi o cihaza uyar, tahmin etmeyiz, sorarız.",
+          "Gazlı bir ısıtıcı düşünüyorsanız tüp ikinci üründür. 2 kg, 12 kg ve piknik tüpü birbirinin yerine yazılmaz. Hangisi o cihaza uyar, tahmin etmeyiz; sorarız.",
           "Hürgaz adı tüp kartlarına ait. Isıtıcıya Hürgaz etiketi koymayız.",
         ],
       },
@@ -97,7 +97,7 @@ export const outdoorPosts: readonly Post[] = [
     slug: "tokat-kamp-ocagi",
     title: "Tokat'ta Kamp Ocağı",
     description:
-      "Kamp ocağı piknik tüpünden ayrı bir ürün. Kartuşlu ve tüplü olanlar karışmasın. Tokat tüp siparişi WhatsApp'tan.",
+      "Kamp ocağı piknik tüpünden ayrı bir ürün. Kartuşlu ve tüplü olanlar karışmasın. Sipariş WhatsApp'tan.",
     links: [
       { href: "/urunler", label: "Kamp ürünleri" },
       { href: "/urunler/piknik-tupu", label: "Piknik tüpü" },
@@ -106,7 +106,7 @@ export const outdoorPosts: readonly Post[] = [
       {
         heading: "Ocak ile tüp ayrı",
         paragraphs: [
-          "Kamp ocağı bir cihaz, piknik tüpü yakıt. Bazı ocaklar kartuşla, bazıları tüple çalışır. Hangisi stokta, ürün kartına bakın. Kartuşun gramı kartta yazıyorsa o rakamı kullanın, uydurmayın.",
+          "Kamp ocağı bir cihaz, piknik tüpü yakıt. Bazı ocaklar kartuşla, bazıları tüple çalışır. Hangisi stokta, ürün kartına bakın. Kartuşun gramı kartta yazıyorsa o rakamı kullanın.",
           "2 kg ev tüpü ile piknik tüpü aynı ürün değil. Evdeki 12 kg tüp de kamp ocağının varsayılan yakıtı değil.",
         ],
       },
@@ -123,7 +123,7 @@ export const outdoorPosts: readonly Post[] = [
     slug: "tokat-mangal-secimi",
     title: "Tokat'ta Mangal Seçimi",
     description:
-      "Kömürlü mangal ile tüplü mangal ayrı. Ölçüyü yazın, uydurmayalım. Tokat tüp dükkânı Bahçelievler'de.",
+      "Kömürlü mangal ile tüplü mangal ayrı. Ölçüyü yazın. Dükkân Bahçelievler'de.",
     links: [
       { href: "/urunler", label: "Mangal ve kamp" },
       { href: "/iletisim", label: "İletişim" },
@@ -150,7 +150,7 @@ export const outdoorPosts: readonly Post[] = [
     slug: "tokat-barbeku-aksesuari",
     title: "Tokat'ta Barbekü Aksesuarı",
     description:
-      "Maşa, ızgara ve kömür kovası stoktan sorulur. Hazır hediye seti ilan etmiyoruz. Tokat Merkez, Turanlar Ticaret.",
+      "Maşa, ızgara ve kömür kovası stoktan sorulur. Hazır hediye seti ilan etmiyoruz. Turanlar Ticaret, Tokat Merkez.",
     links: [
       { href: "/urunler", label: "Kamp ürünleri" },
       { href: "/iletisim", label: "WhatsApp" },
@@ -159,14 +159,14 @@ export const outdoorPosts: readonly Post[] = [
       {
         heading: "Ne lazımsa onu yazın",
         paragraphs: [
-          "Şiş, ızgara teli, maşa ya da kömür kovası ayrı ayrı istenebilir. Hepsini istiyorsanız hepsini yazın. Mangalın enini biliyorsanız ekleyin. Bilmiyorsanız ölçü uydurmayız.",
+          "Şiş, ızgara teli, maşa ya da kömür kovası ayrı ayrı istenebilir. Hepsini istiyorsanız hepsini yazın. Mangalın enini biliyorsanız ekleyin.",
           "Beş parçalık hazır bir hediye seti diye bir ilanımız yok. Fiyat, ne istediğiniz belli olunca WhatsApp'ta.",
         ],
       },
       {
         heading: "Nereden",
         paragraphs: [
-          "Tokat tüp dükkânı Bahçelievler'de. Aksesuar da aynı yerden sorulur. Stokta yoksa yok deriz.",
+          "Dükkân Bahçelievler'de. Aksesuar da aynı yerden sorulur. Stokta yoksa yok deriz.",
         ],
       },
     ],

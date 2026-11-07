@@ -126,7 +126,7 @@ function ProductView({ product, others }: { product: Product; others: Product[] 
               <div className="mt-6">
                 {product.priceKurus == null ? (
                   <p className="text-base leading-7 text-[#3d4a5c] [word-spacing:0.25em]">
-                    Fiyat için sorun
+                    Fiyat için iletişime geçin
                   </p>
                 ) : (
                   <>
@@ -174,8 +174,10 @@ function ProductView({ product, others }: { product: Product; others: Product[] 
                 </div>
               </dl>
               <p className="mt-4 text-sm leading-6 text-ink [word-spacing:0.25em]">
-                {product.priceKurus == null ? "Fiyat kartta yazar. " : null}
-                Sipariş WhatsApp ile verilir, servis talebi telefondan alınır.
+                {product.priceKurus == null
+                  ? "Fiyat için WhatsApp'tan ya da telefondan yazın. "
+                  : null}
+                {"Sipariş WhatsApp'tan verilir, servis için telefonu arayabilirsiniz."}
               </p>
               <div className="mt-8 flex flex-col gap-3">
                 <Button href={productWhatsappUrl(product.name)} variant="whatsapp" className="w-full">

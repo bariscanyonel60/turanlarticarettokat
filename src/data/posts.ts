@@ -29,39 +29,39 @@ export const posts: readonly Post[] = [
     slug: "1977den-bugune-tokat-merkez",
     title: "1977'den bugüne Tokat Merkez",
     description:
-      "Turanlar Ticaret 1977'den beri Tokat Merkez'de. Tokat tüp için Hürgaz ev, piknik ve sanayi tüpü satıyoruz.",
+      "Turanlar Ticaret 1977'den beri Tokat Merkez'de. Ev, piknik ve sanayi tipi Hürgaz tüp satıyoruz.",
     date: "2026-11-05",
     dateLabel: "5 Kasım 2026",
     paragraphs: [
-      "1977'den beri Tokat Merkez'deyiz. Dükkân Bahçelievler'de. Tokat tüp deyince kastettiğimiz yer burası.",
-      "Hürgaz ev tipi, piknik tipi ve sanayi tipi tüp satıyoruz. Soba, kuzine, semaver, ocak ve bağlantı parçaları da vitrinde. Vitrinde olmayan bir parçayı WhatsApp'tan sorun.",
-      "Siteden kartla ödeme yok. Siparişi WhatsApp'tan bırakın, servis için arayın. Fiyat ve stok o gün neyse onu söyleriz.",
+      "1977'den beri Tokat Merkez'deyiz. Dükkân Bahçelievler'de. Tüp için arayan çoğu kişi bizi buradan buluyor.",
+      "Hürgaz ev tipi, piknik tipi ve sanayi tipi tüp satıyoruz. Soba, kuzine, semaver, ocak ve bağlantı parçaları da vitrinde. Aradığınız vitrinde yoksa WhatsApp'tan sorun, bakalım.",
+      "Siteden kartla ödeme almıyoruz. Siparişi WhatsApp'tan bırakın, servis için arayın. Fiyat ve stok o günkü duruma göre söylenir.",
     ],
   },
   {
     slug: "whatsapp-ile-tup-siparisi",
     title: "WhatsApp ile tüp siparişi nasıl verilir?",
     description:
-      "Tüpü seçin, WhatsApp açılsın. Tokat tüp fiyatı ve Tokat Merkez'e bırakma işi yazışmada netleşir.",
+      "Tüpü seçin, WhatsApp açılsın. Fiyat ve Tokat Merkez'e bırakma yazışmada konuşulur.",
     date: "2026-11-05",
     dateLabel: "5 Kasım 2026",
     paragraphs: [
-      "Üç adım. Tüpü seçin. Ürün sayfasındaki bağlantı, adını yazılmış bir mesajla WhatsApp'ı açsın. Sonra stok, fiyat ve adresi konuşalım.",
-      "Hazır mesaj bir fiş değil. Ödemeyi siteden almıyoruz. Uygunluk yazışmada ya da 0356 228 52 54'te belli olur.",
-      "Telefon servis içindir. WhatsApp sipariş ve ürün sorusu içindir. Sitede üyelik hesabı yok.",
+      "Önce tüpü seçin. Ürün sayfasındaki bağlantı, ürün adını yazılmış bir mesajla WhatsApp'ı açar. Sonra stok, fiyat ve adresi konuşuruz.",
+      "Hazır mesaj ödeme fişi değildir. Ödemeyi siteden almıyoruz. Uygunluk yazışmada ya da 0356 228 52 54'te belli olur.",
+      "Telefon daha çok servis içindir. WhatsApp sipariş ve ürün sorusu için. Sitede üyelik hesabı yoktur.",
     ],
   },
   {
     slug: "hizmet-bolgesi-tokat-merkez",
     title: "Neden yalnız Tokat Merkez?",
     description:
-      "Tokat tüp servisi Tokat Merkez ile sınırlı. İlçe ve şehir dışına düzenli gitmiyoruz.",
+      "Servisimiz Tokat Merkez ile sınırlı. İlçe ve şehir dışına düzenli çıkmıyoruz.",
     date: "2026-11-05",
     dateLabel: "5 Kasım 2026",
     paragraphs: [
-      "Tüpü Tokat Merkez'deki eve ve iş yerine bırakıyoruz. İlçeye ya da şehir dışına düzenli gitmiyoruz. Adresinizi yazın, Merkez'de mi birlikte bakalım.",
-      "Ne zaman bırakılacağını da o günkü stok ve sıraya göre söyleriz. Sitede 'şu kadar dakikada gelir' diye bir cümle yok.",
-      "Dükkân Bahçelievler Mahallesi, Yazıcıoğlu Caddesi, 3. Geçit No: 47/C. Harita aynı adresi açar.",
+      "Tüpü Tokat Merkez'deki eve ve iş yerine bırakıyoruz. İlçeye ya da şehir dışına düzenli çıkmıyoruz. Adresinizi yazın, Merkez içinde mi birlikte bakalım.",
+      "Bırakma saati o günkü stok ve sıraya göre değişir. Bu yüzden sitede sabit bir süre yazmıyoruz; saati yazışmada konuşuyoruz.",
+      "Dükkân Bahçelievler Mahallesi, Yazıcıoğlu Caddesi, 3. Geçit No: 47/C. Harita aynı adresi gösterir.",
     ],
   },
 ];

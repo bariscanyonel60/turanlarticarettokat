@@ -10,7 +10,7 @@ import { MessageCircle, Phone } from "lucide-react";
 export const metadata = buildMetadata({
   title: "Teşekkürler",
   description:
-    "Yazıştığınız için teşekkürler. Tokat tüp siparişi bu sayfada bitmez; stok ve fiyat WhatsApp ya da telefonda konuşulur.",
+    "Yazıştığınız için teşekkürler. Sipariş bu sayfada bitmez; stok ve fiyat WhatsApp ya da telefonda konuşulur.",
   path: "/tesekkurler",
   noIndex: true,
 });
@@ -25,7 +25,7 @@ export default function ThanksPage() {
         ]}
         eyebrow="Tokat Merkez"
         title="Bize ulaştığınız için teşekkürler"
-        lede="Mesajınız için teşekkürler. Sipariş burada bitmez. Stok, fiyat ve Tokat Merkez'e bırakma işi WhatsApp'ta ya da telefonda konuşulur."
+        lede="Mesajınız için teşekkürler. Sipariş burada bitmiş sayılmaz. Stok, fiyat ve bırakma durumunu WhatsApp'ta ya da telefonda konuşuyoruz."
       />
       <section className="py-14 sm:py-20">
         <Container className="max-w-3xl">

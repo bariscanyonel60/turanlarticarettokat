@@ -15,12 +15,13 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState, type CSSProperties } from "react";
 
-export function Header() {
+export function Header({ showGallery = true }: { showGallery?: boolean }) {
   const pathname = usePathname();
   const { open, setOpen } = useMenu();
   const [scrolled, setScrolled] = useState(false);
   const [corporateOpen, setCorporateOpen] = useState(false);
   const [seenPath, setSeenPath] = useState(pathname);
+  const items = showGallery ? navItems : navItems.filter((item) => item.href !== "/galeri");
 
   if (seenPath !== pathname) {
     setSeenPath(pathname);
@@ -67,7 +68,7 @@ export function Header() {
       <div className="hidden border-b border-white/10 bg-navy text-cream md:block">
         <Container className="flex h-11 items-center justify-between gap-4 text-sm font-semibold">
           <p className="truncate">
-            Tokat Merkez tüp siparişi · {hoursLabel()}
+            Tokat Merkez · Her gün {hoursLabel()}
           </p>
           <div className="flex shrink-0 items-center gap-2">
             <a
@@ -99,7 +100,7 @@ export function Header() {
             <Logo priority />
           </Link>
           <nav className="ml-auto hidden shrink-0 items-center gap-2 lg:flex xl:gap-3" aria-label="Ana menü">
-            {navItems.map((item) => (
+            {items.map((item) => (
               <DesktopItem
                 key={item.href}
                 item={item}
@@ -149,7 +150,7 @@ export function Header() {
             style={{ top: "var(--header-h)", height: "calc(100dvh - var(--header-h))" }}
           >
             <nav className="mx-auto flex w-full max-w-6xl flex-col py-3" aria-label="Mobil menü">
-              {navItems.map((item) =>
+              {items.map((item) =>
                 "children" in item ? (
                   <div key={item.href} className="border-b border-navy/10">
                     <div className="flex min-h-14 items-center">

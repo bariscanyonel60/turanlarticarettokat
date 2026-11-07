@@ -1,6 +1,7 @@
 "use client";
 
 import { logoutAction } from "@/app/admin/actions";
+import { PurgeCacheButton } from "@/components/admin/PurgeCacheButton";
 import { cn } from "@/lib/cn";
 import { Images, LogOut, PackagePlus, PanelsTopLeft, Store } from "lucide-react";
 import Link from "next/link";
@@ -54,7 +55,8 @@ export function AdminShell({ children }: { children: ReactNode }) {
             );
           })}
         </nav>
-        <div className="mt-auto flex gap-2 px-3 pb-4 md:grid">
+        <div className="mt-auto grid gap-2 px-3 pb-4">
+          <PurgeCacheButton compact />
           <Link
             href="/"
             className="inline-flex min-h-11 items-center gap-3 rounded-xl px-3 text-sm font-bold text-white/80 hover:bg-white/10"

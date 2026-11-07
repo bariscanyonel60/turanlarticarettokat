@@ -18,12 +18,12 @@ import { uploadProductImage } from "@/lib/cloudinary-upload";
 import { addGalleryImage, deleteGalleryImage } from "@/lib/gallery";
 import { parsePriceInput } from "@/lib/price";
 import { buildSeoDescription } from "@/lib/product-seo";
+import { purgeGalleryCache, purgeProductCache, purgeSiteCache } from "@/lib/site-cache";
 import { slugify } from "@/lib/slug";
 import type { ProductImage } from "@/types/product";
-import { updateTag } from "next/cache";
 import { redirect } from "next/navigation";
 
-export type AdminFormState = { error: string };
+export type AdminFormState = { error: string; message?: string };
 
 function text(formData: FormData, key: string) {
   const value = formData.get(key);
@@ -87,7 +87,7 @@ export async function setupCatalogAction(_previous: AdminFormState): Promise<Adm
   await requireAdminAction();
   try {
     await seedCatalogFromSite();
-    updateTag("products");
+    purgeProductCache();
   } catch (error) {
     return { error: actionError(error) };
   }
@@ -101,7 +101,7 @@ export async function deleteProductAction(formData: FormData) {
     throw new Error("Ürün bulunamadı.");
   }
   await deleteProduct(id);
-  updateTag("products");
+  purgeProductCache();
   redirect("/admin");
 }
 
@@ -226,11 +226,24 @@ export async function saveProductAction(
       image,
       gallery,
     });
-    updateTag("products");
+    purgeProductCache();
   } catch (error) {
     return { error: actionError(error) };
   }
   redirect("/admin");
+}
+
+export async function purgeCacheAction(
+  _previous: AdminFormState,
+): Promise<AdminFormState> {
+  void _previous;
+  await requireAdminAction();
+  try {
+    purgeSiteCache();
+    return { error: "", message: "Site önbelleği temizlendi. Ziyaretçi sayfaları güncel veriyi alır." };
+  } catch (error) {
+    return { error: actionError(error) };
+  }
 }
 
 export async function saveGalleryAction(
@@ -253,7 +266,7 @@ export async function saveGalleryAction(
         height: photo.height,
       });
     }
-    updateTag("gallery");
+    purgeGalleryCache();
   } catch (error) {
     return { error: actionError(error) };
   }
@@ -267,6 +280,6 @@ export async function deleteGalleryAction(formData: FormData) {
     throw new Error("Görsel bulunamadı.");
   }
   await deleteGalleryImage(id);
-  updateTag("gallery");
+  purgeGalleryCache();
   redirect("/admin/galeri");
 }

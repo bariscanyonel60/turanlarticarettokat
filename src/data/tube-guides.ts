@@ -14,7 +14,7 @@ export const tubeGuides: Record<string, TubeGuide> = {
   "ev-tipi-tup": {
     longDescription: `2 kg ev tipi tüp, az yemek pişen mutfaklar için küçük Hürgaz tüpüdür. Çay, kahvaltı ve kısa ocak işi için yeter. Tek kişilik evde yer kaplamaz. Ne kadar süreceği evden eve değişir.
 
-Tokat tüp siparişini WhatsApp'tan bırakın, servis için arayın. Stok o gün neyse onu söyleriz.
+Siparişi WhatsApp'tan bırakabilir, servis için arayabilirsiniz. Stok o günkü duruma göre söylenir.
 
 ${safety}`,
     features: [
@@ -36,9 +36,9 @@ ${safety}`,
     ],
   },
   "12kg-ev-tupu": {
-    longDescription: `12 kg ev tüpü, Tokat Merkez'de her gün yemek pişen evlerin sorduğu Hürgaz tüpüdür. Ocak ve düzenli mutfak işi için en çok bunu soruyorlar. Bir evde kaç gün gideceği ocağın ne kadar yandığına bağlı.
+    longDescription: `12 kg ev tüpü, her gün yemek pişen evlerin en çok sorduğu Hürgaz tüptür. Ocak ve düzenli mutfak işi için tercih edilir. Bir evde kaç gün gideceği ocağın ne kadar yandığına bağlıdır.
 
-Siparişi WhatsApp'tan açın. Servis için 0356 228 52 54'ü arayın. Adresin Tokat Merkez'de olup olmadığına birlikte bakarız.
+Siparişi WhatsApp'tan açabilirsiniz. Servis için 0356 228 52 54'ü arayın. Adresin Tokat Merkez'de olup olmadığına birlikte bakarız.
 
 ${safety}`,
     features: [
@@ -62,7 +62,7 @@ ${safety}`,
   "piknik-tupu": {
     longDescription: `Piknik tüpü, vitrindeki mavi tüptür. Kamp ocağı, semaver ve açık alanda kısa pişirme için sorulur. Fotoğrafta kilogram yazmadığı için dolum miktarını burada tahmin etmiyoruz. Net rakamı WhatsApp'tan sorun.
 
-Tokat tüp siparişi WhatsApp ile verilir. Hangi ocağa uyduğu, hortum ve muslukla birlikte stoktan konuşulur.
+Sipariş WhatsApp ile verilir. Hangi ocağa uyduğu, hortum ve muslukla birlikte stoktan konuşulur.
 
 ${safety} Piknik tüpünü kapalı ve havasız bir odada ısıtıcı gibi kullanmayın. Kullanırken düz dursun.
 
@@ -76,7 +76,7 @@ Fiyat ve bırakma koşulu kartta yoksa arayın, söyleyelim.`,
       {
         question: "Piknik tüpü kaç kilogramdır?",
         answer:
-          "Vitrindeki fotoğrafta kilogram yazmıyor. Net dolumu WhatsApp'tan sorun, tahminle yazmayalım.",
+          "Vitrindeki fotoğrafta kilogram yazmıyor. Net dolumu WhatsApp'tan sorun.",
       },
       {
         question: "Piknik tüpü evin içinde kullanılır mı?",
@@ -88,7 +88,7 @@ Fiyat ve bırakma koşulu kartta yoksa arayın, söyleyelim.`,
   "sanayi-tipi-tup": {
     longDescription: `24 kg sanayi tüpü, iş yeri ve daha çok gaz yakan yerler için Hürgaz tüpüdür. Lokanta, imalathane ve sürekli yanan ocaklar bunu sorar. Her ev mutfağına uygun diye anlatmayız. Cihazın bağlantısı ve iş yerinin Tokat Merkez'de olması birlikte bakılır.
 
-Sipariş WhatsApp ile açılır, servis telefonla alınır. Stok o gün neyse onu söyleriz.
+Sipariş WhatsApp ile açılır, servis telefonla alınır. Stok o günkü duruma göre söylenir.
 
 ${safety} Sanayi tüpünün vanasını ev tüpü bağlantısıyla karıştırmayın. Emin değilseniz takmadan önce arayın.`,
     features: [
@@ -98,14 +98,14 @@ ${safety} Sanayi tüpünün vanasını ev tüpü bağlantısıyla karıştırmay
     ],
     faq: [
       {
-        question: "24 kg sanayi tüpü eve uygun mu?",
+        question: "24 kg sanayi tüpü eve gelir mi?",
         answer:
-          "İş yeri ve yüksek tüketim için. Ev ocağına uyup uymadığını, cihazı sormadan söylemeyiz.",
+          "Tokat Merkez'deki iş yerlerine bırakıyoruz. Ev mutfağı için genelde 2 kg veya 12 kg bakılır. İş yeriniz Merkez'deyse adedi yazın, bakalım.",
       },
       {
-        question: "24 kg sanayi tüpünün fiyatı nedir?",
+        question: "Sanayi tüpünün fiyatı nedir?",
         answer:
-          "Kartta yazıyorsa güncel fiyat odur. Yazmıyorsa WhatsApp ya da telefondan sorun. Depozito ve bırakma saatini de o görüşmede konuşuruz.",
+          "Kartta yazıyorsa o günkü fiyattır. Yazmıyorsa WhatsApp'tan sorun. Adet ve bırakma saatini de orada konuşuruz.",
       },
     ],
   },

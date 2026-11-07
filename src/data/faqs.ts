@@ -3,13 +3,13 @@ export const faqs = [
     id: "tokat-tup-siparisi",
     question: "Tokat tüp siparişini nasıl veririm?",
     answer:
-      "Tüpü siteden seçin, WhatsApp'tan yazın. Ev, piknik ve sanayi tüpü için Turanlar Ticaret'e ulaşmanız yeterli. Servis isteyecekseniz 0356 228 52 54'ü arayın.",
+      "Siteden tüpü seçip WhatsApp'tan yazmanız yeterli. Ev, piknik ve sanayi tüpü için Turanlar Ticaret'e ulaşabilirsiniz. Servis isteyecekseniz 0356 228 52 54'ü arayın.",
   },
   {
     id: "tokat-merkez-tup-servisi",
     question: "Eve tüp bırakıyor musunuz?",
     answer:
-      "Evet, Tokat Merkez'deki evlere ve iş yerlerine bırakıyoruz. Adresinizi yazın, o gün bırakıp bırakamayacağımızı söyleyelim. İlçe ve şehir dışına düzenli gitmiyoruz.",
+      "Evet. Tokat Merkez'deki evlere ve iş yerlerine bırakıyoruz. Adresinizi yazın, o gün mümkün olup olmadığını söyleyelim. İlçe ve şehir dışına düzenli çıkmıyoruz.",
   },
   {
     id: "tokat-hurgaz-tup",
@@ -21,7 +21,7 @@ export const faqs = [
     id: "ev-tup-piknik-tup",
     question: "Ev tüpü ile piknik tüpü aynı mı?",
     answer:
-      "Değil. Ev tüpü mutfak içindir, 2 kg ve 12 kg olarak iki ayrı üründür. Piknik tüpü kamp ve taşınabilir işler içindir. İkisini de Tokat Merkez'den sorabilirsiniz.",
+      "Değil. Ev tüpü mutfak içindir; bizde 2 kg ve 12 kg olarak iki ayrı ürün var. Piknik tüpü kamp ve taşınabilir işler içindir. İkisini de Tokat Merkez'den sorabilirsiniz.",
   },
   {
     id: "tokat-tup-fiyatlari",

@@ -6,7 +6,7 @@ import { getSiteUrl } from "@/lib/site";
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const products = await getProducts();
   const siteUrl = getSiteUrl();
-  const lastModified = "2026-11-06";
+  const lastModified = new Date();
   const staticPaths = [
     "/",
     "/urunler",
@@ -37,7 +37,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     })),
     ...posts.map((post) => ({
       url: `${siteUrl}/blog/${post.slug}`,
-      lastModified: post.date,
+      lastModified: new Date(post.date),
       changeFrequency: "monthly" as const,
       priority: 0.6,
     })),

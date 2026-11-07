@@ -48,7 +48,7 @@ export async function listGalleryImages() {
 
 async function readCachedGalleryImages() {
   "use cache";
-  cacheLife("hours");
+  cacheLife({ stale: 60, revalidate: 300, expire: 3600 });
   cacheTag("gallery");
   try {
     await ensureGallerySchema();

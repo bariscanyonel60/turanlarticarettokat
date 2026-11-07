@@ -22,47 +22,39 @@ function serviceIcon(id: ServiceId): LucideIcon {
 
 export function Services() {
   return (
-    <section id="hizmetler" className="bg-cream py-16 sm:py-24">
+    <section id="hizmetler" className="bg-cream py-14 sm:py-20">
       <Container>
         <div className="max-w-2xl">
-          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-navy">
+          <p className="text-xs font-semibold tracking-[0.18em] text-navy uppercase">
             Hizmetlerimiz
           </p>
-          <h2 className="mt-3 font-display text-3xl tracking-[-0.04em] text-navy sm:text-5xl">
+          <h2 className="mt-3 font-display text-3xl tracking-[-0.04em] text-navy sm:text-4xl">
             Tokat Tüp Hizmetleri
           </h2>
-          <p className="mt-4 text-base leading-7 text-ink-soft">
-            Tüpü Tokat Merkez&apos;e bırakıyoruz. Sipariş WhatsApp&apos;tan, servis telefondan.
+          <p className="mt-3 text-base leading-7 text-ink-soft">
+            Ev ve iş yeri için tüp satıyoruz. Siparişi WhatsApp&apos;tan bırakabilir, servis için
+            bizi arayabilirsiniz. Bırakma yalnızca Tokat Merkez içindir.
           </p>
         </div>
-        <ol className="mt-12 divide-y divide-navy/10 border-y border-navy/10">
-          {services.map((service, index) => {
+        <ul className="mt-10 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+          {services.map((service) => {
             const Icon = serviceIcon(service.id);
             return (
               <li
                 key={service.id}
-                className="grid gap-4 py-7 sm:grid-cols-[auto_1fr] sm:items-start sm:gap-8"
+                className="flex h-full flex-col rounded-2xl border border-navy/10 bg-paper p-5 shadow-[0_16px_40px_-32px_rgba(12,35,72,0.55)] sm:p-6"
               >
-                <div className="flex items-center gap-4">
-                  <span className="font-display text-sm tracking-[0.16em] text-navy">
-                    0{index + 1}
-                  </span>
-                  <span className="grid size-11 place-items-center rounded-xl bg-paper text-navy">
-                    <Icon className="size-5" aria-hidden />
-                  </span>
-                </div>
-                <div>
-                  <h3 className="font-display text-2xl tracking-[-0.03em] text-navy">
-                    {service.title}
-                  </h3>
-                  <p className="mt-2 max-w-2xl text-sm leading-6 text-ink-soft sm:text-base">
-                    {service.summary}
-                  </p>
-                </div>
+                <span className="grid size-11 place-items-center rounded-xl bg-navy text-cream">
+                  <Icon className="size-5" aria-hidden />
+                </span>
+                <h3 className="mt-5 font-display text-xl tracking-[-0.03em] text-navy">
+                  {service.title}
+                </h3>
+                <p className="mt-2 text-sm leading-6 text-ink-soft">{service.summary}</p>
               </li>
             );
           })}
-        </ol>
+        </ul>
       </Container>
     </section>
   );

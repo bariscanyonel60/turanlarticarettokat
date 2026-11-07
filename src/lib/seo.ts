@@ -82,16 +82,14 @@ export function websiteJsonLd() {
 
 export function localBusinessJsonLd() {
   // TODO: koordinatlar doğrulanınca geo ekle.
-  // Açılış 07:30, kapanış 22:00. Günler doğrulanmadan openingHoursSpecification yazılmaz.
-  const hours =
-    businessHours.openingTime && businessHours.workingDays
-      ? {
-          "@type": "OpeningHoursSpecification",
-          dayOfWeek: businessHours.workingDays,
-          opens: businessHours.openingTime,
-          closes: businessHours.closingTime,
-        }
-      : null;
+  const hours = businessHours.openingTime
+    ? {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: [...businessHours.schemaDayOfWeek],
+        opens: businessHours.openingTime,
+        closes: businessHours.closingTime,
+      }
+    : null;
 
   return {
     "@context": "https://schema.org",
