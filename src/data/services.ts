@@ -1,31 +1,31 @@
 export const services = [
   {
     id: "ev",
-    title: "Ev tüpü",
+    title: "Ev Tüpü",
     summary: "Mutfak için 2 kg ve 12 kg Hürgaz tüp.",
     detail:
-      "Evde ocak, çay ve günlük yemek için küçük ya da büyük tüp bakıyorsanız ikisini de sorun. Hangisi stokta, WhatsApp'tan ya da telefondan söyleyelim.",
+      "Evde az yemek pişiyorsa 2 kg, her gün ocak yanıyorsa genelde 12 kg bakılır. İkisini de stoktan sorabilirsiniz. WhatsApp'tan yazın ya da dükkânı arayın, o gün hangisi varsa söyleyelim.",
   },
   {
     id: "isletme",
-    title: "İş yerine tüp",
+    title: "İş Yerine Tüp",
     summary: "Lokanta, kafe ve iş yeri için tüp.",
     detail:
-      "Tokat Merkez'deki iş yerlerine tüp bırakıyoruz. Kaç tane ve hangi çeşit lazım, yazın. Ne zaman bırakılacağını siparişte konuşuruz.",
+      "Tokat Merkez'deki iş yerlerine de tüp bırakıyoruz. Kaç tane lazım, hangi ölçü olduğuna göre stok ve saati birlikte konuşuruz.",
   },
   {
     id: "servis",
-    title: "Tokat Merkez'e servis",
+    title: "Tokat Merkez Servis",
     summary: "Tüpü Tokat Merkez içine bırakıyoruz.",
     detail:
-      "Servis Tokat Merkez ile sınırlı. İlçeye ya da şehir dışına düzenli gitmiyoruz. Servis için sabit telefonu arayın, sipariş için WhatsApp yeter.",
+      "Servisimiz Tokat Merkez ile sınırlı. İlçeye ya da şehir dışına düzenli çıkmıyoruz. Servis için sabit telefonu aramanız yeterli; ürün sorusu WhatsApp'tan da olur.",
   },
   {
     id: "whatsapp",
-    title: "WhatsApp'tan sipariş",
+    title: "WhatsApp'tan Sipariş",
     summary: "Ürüne tıklayınca mesaj, tüpün adıyla açılır.",
     detail:
-      "Sitede sepet yok. Tüpü seçince WhatsApp hazır bir mesajla açılır. Fiyatı ve Tokat Merkez'e bırakıp bırakamayacağımızı orada netleştiririz.",
+      "Sitede sepet yok. Ürünü seçince WhatsApp hazır mesajla açılır. Fiyat, stok ve bırakma durumunu orada konuşuyoruz.",
   },
 ] as const;
 
@@ -40,21 +40,21 @@ export const orderSteps = [
   {
     number: "02",
     title: "WhatsApp'tan yazın",
-    text: "Sipariş bağlantısı, seçtiğiniz ürünün adını mesaja koyup WhatsApp'ı açar.",
+    text: "Sipariş bağlantısı seçtiğiniz ürünün adını mesaja koyup WhatsApp'ı açar.",
   },
   {
     number: "03",
-    title: "Yeri ve saati konuşun",
-    text: "Stok, fiyat ve Tokat Merkez'e bırakma işini birlikte netleştiririz.",
+    title: "Servis saatini konuşun",
+    text: "Stok, fiyat ve Tokat Merkez'e bırakma saatini birlikte netleştiririz.",
   },
 ] as const;
 
 export const aboutCopy = {
   title: "1977'den beri Tokat'ta",
-  lead: "Tokat tüp lazım olduğunda Bahçelievler'deki dükkâna yazın. Turanlar Ticaret 1977'den beri Tokat Merkez'de Hürgaz tüp satıyor.",
+  lead: "Turanlar Ticaret, 1977'den beri Tokat Merkez Bahçelievler'de Hürgaz tüp satıyor. Tüp lazım olduğunda dükkâna yazmanız ya da aramanız yeterli.",
   paragraphs: [
-    "Ev için 2 kg ve 12 kg tüp, piknik tüpü ve iş yeri için 24 kg sanayi tüpü var. Yanında soba, kuzine, semaver, ocak ve bağlantı parçaları da duruyor.",
-    "Siparişi WhatsApp'tan bırakın. Servis için sabit telefonu arayın. Fiyat ve stok o günkü duruma göre söylenir.",
-    "Tüpü Tokat Merkez'e bırakıyoruz. İlçe ve il dışına düzenli servis yok. Dükkân 07:30 ile 22:00 arasında açık. Hangi günler çalıştığımızı arayınca öğrenirsiniz.",
+    "Ev için 2 kg ve 12 kg tüp, piknik tüpü ve iş yeri için 24 kg sanayi tüpü var. Yanında soba, kuzine, semaver, ocak ve bağlantı parçaları da bulunuyor.",
+    "Siparişi WhatsApp'tan bırakabilirsiniz. Servis için sabit telefonu aramanız yeterli. Fiyat ve stok o günkü duruma göre söylenir.",
+    "Tüpü Tokat Merkez'e bırakıyoruz. İlçe ve il dışına düzenli servis yok. Dükkân haftanın her günü 07:30 ile 22:00 arasında açık.",
   ],
 } as const;

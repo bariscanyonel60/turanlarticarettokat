@@ -1,0 +1,28 @@
+name: Deploy sonrası önbellek temizliği
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  purge-cache:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dağıtımın oturmasını bekle
+        run: sleep 90
+
+      - name: Next.js site önbelleğini temizle
+        env:
+          SITE_URL: ${{ secrets.SITE_URL }}
+          REVALIDATE_SECRET: ${{ secrets.REVALIDATE_SECRET }}
+        run: |
+          if [ -z "$SITE_URL" ] || [ -z "$REVALIDATE_SECRET" ]; then
+            echo "SITE_URL veya REVALIDATE_SECRET secret tanımlı değil; adım atlandı."
+            exit 0
+          fi
+          curl --fail --silent --show-error \
+            -X POST "${SITE_URL%/}/api/revalidate" \
+            -H "Authorization: Bearer ${REVALIDATE_SECRET}" \
+            -H "Content-Type: application/json" \
+            -d '{"tags":["products","gallery"]}'

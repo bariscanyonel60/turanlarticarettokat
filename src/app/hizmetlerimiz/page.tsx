@@ -10,7 +10,7 @@ import type { LucideIcon } from "lucide-react";
 export const metadata = buildMetadata({
   title: "Tokat Tüp Hizmetleri",
   description:
-    "Tokat tüp hizmeti: ev tüpü, iş yerine tüp ve Tokat Merkez'e servis. Sipariş WhatsApp'tan, Turanlar Ticaret.",
+    "Ev tüpü, iş yerine tüp ve Tokat Merkez'e servis. Sipariş WhatsApp'tan. Turanlar Ticaret.",
   path: "/hizmetlerimiz",
 });
 
@@ -46,8 +46,8 @@ export default function ServicesPage() {
             Tokat Tüp Hizmetleri
           </h1>
           <p className="mt-5 max-w-2xl text-base leading-7 text-ink-soft sm:text-lg">
-            Ev tüpü, iş yeri tüpü ve Tokat Merkez&apos;e servis. Ne zaman bırakılacağını
-            siparişte konuşuruz. İlçe ve şehir dışına düzenli gitmiyoruz.
+            Ev tüpü, iş yeri tüpü ve Tokat Merkez&apos;e bırakma. Bırakma saatini siparişte
+            konuşuyoruz. İlçe ve şehir dışına düzenli çıkmıyoruz.
           </p>
         </Container>
       </section>

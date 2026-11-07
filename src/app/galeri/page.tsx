@@ -1,17 +1,19 @@
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { JsonLd } from "@/components/shared/JsonLd";
+import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { getGalleryImages } from "@/lib/gallery";
 import { cloudinaryDeliveryUrl } from "@/lib/cloudinary";
 import { imageAlt } from "@/lib/image-alt";
 import { buildMetadata } from "@/lib/seo";
 import { getSiteUrl } from "@/lib/site";
+import { generalWhatsappUrl } from "@/lib/whatsapp";
 import Image from "next/image";
 import { Suspense } from "react";
 
 export const metadata = buildMetadata({
   title: "Tokat Tüp Galeri",
-  description: "Tokat tüp dükkânından görseller. Turanlar Ticaret vitrini ve ürün fotoğrafları.",
+  description: "Dükkân ve vitrinden görseller. Turanlar Ticaret, Tokat Merkez Bahçelievler.",
   path: "/galeri",
 });
 
@@ -26,10 +28,11 @@ export default function GalleryPage() {
           ]}
         />
         <h1 className="mt-6 font-display text-4xl tracking-[-0.045em] text-navy sm:text-6xl">
-          Tokat tüp galerisi
+          Galeri
         </h1>
         <p className="mt-4 max-w-2xl text-base leading-7 text-ink-soft">
-          Dükkândan ve vitrinden kareler. Sipariş için ürüne bakıp WhatsApp&apos;tan yazmanız yeterli.
+          Dükkândan ve vitrinden kareler. Sipariş için ürün sayfasından bakıp WhatsApp&apos;tan
+          yazabilirsiniz.
         </p>
         <Suspense fallback={<p className="mt-10 text-sm text-ink-soft">Galeri yükleniyor.</p>}>
           <GalleryImages />
@@ -50,7 +53,21 @@ async function GalleryImages() {
   };
 
   if (images.length === 0) {
-    return <p className="mt-10 text-sm text-ink-soft">Galeride henüz görsel yok.</p>;
+    return (
+      <div className="mt-10 rounded-2xl border border-dashed border-navy/20 bg-white px-5 py-10 text-center">
+        <p className="text-base leading-7 text-ink-soft">
+          Galeri henüz dolmadı. Ürünlere bakabilir veya WhatsApp&apos;tan yazabilirsiniz.
+        </p>
+        <div className="mt-6 flex flex-col justify-center gap-3 sm:flex-row">
+          <Button href="/urunler" variant="navy">
+            Ürünlere bak
+          </Button>
+          <Button href={generalWhatsappUrl()} variant="whatsapp">
+            WhatsApp&apos;tan yaz
+          </Button>
+        </div>
+      </div>
+    );
   }
 
   return (

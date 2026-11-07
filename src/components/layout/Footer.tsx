@@ -10,16 +10,19 @@ import { cacheLife } from "next/cache";
 import Link from "next/link";
 import type { ReactNode } from "react";
 
-const pageLinks = [
-  ...navItems.filter((item) => item.href !== "/kurumsal"),
-  ...corporateLinks.filter(
-    (item) => item.href === "/hakkimizda" || item.href === "/blog" || item.href === "/sss",
-  ),
-];
-
 const { street, line, district, city, postalCode } = business.address;
 
-export function Footer() {
+export function Footer({ showGallery = true }: { showGallery?: boolean }) {
+  const pageLinks = [
+    ...navItems.filter(
+      (item) =>
+        item.href !== "/kurumsal" && (showGallery || item.href !== "/galeri"),
+    ),
+    ...corporateLinks.filter(
+      (item) => item.href === "/hakkimizda" || item.href === "/blog" || item.href === "/sss",
+    ),
+  ];
+
   return (
     <footer className="bg-navy text-cream">
       <Container className="py-10 lg:py-12">
@@ -33,11 +36,12 @@ export function Footer() {
               <Logo />
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-6 text-mist">
-              1977&apos;den beri Tokat Merkez&apos;de Hürgaz tüp. Sipariş WhatsApp&apos;tan, servis
-              telefondan.
+              1977&apos;den beri Tokat Merkez&apos;de Hürgaz tüp satıyoruz. Sipariş için WhatsApp,
+              servis için telefon yeterlidir.
             </p>
-            <p className="mt-4 text-sm font-semibold text-white">Açık {hoursLabel()}</p>
-            <p className="mt-1 text-sm text-mist">Açık günler telefonda öğrenilir.</p>
+            <p className="mt-4 text-sm font-semibold text-white">
+              Haftanın her günü {hoursLabel()}
+            </p>
             <div className="mt-5 flex flex-wrap gap-2">
               <a
                 href={`tel:${business.phoneTel}`}

@@ -11,7 +11,7 @@ import Image from "next/image";
 export const metadata = buildMetadata({
   title: "Tokat Tüp Hakkımızda",
   description:
-    "Tokat tüp için Turanlar Ticaret. 1977'den beri Bahçelievler'de Hürgaz tüp satıyoruz. Sipariş WhatsApp'tan, servis telefondan.",
+    "Turanlar Ticaret 1977'den beri Bahçelievler'de Hürgaz tüp satıyor. Sipariş için WhatsApp, servis için telefon yeterlidir.",
   path: "/hakkimizda",
 });
 

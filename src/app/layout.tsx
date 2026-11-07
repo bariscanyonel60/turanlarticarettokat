@@ -6,10 +6,12 @@ import { SiteShell } from "@/components/layout/SiteShell";
 import { WhatsAppFloat } from "@/components/layout/WhatsAppFloat";
 import { JsonLd } from "@/components/shared/JsonLd";
 import { business } from "@/data/business";
+import { getGalleryImages } from "@/lib/gallery";
 import { localBusinessJsonLd, websiteJsonLd } from "@/lib/seo";
 import { getSiteUrl } from "@/lib/site";
 import type { Metadata, Viewport } from "next";
 import { Manrope, Plus_Jakarta_Sans } from "next/font/google";
+import { Suspense } from "react";
 import "./globals.css";
 
 const manrope = Manrope({
@@ -63,6 +65,16 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
+async function HeaderWithGallery() {
+  const galleryImages = await getGalleryImages();
+  return <Header showGallery={galleryImages.length > 0} />;
+}
+
+async function FooterWithGallery() {
+  const galleryImages = await getGalleryImages();
+  return <Footer showGallery={galleryImages.length > 0} />;
+}
+
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
@@ -81,8 +93,16 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         </a>
         <Providers>
           <SiteShell
-            header={<Header />}
-            footer={<Footer />}
+            header={
+              <Suspense fallback={<Header showGallery={false} />}>
+                <HeaderWithGallery />
+              </Suspense>
+            }
+            footer={
+              <Suspense fallback={<Footer showGallery={false} />}>
+                <FooterWithGallery />
+              </Suspense>
+            }
             mobile={<MobileOrderBar />}
             whatsapp={<WhatsAppFloat />}
           >

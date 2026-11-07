@@ -15,11 +15,11 @@ export function HomeContact() {
             İletişim
           </p>
           <h2 className="mt-3 font-display text-3xl tracking-[-0.04em] text-navy sm:text-5xl">
-            Tokat Merkez&apos;de bize ulaşın
+            Bize ulaşın
           </h2>
           <p className="mt-4 max-w-md text-base leading-7 text-ink-soft">
-            Sipariş için WhatsApp, servis için telefon. Dükkân Bahçelievler&apos;de,
-            harita da aynı adresi açar.
+            Sipariş için WhatsApp, servis için telefon. Dükkân Bahçelievler&apos;de;
+            harita da aynı adresi gösterir.
           </p>
         </div>
         <div className="grid gap-8 rounded-3xl border border-navy/10 bg-paper p-6 sm:p-8 lg:col-span-7">

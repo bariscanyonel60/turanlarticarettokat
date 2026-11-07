@@ -197,7 +197,8 @@ export async function readProductRecords(): Promise<ProductRecord[]> {
 
 async function readCachedProductRecords() {
   "use cache";
-  cacheLife({ stale: 300, revalidate: 3600, expire: 86400 });
+  // Kısa stale: admin yazısından sonra eski vitrinin uzun süre kalmasını engeller.
+  cacheLife({ stale: 60, revalidate: 300, expire: 3600 });
   cacheTag("products");
   try {
     return await readProductRecords();

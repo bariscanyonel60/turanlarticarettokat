@@ -26,7 +26,7 @@ export function AboutPreview() {
                 1977
               </p>
               <p className="max-w-xs text-base leading-7 text-mist">
-                1977&apos;den bugüne Turanlar Ticaret.
+                1977&apos;den beri aynı mahalledeyiz.
               </p>
             </div>
           )}
@@ -40,8 +40,8 @@ export function AboutPreview() {
           </h2>
           <p className="mt-5 text-base leading-7 text-ink-soft">{aboutCopy.lead}</p>
           <p className="mt-4 text-base leading-7 text-ink-soft">{aboutCopy.paragraphs[0]}</p>
-          <Button href="/kurumsal" variant="navy" className="mt-8">
-            Kurumsal sayfa
+          <Button href="/hakkimizda" variant="navy" className="mt-8">
+            Hakkımızda
           </Button>
         </div>
       </Container>

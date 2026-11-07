@@ -9,14 +9,14 @@ import Link from "next/link";
 export const metadata = buildMetadata({
   title: "Kurumsal",
   description:
-    "Tokat tüp için Turanlar Ticaret. Hakkımızda, sipariş notları ve iletişim. Hizmet Tokat Merkez'de.",
+    "Turanlar Ticaret kurumsal sayfası. Hakkımızda, sipariş ve iletişim. Hizmet Tokat Merkez'de.",
   path: "/kurumsal",
 });
 
 const principles = [
   {
     title: "Sipariş",
-    text: "Tüpü seçin, WhatsApp'tan yazın. Fiyat ve stok o gün neyse onu söyleriz.",
+    text: "Tüpü seçip WhatsApp'tan yazmanız yeterli. Fiyat ve stok o günkü duruma göre söylenir.",
   },
   {
     title: "Servis",
@@ -24,7 +24,7 @@ const principles = [
   },
   {
     title: "Saat",
-    text: "Dükkân 07:30 ile 22:00 arasında açık. Hangi günler çalıştığımızı arayınca öğrenirsiniz.",
+    text: "Dükkân haftanın her günü 07:30 ile 22:00 arasında açık.",
   },
 ] as const;
 
@@ -34,7 +34,7 @@ export default function CorporatePage() {
       <PageHeader
         eyebrow="Kurumsal"
         title="1977'den bugüne Tokat Merkez"
-        lede="1977'den beri Tokat Merkez'deyiz. Tokat tüp için Bahçelievler'deki dükkâna yazmanız yeterli."
+        lede="1977'den beri Tokat Merkez'deyiz. Tüp, soba ve bağlantı parçası için Bahçelievler'deki dükkâna yazmanız ya da aramanız yeterli."
         crumbs={[
           { name: "Tokat Tüp", path: "/" },
           { name: "Kurumsal", path: "/kurumsal" },
@@ -46,9 +46,9 @@ export default function CorporatePage() {
             {business.foundedYear}
           </p>
           <p className="mt-4 max-w-2xl text-base leading-7 text-ink-soft">
-            {business.name}, {business.area}&apos;de {business.brandSold} tüp satar.
-            Sipariş WhatsApp&apos;tan, servis telefondan. İlçe ve şehir dışına düzenli
-            gitmiyoruz.
+            {business.name}, {business.area}&apos;de {business.brandSold} tüp satar. Sipariş
+            için WhatsApp, servis için telefon yeterlidir. İlçe ve şehir dışına düzenli
+            çıkmıyoruz.
           </p>
           <ul className="mt-12 grid gap-4 md:grid-cols-3">
             {principles.map((item) => (

@@ -9,6 +9,11 @@ export function formatPrice(kurus: number) {
   }).format(lira);
 }
 
+/** Fiyat yoksa kullanıcıya gösterilen kısa ifade. Sahte fiyat üretilmez. */
+export function missingPriceLabel() {
+  return "Fiyat için iletişime geçin";
+}
+
 export function priceInputValue(kurus: number | null | undefined) {
   if (kurus == null) {
     return "";

@@ -5,7 +5,7 @@ export const business = {
   /** İşletmenin bildirdiği hizmete başlama yılı. */
   foundedYear: 1977,
   shortDescription:
-    "Tokat tüp için Turanlar Ticaret. 1977'den beri Tokat Merkez'de Hürgaz tüp satıyoruz. Sipariş WhatsApp'tan, servis telefondan.",
+    "Turanlar Ticaret, 1977'den beri Tokat Merkez'de Hürgaz tüp satıyor. Sipariş için WhatsApp, servis için telefon yeterlidir.",
   address: {
     street: "Bahçelievler Mahallesi, Yazıcıoğlu Caddesi",
     line: "3. Geçit No: 47/C",
@@ -26,18 +26,25 @@ export const business = {
 } as const;
 
 /**
- * Açılış ve kapanış işletmenin bildirdiği aralıktır.
- * Haftanın hangi günleri açık olduğu ayrıca doğrulanmadı; uydurulmaz.
+ * Açılış, kapanış ve çalışma günleri işletmenin bildirdiği aralıktır.
+ * Haftanın her günü 07:30 – 22:00.
  */
-export const businessHours: {
-  closingTime: string;
-  openingTime: string | null;
-  workingDays: string | null;
-} = {
+export const businessHours = {
   closingTime: "22:00",
   openingTime: "07:30",
-  workingDays: null,
-};
+  /** Kullanıcıya gösterilen çalışma günü. */
+  workingDays: "Haftanın her günü",
+  /** Schema.org OpeningHoursSpecification dayOfWeek. */
+  schemaDayOfWeek: [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday",
+  ],
+} as const;
 
 /**
  * TODO: gerçek dükkân fotoğrafı ekle.
